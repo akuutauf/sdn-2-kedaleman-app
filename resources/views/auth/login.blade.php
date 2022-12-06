@@ -1,3 +1,5 @@
+<title>Login | SDN 2 Kedaleman</title>
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
