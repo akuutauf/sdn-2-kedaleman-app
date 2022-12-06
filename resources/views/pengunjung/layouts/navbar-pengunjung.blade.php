@@ -7,7 +7,9 @@
             <img src="{{ asset('img/logo/tut-wuri-handayani-logo.png') }}" alt="" class="img-fluid">
         </a>
         <div class="ml-4">
-            <h3 class="logo"><a href=""><b>SDN 2 KEDALEMAN</b></a></h2>
+            <center>
+                <h3 class="logo"><a href=""><b>SDN 2 KEDALEMAN</b></a></h2>
+            </center>
         </div>
 
         {{-- navbar --}}

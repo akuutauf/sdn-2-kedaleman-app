@@ -1,4 +1,4 @@
-<title>Register | SDN 2 Kedaleman</title>
+<title>Daftar | SDN 2 Kedaleman</title>
 
 <x-guest-layout>
     <x-auth-card>
@@ -6,14 +6,22 @@
             <a href="/">
                 {{-- logo default laravel --}}
                 {{-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" /> --}}
-
-                {{-- logo sekolah --}}
-                <img src="{{ asset('img/logo/tut-wuri-handayani-logo.png') }}" alt="" width="160">
             </a>
         </x-slot>
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
+
+            <center>
+                <div class="pt-4 pb-4">
+                    {{-- logo sekolah --}}
+                    <img src="{{ asset('img/logo/tut-wuri-handayani-logo.png') }}" alt="" width="160">
+                </div>
+            </center>
+
+            <div class="text-center">
+                <p class="login-box-msg mb-3">Mohon Inputkan Data Valid Anda </p>
+            </div>
 
             <!-- Name -->
             <div>

@@ -29,8 +29,19 @@
                 </div>
                 <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img"
                     data-aos="fade-up">
-                    <img src="{{ asset('pengunjung/assets/img/school-ilustration.png') }}"
-                        class="img-fluid rounded shadow-sm" alt="">
+                    {{-- <img src="{{ asset('pengunjung/assets/img/school-ilustration-1.png') }}"
+                        class="img-fluid rounded shadow-sm" alt=""> --}}
+
+                    <center>
+                        <div class="owl-carousel owl-1">
+                            <div><img src="{{ asset('pengunjung/assets/img/school-ilustration-1.png') }}" alt="Image"
+                                    class="img-fluid shadow-sm rounded"></div>
+                            <div><img src="{{ asset('pengunjung/assets/img/school-ilustration-2.jpg') }}" alt="Image"
+                                    class="img-fluid shadow-sm rounded"></div>
+                            <div><img src="{{ asset('pengunjung/assets/img/school-ilustration-3.jpg') }}" alt="Image"
+                                    class="img-fluid shadow-sm rounded"></div>
+                        </div>
+                    </center>
                 </div>
             </div>
         </div>
@@ -876,4 +887,12 @@
         </section><!-- End Contact Section -->
 
     </main><!-- End #main -->
+@endsection
+
+@section('script')
+    <script src="{{ asset('pengunjung/assets/carousel/js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('pengunjung/assets/carousel/js/popper.min.js') }}"></script>
+    <script src="{{ asset('pengunjung/assets/carousel/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('pengunjung/assets/carousel/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('pengunjung/assets/carousel/js/main.js') }}"></script>
 @endsection
