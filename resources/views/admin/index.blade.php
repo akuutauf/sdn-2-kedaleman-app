@@ -66,7 +66,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-4 stretch-card transparent">
-                            <div class="card card-dark-blue shadow-sm" data-aos="fade-up" data-aos-duration="1300"
+                            <div class="card card-dark-blue shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
                                 <div class="card-body">
                                     <p class="mb-4">Manajemen Motivasi</p>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                            <div class="card card-light-blue shadow-sm" data-aos="fade-up" data-aos-duration="1600"
+                            <div class="card card-light-blue shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
                                 <div class="card-body">
                                     <p class="mb-4">Manajemen Pengumuman</p>
@@ -87,7 +87,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 stretch-card transparent" data-aos="fade-up" data-aos-duration="1900"
+                        <div class="col-md-6 stretch-card transparent" data-aos="fade-up" data-aos-duration="1000"
                             data-aos-easing="ease-in-sine" data-aos-once='true'>
                             <div class="card card-light-danger shadow-sm">
                                 <div class="card-body">
@@ -100,7 +100,7 @@
                     </div>
                     <div class="row mt-4">
                         <div class="col-md-6 mb-4 stretch-card transparent">
-                            <div class="card card-tale shadow-sm" data-aos="fade-up" data-aos-duration="2200"
+                            <div class="card card-tale shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
                                 <div class="card-body">
                                     <p class="mb-4">Manajemen Event</p>
@@ -110,7 +110,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-4 stretch-card transparent">
-                            <div class="card card-dark-blue shadow-sm" data-aos="fade-up" data-aos-duration="2500"
+                            <div class="card card-dark-blue shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
                                 <div class="card-body">
                                     <p class="mb-4">Manajemen Prestasi</p>
@@ -122,7 +122,7 @@
                     </div>
                     <div class="row mt-1">
                         <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                            <div class="card card-light-blue shadow-sm" data-aos="fade-up" data-aos-duration="2800"
+                            <div class="card card-light-blue shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
                                 <div class="card-body">
                                     <p class="mb-4">Manajemen Banner</p>

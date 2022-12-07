@@ -11,11 +11,5 @@ class Pengumuman extends Model
 
     protected $table = 'pengumumans';
     protected $primaryKey = 'id';
-    protected $fillable = ['id', 'id_arsip', 'judul_pengumuman', 'pembuat_pengumuman', 'penerima_pengumuman', 'perihal_pengumuman', 'tanggal_pengumuman', 'isi_pengumuman'];
-
-    // relasi many to one ke model arsip (not fix)
-    public function arsip()
-    {
-        return $this->belongsTo(Arsip::class);
-    }
+    protected $fillable = ['id', 'judul_pengumuman', 'pembuat_pengumuman', 'penerima_pengumuman', 'perihal_pengumuman', 'tanggal_pengumuman', 'isi_pengumuman', 'lampiran_pengumuman'];
 }
