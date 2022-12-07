@@ -20,9 +20,9 @@
                             informasi sekolah yang lainnya.<br><br>
                             Yuk cek sekarang.
                         </h2>
-                        <a href="#about" class="download-btn nav-link scrollto"><i class="fa-solid fa-school"></i>&ensp;
+                        <a href="#tentang" class="download-btn nav-link scrollto"><i class="fa-solid fa-school"></i>&ensp;
                             Profil Sekolah</a>
-                        <a href="#portfolio" class="download-btn nav-link scrollto"><i
+                        <a href="#kegiatan" class="download-btn nav-link scrollto"><i
                                 class="fa-regular fa-calendar-minus"></i>&ensp; Event
                             Sekolah</a>
                     </div>

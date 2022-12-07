@@ -1,4 +1,5 @@
 <title>Daftar | SDN 2 Kedaleman</title>
+<link rel="stylesheet" href="{{ asset('admin/css/main.css') }}">
 
 <x-guest-layout>
     <x-auth-card>

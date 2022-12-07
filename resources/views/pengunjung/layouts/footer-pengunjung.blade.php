@@ -36,10 +36,10 @@
                     <h4>Konten Website</h4>
                     <ul>
                         <li><i class="bx bx-chevron-right"></i> <a href="#">Guru dan Staf</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Motivasi Guru</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="#">Pengumuman Sekolah</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="#">Event Sekolah</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="#">Prestasi Siswa</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Kerjasama Sekolah</a></li>
                     </ul>
                 </div>
 

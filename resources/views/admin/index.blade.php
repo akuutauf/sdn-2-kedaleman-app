@@ -36,57 +36,85 @@
             </div>
             <div class="row">
                 <div class="col-md-6 grid-margin stretch-card">
-                    <div class="card shadow-sm">
-                        <div class="card-people mt-auto">
-                            <img src="{{ asset('img/ilustrator/ilustrator-dashboard.jpg') }}" alt="people">
-                            <div class="weather-info">
-                                <div class="d-flex">
-                                    <div class="ml-2">
-                                        <h4 class="location font-weight-normal pb-2">Rogojampi</h4>
-                                        <h6 class="font-weight-normal">Banyuwangi</h6>
+                    <div class="card shadow-sm" data-aos="zoom-in" data-aos-duration="1000" data-aos-once='true'>
+                        <center>
+                            <div class="card-people pt-5">
+                                <img src="{{ asset('img/ilustrator/ilustrator-dashboard.jpg') }}" alt="people">
+                                <div class="weather-info">
+                                    <div class="d-flex">
+                                        <div class="ml-2">
+                                            <h4 class="location font-weight-normal pb-2">Rogojampi</h4>
+                                            <h6 class="font-weight-normal">Banyuwangi</h6>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </center>
                     </div>
                 </div>
                 <div class="col-md-6 grid-margin transparent">
                     <div class="row">
                         <div class="col-md-6 mb-4 stretch-card transparent">
-                            <div class="card card-tale shadow-sm">
+                            <div class="card card-tale shadow-sm" data-aos="fade-up" data-aos-duration="1000"
+                                data-aos-easing="ease-in-sine" data-aos-once='true'>
                                 <div class="card-body">
-                                    <p class="mb-4">Today’s Bookings</p>
+                                    <p class="mb-4">Manajemen Guru</p>
                                     <p class="fs-30 mb-2">4006</p>
-                                    <p>10.00% (30 days)</p>
+                                    <p>Kelola data guru dan staf</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4 stretch-card transparent">
-                            <div class="card card-dark-blue shadow-sm">
+                            <div class="card card-dark-blue shadow-sm" data-aos="fade-up" data-aos-duration="1300"
+                                data-aos-easing="ease-in-sine" data-aos-once='true'>
                                 <div class="card-body">
-                                    <p class="mb-4">Total Bookings</p>
+                                    <p class="mb-4">Manajemen Pengumuman</p>
                                     <p class="fs-30 mb-2">61344</p>
-                                    <p>22.00% (30 days)</p>
+                                    <p>Kelola data pengumuman</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                            <div class="card card-light-blue shadow-sm">
+                            <div class="card card-light-blue shadow-sm" data-aos="fade-up" data-aos-duration="1600"
+                                data-aos-easing="ease-in-sine" data-aos-once='true'>
                                 <div class="card-body">
-                                    <p class="mb-4">Number of Meetings</p>
+                                    <p class="mb-4">Manajemen Event</p>
                                     <p class="fs-30 mb-2">34040</p>
-                                    <p>2.00% (30 days)</p>
+                                    <p>Kelola data event</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 stretch-card transparent">
+                        <div class="col-md-6 stretch-card transparent" data-aos="fade-up" data-aos-duration="1900"
+                            data-aos-easing="ease-in-sine" data-aos-once='true'>
                             <div class="card card-light-danger shadow-sm">
                                 <div class="card-body">
-                                    <p class="mb-4">Number of Clients</p>
+                                    <p class="mb-4">Manajemen Prestasi Siswa</p>
                                     <p class="fs-30 mb-2">47033</p>
-                                    <p>0.22% (30 days)</p>
+                                    <p>Kelola prestasi siswa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-4 stretch-card transparent">
+                            <div class="card card-tale shadow-sm" data-aos="fade-up" data-aos-duration="2200"
+                                data-aos-easing="ease-in-sine" data-aos-once='true'>
+                                <div class="card-body">
+                                    <p class="mb-4">Manajemen Kerjasama Sekolah</p>
+                                    <p class="fs-30 mb-2">4006</p>
+                                    <p>Kelola data kerjasama sekolah</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4 stretch-card transparent">
+                            <div class="card card-dark-blue shadow-sm" data-aos="fade-up" data-aos-duration="2500"
+                                data-aos-easing="ease-in-sine" data-aos-once='true'>
+                                <div class="card-body">
+                                    <p class="mb-4">Manajemen Banner</p>
+                                    <p class="fs-30 mb-2">61344</p>
+                                    <p>Kelola gambar banner beranda</p>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +123,8 @@
             </div>
             <div class="row">
                 <div class="col-md-12 grid-margin stretch-card">
-                    <div class="card position-relative shadow-sm">
+                    <div class="card position-relative shadow-sm" data-aos="zoom-out-up" data-aos-duration="1500"
+                        data-aos-once='true'>
                         <div class="card-body">
                             <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2"
                                 data-ride="carousel">
@@ -104,7 +133,7 @@
                                         <div class="row">
                                             <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
                                                 <div class="ml-xl-4 mt-3">
-                                                    <p class="card-title">Detailed Reports</p>
+                                                    <p class="card-title">Data Informasi Sekolah</p>
                                                     <h1 class="text-primary">$34040</h1>
                                                     <h3 class="font-weight-500 mb-xl-4 text-primary">North
                                                         America</h3>
@@ -119,7 +148,7 @@
                                                         <div class="table-responsive mb-3 mb-md-0 mt-3">
                                                             <table class="table table-borderless report-table">
                                                                 <tr>
-                                                                    <td class="text-muted">Illinois</td>
+                                                                    <td class="text-muted">Guru dan Staf</td>
                                                                     <td class="w-100 px-0">
                                                                         <div class="progress progress-md mx-4">
                                                                             <div class="progress-bar bg-primary"
@@ -134,7 +163,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="text-muted">Washington</td>
+                                                                    <td class="text-muted">Pengumuman</td>
                                                                     <td class="w-100 px-0">
                                                                         <div class="progress progress-md mx-4">
                                                                             <div class="progress-bar bg-warning"
@@ -149,7 +178,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="text-muted">Mississippi</td>
+                                                                    <td class="text-muted">Event Sekolah</td>
                                                                     <td class="w-100 px-0">
                                                                         <div class="progress progress-md mx-4">
                                                                             <div class="progress-bar bg-danger"
@@ -164,7 +193,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="text-muted">California</td>
+                                                                    <td class="text-muted">Prestasi Siswa</td>
                                                                     <td class="w-100 px-0">
                                                                         <div class="progress progress-md mx-4">
                                                                             <div class="progress-bar bg-info"
@@ -179,7 +208,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="text-muted">Maryland</td>
+                                                                    <td class="text-muted">Kerjasama Sekolah</td>
                                                                     <td class="w-100 px-0">
                                                                         <div class="progress progress-md mx-4">
                                                                             <div class="progress-bar bg-primary"
@@ -194,7 +223,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="text-muted">Alaska</td>
+                                                                    <td class="text-muted">Banner Beranda</td>
                                                                     <td class="w-100 px-0">
                                                                         <div class="progress progress-md mx-4">
                                                                             <div class="progress-bar bg-danger"
@@ -223,7 +252,7 @@
                                         <div class="row">
                                             <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
                                                 <div class="ml-xl-4 mt-3">
-                                                    <p class="card-title">Detailed Reports</p>
+                                                    <p class="card-title">Data Informasi Website</p>
                                                     <h1 class="text-primary">$34040</h1>
                                                     <h3 class="font-weight-500 mb-xl-4 text-primary">North
                                                         America</h3>
@@ -356,9 +385,9 @@
             </div>
             <div class="row">
                 <div class="col-md-12 grid-margin stretch-card">
-                    <div class="card shadow-sm">
+                    <div class="card shadow-sm" data-aos="zoom-out-up" data-aos-duration="1500" data-aos-once='true'>
                         <div class="card-body">
-                            <p class="card-title">Advanced Table</p>
+                            <p class="card-title">Tabel Data Websitep</p>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="table-responsive">
