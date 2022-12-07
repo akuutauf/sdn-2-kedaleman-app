@@ -36,7 +36,8 @@
             </div>
             <div class="row">
                 <div class="col-md-6 grid-margin stretch-card">
-                    <div class="card shadow-sm" data-aos="zoom-in" data-aos-duration="1000" data-aos-once='true'>
+                    <div class="card shadow-sm mb-auto py-5" data-aos="zoom-in" data-aos-duration="1000"
+                        data-aos-once='true'>
                         <center>
                             <div class="card-people pt-5">
                                 <img src="{{ asset('img/ilustrator/ilustrator-dashboard.jpg') }}" alt="people">
@@ -68,9 +69,9 @@
                             <div class="card card-dark-blue shadow-sm" data-aos="fade-up" data-aos-duration="1300"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
                                 <div class="card-body">
-                                    <p class="mb-4">Manajemen Pengumuman</p>
+                                    <p class="mb-4">Manajemen Motivasi</p>
                                     <p class="fs-30 mb-2">61344</p>
-                                    <p>Kelola data pengumuman</p>
+                                    <p>Kelola data motivasi</p>
                                 </div>
                             </div>
                         </div>
@@ -80,9 +81,9 @@
                             <div class="card card-light-blue shadow-sm" data-aos="fade-up" data-aos-duration="1600"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
                                 <div class="card-body">
-                                    <p class="mb-4">Manajemen Event</p>
+                                    <p class="mb-4">Manajemen Pengumuman</p>
                                     <p class="fs-30 mb-2">34040</p>
-                                    <p>Kelola data event</p>
+                                    <p>Kelola data pengumuman</p>
                                 </div>
                             </div>
                         </div>
@@ -90,9 +91,9 @@
                             data-aos-easing="ease-in-sine" data-aos-once='true'>
                             <div class="card card-light-danger shadow-sm">
                                 <div class="card-body">
-                                    <p class="mb-4">Manajemen Prestasi Siswa</p>
+                                    <p class="mb-4">Manajemen Arsip</p>
                                     <p class="fs-30 mb-2">47033</p>
-                                    <p>Kelola prestasi siswa</p>
+                                    <p>Kelola data arsip sekolah</p>
                                 </div>
                             </div>
                         </div>
@@ -102,9 +103,9 @@
                             <div class="card card-tale shadow-sm" data-aos="fade-up" data-aos-duration="2200"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
                                 <div class="card-body">
-                                    <p class="mb-4">Manajemen Kerjasama Sekolah</p>
+                                    <p class="mb-4">Manajemen Event</p>
                                     <p class="fs-30 mb-2">4006</p>
-                                    <p>Kelola data kerjasama sekolah</p>
+                                    <p>Kelola data event sekolah</p>
                                 </div>
                             </div>
                         </div>
@@ -112,9 +113,21 @@
                             <div class="card card-dark-blue shadow-sm" data-aos="fade-up" data-aos-duration="2500"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
                                 <div class="card-body">
-                                    <p class="mb-4">Manajemen Banner</p>
+                                    <p class="mb-4">Manajemen Prestasi</p>
                                     <p class="fs-30 mb-2">61344</p>
-                                    <p>Kelola gambar banner beranda</p>
+                                    <p>Kelola data prestasi siswa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
+                            <div class="card card-light-blue shadow-sm" data-aos="fade-up" data-aos-duration="2800"
+                                data-aos-easing="ease-in-sine" data-aos-once='true'>
+                                <div class="card-body">
+                                    <p class="mb-4">Manajemen Banner</p>
+                                    <p class="fs-30 mb-2">34040</p>
+                                    <p>Kelola data gambar banner beranda</p>
                                 </div>
                             </div>
                         </div>
@@ -163,6 +176,36 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
+                                                                    <td class="text-muted">Motivasi Guru</td>
+                                                                    <td class="w-100 px-0">
+                                                                        <div class="progress progress-md mx-4">
+                                                                            <div class="progress-bar bg-danger"
+                                                                                role="progressbar" style="width: 75%"
+                                                                                aria-valuenow="75" aria-valuemin="0"
+                                                                                aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h5 class="font-weight-bold mb-0">793
+                                                                        </h5>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-muted">Arsip Sekolah</td>
+                                                                    <td class="w-100 px-0">
+                                                                        <div class="progress progress-md mx-4">
+                                                                            <div class="progress-bar bg-primary"
+                                                                                role="progressbar" style="width: 40%"
+                                                                                aria-valuenow="40" aria-valuemin="0"
+                                                                                aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h5 class="font-weight-bold mb-0">560
+                                                                        </h5>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
                                                                     <td class="text-muted">Pengumuman</td>
                                                                     <td class="w-100 px-0">
                                                                         <div class="progress progress-md mx-4">
@@ -204,36 +247,6 @@
                                                                     </td>
                                                                     <td>
                                                                         <h5 class="font-weight-bold mb-0">664
-                                                                        </h5>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="text-muted">Kerjasama Sekolah</td>
-                                                                    <td class="w-100 px-0">
-                                                                        <div class="progress progress-md mx-4">
-                                                                            <div class="progress-bar bg-primary"
-                                                                                role="progressbar" style="width: 40%"
-                                                                                aria-valuenow="40" aria-valuemin="0"
-                                                                                aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h5 class="font-weight-bold mb-0">560
-                                                                        </h5>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="text-muted">Banner Beranda</td>
-                                                                    <td class="w-100 px-0">
-                                                                        <div class="progress progress-md mx-4">
-                                                                            <div class="progress-bar bg-danger"
-                                                                                role="progressbar" style="width: 75%"
-                                                                                aria-valuenow="75" aria-valuemin="0"
-                                                                                aria-valuemax="100"></div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <h5 class="font-weight-bold mb-0">793
                                                                         </h5>
                                                                     </td>
                                                                 </tr>

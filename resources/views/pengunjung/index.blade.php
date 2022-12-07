@@ -102,6 +102,7 @@
                 </div>
 
             </div>
+            <div id="sejarah"></div>
         </div>
     </section><!-- End Hero -->
 @endsection
@@ -293,7 +294,7 @@
 
                 <div class="row">
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box iconbox-blue">
+                        <div class="icon-box iconbox-blue rounded">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -310,7 +311,7 @@
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
                         data-aos-delay="200">
-                        <div class="icon-box iconbox-orange ">
+                        <div class="icon-box iconbox-orange  rounded">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -327,7 +328,7 @@
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
                         data-aos-delay="300">
-                        <div class="icon-box iconbox-pink">
+                        <div class="icon-box iconbox-pink rounded">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -344,7 +345,7 @@
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in"
                         data-aos-delay="100">
-                        <div class="icon-box iconbox-yellow">
+                        <div class="icon-box iconbox-yellow rounded">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -361,7 +362,7 @@
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in"
                         data-aos-delay="200">
-                        <div class="icon-box iconbox-red">
+                        <div class="icon-box iconbox-red rounded">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -378,7 +379,7 @@
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in"
                         data-aos-delay="300">
-                        <div class="icon-box iconbox-teal">
+                        <div class="icon-box iconbox-teal rounded">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -410,7 +411,7 @@
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member">
+                        <div class="member shadow-sm">
                             <div class="member-img">
                                 <img src="{{ asset('pengunjung/assets/img/team/team-1.jpg') }}" class="img-fluid"
                                     alt="">
@@ -429,7 +430,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member">
+                        <div class="member shadow-sm">
                             <div class="member-img">
                                 <img src="{{ asset('pengunjung/assets/img/team/team-2.jpg') }}" class="img-fluid"
                                     alt="">
@@ -448,7 +449,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                        <div class="member">
+                        <div class="member shadow-sm">
                             <div class="member-img">
                                 <img src="{{ asset('pengunjung/assets/img/team/team-3.jpg') }}" class="img-fluid"
                                     alt="">
@@ -467,7 +468,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-                        <div class="member">
+                        <div class="member shadow-sm">
                             <div class="member-img">
                                 <img src="{{ asset('pengunjung/assets/img/team/team-4.jpg') }}" class="img-fluid"
                                     alt="">
@@ -491,7 +492,7 @@
         </section><!-- End Team Section -->
 
         <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials section-bg">
+        <section id="motivasi" class="testimonials section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
@@ -617,8 +618,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-1.jpg') }}" class="img-fluid"
-                                alt="">
+                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-1.jpg') }}"
+                                class="img-fluid shadow-sm rounded" alt="">
                             <div class="portfolio-info">
                                 <h4>App 1</h4>
                                 <p>App</p>
@@ -634,8 +635,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-2.jpg') }}" class="img-fluid"
-                                alt="">
+                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-2.jpg') }}"
+                                class="img-fluid shadow-sm rounded" alt="">
                             <div class="portfolio-info">
                                 <h4>Web 3</h4>
                                 <p>Web</p>
@@ -651,8 +652,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-3.jpg') }}" class="img-fluid"
-                                alt="">
+                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-3.jpg') }}"
+                                class="img-fluid shadow-sm rounded" alt="">
                             <div class="portfolio-info">
                                 <h4>App 2</h4>
                                 <p>App</p>
@@ -668,8 +669,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-4.jpg') }}" class="img-fluid"
-                                alt="">
+                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-4.jpg') }}"
+                                class="img-fluid shadow-sm rounded" alt="">
                             <div class="portfolio-info">
                                 <h4>Card 2</h4>
                                 <p>Card</p>
@@ -685,8 +686,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-5.jpg') }}" class="img-fluid"
-                                alt="">
+                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-5.jpg') }}"
+                                class="img-fluid shadow-sm rounded" alt="">
                             <div class="portfolio-info">
                                 <h4>Web 2</h4>
                                 <p>Web</p>
@@ -702,8 +703,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-6.jpg') }}" class="img-fluid"
-                                alt="">
+                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-6.jpg') }}"
+                                class="img-fluid shadow-sm rounded" alt="">
                             <div class="portfolio-info">
                                 <h4>App 3</h4>
                                 <p>App</p>
@@ -719,8 +720,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-7.jpg') }}" class="img-fluid"
-                                alt="">
+                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-7.jpg') }}"
+                                class="img-fluid shadow-sm rounded" alt="">
                             <div class="portfolio-info">
                                 <h4>Card 1</h4>
                                 <p>Card</p>
@@ -736,8 +737,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-card">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-8.jpg') }}" class="img-fluid"
-                                alt="">
+                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-8.jpg') }}"
+                                class="img-fluid shadow-sm rounded" alt="">
                             <div class="portfolio-info">
                                 <h4>Card 3</h4>
                                 <p>Card</p>
@@ -753,8 +754,8 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                         <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-9.jpg') }}" class="img-fluid"
-                                alt="">
+                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-9.jpg') }}"
+                                class="img-fluid shadow-sm rounded" alt="">
                             <div class="portfolio-info">
                                 <h4>Web 3</h4>
                                 <p>Web</p>
@@ -784,7 +785,7 @@
 
                 <div class="faq-list">
                     <ul>
-                        <li data-aos="fade-up">
+                        <li data-aos="fade-up" class="shadow-sm">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
                                 data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i
                                     class="bx bx-chevron-down icon-show"></i><i
@@ -798,7 +799,7 @@
                             </div>
                         </li>
 
-                        <li data-aos="fade-up" data-aos-delay="100">
+                        <li data-aos="fade-up" data-aos-delay="100" class="shadow-sm">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
                                 data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim
                                 nunc? <i class="bx bx-chevron-down icon-show"></i><i
@@ -813,7 +814,7 @@
                             </div>
                         </li>
 
-                        <li data-aos="fade-up" data-aos-delay="200">
+                        <li data-aos="fade-up" data-aos-delay="200" class="shadow-sm">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
                                 data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing
                                 elit? <i class="bx bx-chevron-down icon-show"></i><i
@@ -828,7 +829,7 @@
                             </div>
                         </li>
 
-                        <li data-aos="fade-up" data-aos-delay="300">
+                        <li data-aos="fade-up" data-aos-delay="300" class="shadow-sm">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
                                 data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam
                                 aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i
@@ -842,7 +843,7 @@
                             </div>
                         </li>
 
-                        <li data-aos="fade-up" data-aos-delay="400">
+                        <li data-aos="fade-up" data-aos-delay="400" class="shadow-sm">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
                                 data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare.
                                 Varius vel pharetra vel turpis nunc eget lorem dolor? <i
@@ -874,7 +875,7 @@
 
                 <div class="col-lg-12 mt-5 mt-lg-0">
                     <div>
-                        <iframe style="border:0; width: 100%; height: 270px;"
+                        <iframe style="border:0; width: 100%; height: 270px;" class="shadow-sm rounded"
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15791.338514544084!2d114.2841109!3d-8.3192265!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa9e0bf6140aa1a70!2sSD%20Negeri%202%20Kedaleman!5e0!3m2!1sen!2sid!4v1670228458226!5m2!1sen!2sid"
                             frameborder="0" allowfullscreen></iframe>
                         {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15791.338514544084!2d114.2841109!3d-8.3192265!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa9e0bf6140aa1a70!2sSD%20Negeri%202%20Kedaleman!5e0!3m2!1sen!2sid!4v1670228458226!5m2!1sen!2sid" allowfullscreen="" loading="lazy"></iframe> --}}

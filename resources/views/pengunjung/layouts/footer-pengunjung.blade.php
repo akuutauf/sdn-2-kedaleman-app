@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-6 col-md-6 footer-contact">
+                <div class="col-lg-4 col-md-6 footer-contact">
                     <h3>SDN 2 Kedaleman</h3>
                     <p>
                         Jl. Cawang Dusun Puspan, Kedaleman, <br>
@@ -35,11 +35,32 @@
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Konten Website</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Guru dan Staf</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Motivasi Guru</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Pengumuman Sekolah</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Event Sekolah</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Prestasi Siswa</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#sejarah">Sejarah Sekolah</a>
+                        </li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#guru">Guru dan Staf</a>
+                        </li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#motivasi">Motivasi Guru</a>
+                        </li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#kegiatan">Event Sekolah</a>
+                        </li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#kegiatan">Prestasi Siswa</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Link Website</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#">Guru dan Staf
+                                Sekolah</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#">Info Pengumuman</a>
+                        </li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#">Data Arsip
+                                Sekolah</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#">Info Event
+                                Sekolah</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#">Data Prestasi
+                                Siswa</a></li>
                     </ul>
                 </div>
 

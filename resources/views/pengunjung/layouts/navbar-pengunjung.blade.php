@@ -21,22 +21,18 @@
                 <li><a class="nav-link scrollto" href="#guru">Guru</a></li>
                 <li><a class="nav-link scrollto" href="#kegiatan">Kegiatan</a></li>
                 <li><a class="nav-link scrollto" href="#pertanyaan">Pertanyaan</a></li>
-                <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a href="#"><span>Link</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">Drop Down 1</a></li>
-                        <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
+                        <li><a href="#">Guru dan Staf</a></li>
+                        <li class="dropdown"><a href="#"><span>Info Sekolah</span> <i
                                     class="bi bi-chevron-right"></i></a>
                             <ul>
-                                <li><a href="#">Deep Drop Down 1</a></li>
-                                <li><a href="#">Deep Drop Down 2</a></li>
-                                <li><a href="#">Deep Drop Down 3</a></li>
-                                <li><a href="#">Deep Drop Down 4</a></li>
-                                <li><a href="#">Deep Drop Down 5</a></li>
+                                <li><a href="#">Pengumuman Sekolah</a></li>
+                                <li><a href="#">Event Sekolah</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Drop Down 2</a></li>
-                        <li><a href="#">Drop Down 3</a></li>
-                        <li><a href="#">Drop Down 4</a></li>
+                        <li><a href="#">Data Arsip Sekolah</a></li>
+                        <li><a href="#">Data Prestasi Siswa</a></li>
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="#kontak">Kontak</a></li>
