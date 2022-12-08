@@ -1,7 +1,7 @@
 @extends('layouts.base-pengunjung')
 
 @section('title')
-    <title>Sample Portfolio Page | SDN 2 Kedaleman</title>
+    <title>Pengumuman Sekolah | SDN 2 Kedaleman</title>
 @endsection
 
 @section('content-one')
@@ -54,10 +54,10 @@
 
                     <div class="col-lg-4">
                         <div class="portfolio-info">
-                            <h3>Project information</h3>
+                            <h3>Halaman Pengumuman Sekolah</h3>
                             <ul>
                                 <li><strong>Category</strong>: Web design</li>
-                                <li><strong>Client</strong>: ASU Company</li>
+                                <li><strong>Client</strong>: Poliwangi Company</li>
                                 <li><strong>Project date</strong>: 01 March, 2020</li>
                                 <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
                             </ul>

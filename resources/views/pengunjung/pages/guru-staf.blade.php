@@ -1,7 +1,7 @@
 @extends('layouts.base-pengunjung')
 
 @section('title')
-    <title>Sample | SDN 2 Kedaleman</title>
+    <title>Guru dan Staf | SDN 2 Kedaleman</title>
 @endsection
 
 @section('content-one')
@@ -25,7 +25,7 @@
         <section class="inner-page">
             <div class="container">
                 <p>
-                    Example inner page template
+                    Halaman Guru dan Staf
                 </p>
             </div>
         </section>
