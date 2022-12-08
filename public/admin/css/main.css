@@ -1,12 +1,8 @@
-body {
+.bg-theme {
     background-color: #eef2ff !important;
 }
 
-/* not use */
-.bg-img {
-    background-image: url(../images/bg-login-register.jpg) !important;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+.a-link {
+    text-decoration: none !important;
+    color: white !important;
 }

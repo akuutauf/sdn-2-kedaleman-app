@@ -1,7 +1,7 @@
 <title>Login | SDN 2 Kedaleman</title>
 <link rel="stylesheet" href="{{ asset('admin/css/main.css') }}">
 
-<x-guest-layout>
+<x-guest-layout class="">
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">

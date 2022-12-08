@@ -58,21 +58,25 @@
                         <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-tale shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
-                                <div class="card-body">
-                                    <p class="mb-4">Manajemen Guru</p>
-                                    <p class="fs-30 mb-2">4006</p>
-                                    <p>Kelola data guru dan staf</p>
-                                </div>
+                                <a href="" class="a-link">
+                                    <div class="card-body">
+                                        <p class="mb-4">Manajemen Guru</p>
+                                        <p class="fs-30 mb-2">{{ $guru }}</p>
+                                        <p>Kelola data guru dan staf</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-dark-blue shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
-                                <div class="card-body">
-                                    <p class="mb-4">Manajemen Motivasi</p>
-                                    <p class="fs-30 mb-2">61344</p>
-                                    <p>Kelola data motivasi</p>
-                                </div>
+                                <a href="" class="a-link">
+                                    <div class="card-body">
+                                        <p class="mb-4">Manajemen Motivasi</p>
+                                        <p class="fs-30 mb-2">{{ $motivasi }}</p>
+                                        <p>Kelola data motivasi</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -80,21 +84,25 @@
                         <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                             <div class="card card-light-blue shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
-                                <div class="card-body">
-                                    <p class="mb-4">Manajemen Pengumuman</p>
-                                    <p class="fs-30 mb-2">34040</p>
-                                    <p>Kelola data pengumuman</p>
-                                </div>
+                                <a href="" class="a-link">
+                                    <div class="card-body">
+                                        <p class="mb-4">Manajemen Pengumuman</p>
+                                        <p class="fs-30 mb-2">{{ $pengumuman }}</p>
+                                        <p>Kelola data pengumuman</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-6 stretch-card transparent" data-aos="fade-up" data-aos-duration="1000"
                             data-aos-easing="ease-in-sine" data-aos-once='true'>
                             <div class="card card-light-danger shadow-sm">
-                                <div class="card-body">
-                                    <p class="mb-4">Manajemen Arsip</p>
-                                    <p class="fs-30 mb-2">47033</p>
-                                    <p>Kelola data arsip sekolah</p>
-                                </div>
+                                <a href="" class="a-link">
+                                    <div class="card-body">
+                                        <p class="mb-4">Manajemen Arsip</p>
+                                        <p class="fs-30 mb-2">{{ $arsip }}</p>
+                                        <p>Kelola data arsip sekolah</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -102,21 +110,25 @@
                         <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-tale shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
-                                <div class="card-body">
-                                    <p class="mb-4">Manajemen Event</p>
-                                    <p class="fs-30 mb-2">4006</p>
-                                    <p>Kelola data event sekolah</p>
-                                </div>
+                                <a href="" class="a-link">
+                                    <div class="card-body">
+                                        <p class="mb-4">Manajemen Event</p>
+                                        <p class="fs-30 mb-2">{{ $event }}</p>
+                                        <p>Kelola data event sekolah</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-dark-blue shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
-                                <div class="card-body">
-                                    <p class="mb-4">Manajemen Prestasi</p>
-                                    <p class="fs-30 mb-2">61344</p>
-                                    <p>Kelola data prestasi siswa</p>
-                                </div>
+                                <a href="" class="a-link">
+                                    <div class="card-body">
+                                        <p class="mb-4">Manajemen Prestasi</p>
+                                        <p class="fs-30 mb-2">{{ $prestasi }}</p>
+                                        <p>Kelola data prestasi siswa</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -124,11 +136,13 @@
                         <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                             <div class="card card-light-blue shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
-                                <div class="card-body">
-                                    <p class="mb-4">Manajemen Banner</p>
-                                    <p class="fs-30 mb-2">34040</p>
-                                    <p>Kelola data gambar banner beranda</p>
-                                </div>
+                                <a href="" class="a-link">
+                                    <div class="card-body">
+                                        <p class="mb-4">Manajemen Banner</p>
+                                        <p class="fs-30 mb-2">{{ $banner }}</p>
+                                        <p>Kelola data gambar banner beranda</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>

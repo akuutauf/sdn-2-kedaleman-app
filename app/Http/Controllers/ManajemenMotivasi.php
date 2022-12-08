@@ -2,16 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Arsip;
-use App\Models\Banner;
-use App\Models\Event;
-use App\Models\Guru;
-use App\Models\Motivasi;
-use App\Models\Pengumuman;
-use App\Models\Prestasi;
 use Illuminate\Http\Request;
 
-class DashboardAdmin extends Controller
+class ManajemenMotivasi extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,14 +13,7 @@ class DashboardAdmin extends Controller
      */
     public function index()
     {
-        $guru = Guru::count();
-        $motivasi = Motivasi::count();
-        $pengumuman = Pengumuman::count();
-        $arsip = Arsip::count();
-        $event = Event::count();
-        $prestasi = Prestasi::count();
-        $banner = Banner::count();
-        return view('admin.index', compact('guru', 'motivasi', 'pengumuman', 'arsip', 'event', 'prestasi', 'banner'));
+        return view('admin.pages.kelola-motivasi.index');
     }
 
     /**

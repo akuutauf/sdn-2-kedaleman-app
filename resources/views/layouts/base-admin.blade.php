@@ -35,6 +35,9 @@
 
     {{-- Aos Js animation --}}
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    {{-- Custom css --}}
+    <link rel="stylesheet" href="{{ asset('admin/css/main.css') }}">
 </head>
 
 <body>
