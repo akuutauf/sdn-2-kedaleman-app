@@ -58,7 +58,7 @@
                         <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-tale shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
-                                <a href="" class="a-link">
+                                <a href="{{ route('admin.guru') }}" class="a-link">
                                     <div class="card-body">
                                         <p class="mb-4">Manajemen Guru</p>
                                         <p class="fs-30 mb-2">{{ $guru }}</p>
@@ -70,7 +70,7 @@
                         <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-dark-blue shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
-                                <a href="" class="a-link">
+                                <a href="{{ route('admin.motivasi') }}" class="a-link">
                                     <div class="card-body">
                                         <p class="mb-4">Manajemen Motivasi</p>
                                         <p class="fs-30 mb-2">{{ $motivasi }}</p>
@@ -84,7 +84,7 @@
                         <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                             <div class="card card-light-blue shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
-                                <a href="" class="a-link">
+                                <a href="{{ route('admin.pengumuman') }}" class="a-link">
                                     <div class="card-body">
                                         <p class="mb-4">Manajemen Pengumuman</p>
                                         <p class="fs-30 mb-2">{{ $pengumuman }}</p>
@@ -96,7 +96,7 @@
                         <div class="col-md-6 stretch-card transparent" data-aos="fade-up" data-aos-duration="1000"
                             data-aos-easing="ease-in-sine" data-aos-once='true'>
                             <div class="card card-light-danger shadow-sm">
-                                <a href="" class="a-link">
+                                <a href="{{ route('admin.arsip') }}" class="a-link">
                                     <div class="card-body">
                                         <p class="mb-4">Manajemen Arsip</p>
                                         <p class="fs-30 mb-2">{{ $arsip }}</p>
@@ -110,7 +110,7 @@
                         <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-tale shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
-                                <a href="" class="a-link">
+                                <a href="{{ route('admin.event') }}" class="a-link">
                                     <div class="card-body">
                                         <p class="mb-4">Manajemen Event</p>
                                         <p class="fs-30 mb-2">{{ $event }}</p>
@@ -122,7 +122,7 @@
                         <div class="col-md-6 mb-4 stretch-card transparent">
                             <div class="card card-dark-blue shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
-                                <a href="" class="a-link">
+                                <a href="{{ route('admin.prestasi') }}" class="a-link">
                                     <div class="card-body">
                                         <p class="mb-4">Manajemen Prestasi</p>
                                         <p class="fs-30 mb-2">{{ $prestasi }}</p>
@@ -136,7 +136,7 @@
                         <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                             <div class="card card-light-blue shadow-sm" data-aos="fade-up" data-aos-duration="1000"
                                 data-aos-easing="ease-in-sine" data-aos-once='true'>
-                                <a href="" class="a-link">
+                                <a href="{{ route('admin.banner') }}" class="a-link">
                                     <div class="card-body">
                                         <p class="mb-4">Manajemen Banner</p>
                                         <p class="fs-30 mb-2">{{ $banner }}</p>
@@ -414,7 +414,7 @@
                 <div class="col-md-12 grid-margin stretch-card">
                     <div class="card shadow-sm" data-aos="zoom-out-up" data-aos-duration="1500" data-aos-once='true'>
                         <div class="card-body">
-                            <p class="card-title">Tabel Data Websitep</p>
+                            <p class="card-title">Tabel Data Website</p>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="table-responsive">

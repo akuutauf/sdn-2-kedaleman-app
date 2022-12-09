@@ -176,7 +176,7 @@
                         <div class="count-box">
                             <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="2"
                                 class="purecounter"></span>
-                            <p>Kerjasama Sekolah</p>
+                            <p>Arsip Sekolah</p>
                         </div>
                     </div>
 
