@@ -23,7 +23,7 @@ class ManajemenEvent extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.kelola-event.create');
     }
 
     /**

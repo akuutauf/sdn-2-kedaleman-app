@@ -23,7 +23,7 @@ class ManajemenMotivasi extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.kelola-motivasi.create');
     }
 
     /**

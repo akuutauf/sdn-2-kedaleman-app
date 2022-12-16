@@ -23,7 +23,7 @@ class ManajemenGuru extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.kelola-guru.create');
     }
 
     /**

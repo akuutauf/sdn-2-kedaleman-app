@@ -23,7 +23,7 @@ class ManajemenArsip extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.kelola-arsip.create');
     }
 
     /**

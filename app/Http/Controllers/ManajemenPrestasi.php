@@ -23,7 +23,7 @@ class ManajemenPrestasi extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.kelola-prestasi.create');
     }
 
     /**

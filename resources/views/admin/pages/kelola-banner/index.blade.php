@@ -15,7 +15,7 @@
             <div class="animated fadeIn">
                 <div class="row justify-content-start">
                     <div class="col-sm-12">
-                        <div class="alert  alert-success alert-dismissible fade show" role="alert">
+                        <div class="alert  alert-success alert-dismissible fade show" role="alert" data-aos="fade-down">
                             <span class="badge badge-pill badge-success px-3 py-2">Selamat Datang
                                 {{ Auth::user()->name }}</span>&ensp;
                             Panel Manajemen Data Banner
@@ -33,7 +33,9 @@
                             <div class="container-fluid">
                                 <div class="row justify-content-around">
                                     <div class="col-md-3">
-                                        <a href="" class="btn btn-outline-primary mt-4">Tambah Data
+                                        <a href="{{ route('admin.create.banner') }}"
+                                            class="btn btn-outline-primary mt-4">Tambah
+                                            Data
                                             Banner</a>
                                     </div>
                                     <div class="col-md-8">
@@ -76,8 +78,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="shadow-sm" data-aos="zoom-out-up" data-aos-duration="1500"
-                                                data-aos-once='true'>
+                                            <tr class="shadow-sm">
                                                 <td class="text-center">1</td>
                                                 <td class="text-center">Portfolio Sekolah</td>
                                                 <td class="text-center"><img
