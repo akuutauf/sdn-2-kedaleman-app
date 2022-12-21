@@ -45,7 +45,7 @@
                             <div class="col-md-12 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
-                                        <form class="forms-sample">
+                                        <form action="{{ $action }}" class="forms-sample">
                                             @csrf
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -91,8 +91,8 @@
                                                         <label for="gender_guru">Gender</label>
                                                         <select class="form-control" id="gender_guru" name="gender_guru">
                                                             <option>Pilih Gender</option>
-                                                            <option>Laki-laki</option>
-                                                            <option>Perempuan</option>
+                                                            <option value="Laki-laki">Laki-laki</option>
+                                                            <option value="Perempuan">Perempuan</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -143,9 +143,9 @@
                                                         <select class="form-control" id="jabatan_guru"
                                                             name="jabatan_guru">
                                                             <option>Pilih Jabatan Guru</option>
-                                                            <option>Guru Pengajar</option>
-                                                            <option>Guru PNS</option>
-                                                            <option>Guru Honorer</option>
+                                                            <option value="Guru Pengajar">Guru Pengajar</option>
+                                                            <option value="Guru PNS">Guru PNS</option>
+                                                            <option value="Guru Honorer">Guru Honorer</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -154,9 +154,9 @@
                                                         <label for="status_guru">Status</label>
                                                         <select class="form-control" id="status_guru" name="status_guru">
                                                             <option>Pilih Status Guru</option>
-                                                            <option>Aktif</option>
-                                                            <option>Berhenti</option>
-                                                            <option>Pindah</option>
+                                                            <option value="Aktif">Aktif</option>
+                                                            <option value="Berhenti">Berhenti</option>
+                                                            <option value="Pindah Sekolah">Pindah Sekolah</option>
                                                         </select>
                                                     </div>
                                                 </div>

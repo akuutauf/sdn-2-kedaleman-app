@@ -79,45 +79,36 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="shadow-sm">
-                                                <td class="text-center">1</td>
-                                                <td class="text-center">Taufik Hidayat</td>
-                                                <td class="text-center">362055401019</td>
-                                                <td class="text-center"><img
-                                                        src="{{ asset('admin/images/img-data/example-profile.png') }}"
-                                                        alt="" class="img-fluid"></td>
-                                                <td class="text-center">taufikhidayat09121@gmail.com</td>
-                                                <td class="text-center">Aktif</td>
-                                                <td class="text-center">
-                                                    <div class="btn-group-vertical" role="group"
-                                                        aria-label="Basic example">
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-success">Edit</a>
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-danger">Delete</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <br>
-                                            <tr class="shadow-sm">
-                                                <td class="text-center">2</td>
-                                                <td class="text-center">Taufik Hidayat</td>
-                                                <td class="text-center">362055401019</td>
-                                                <td class="text-center"><img
-                                                        src="{{ asset('admin/images/img-data/example-profile.png') }}"
-                                                        alt="" class="img-fluid"></td>
-                                                <td class="text-center">taufikhidayat09121@gmail.com</td>
-                                                <td class="text-center">Aktif</td>
-                                                <td class="text-center">
-                                                    <div class="btn-group-vertical" role="group"
-                                                        aria-label="Basic example">
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-success">Edit</a>
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-danger">Delete</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            @php
+                                                $no = 1;
+                                            @endphp
+                                            @foreach ($guru as $itemGuru)
+                                                <tr class="shadow-sm">
+                                                    <td class="text-center">{{ $no }}</td>
+                                                    <td class="text-center">{{ $itemGuru->nama_guru }}</td>
+                                                    <td class="text-center">{{ $itemGuru->nip_guru }}</td>
+                                                    <td class="text-center"><img
+                                                            @if ($itemGuru->foto_guru == '') src="{{ asset('img/ilustrator/avatar-logo.png') }}"
+                                                         @else
+                                                         src="{{ $itemGuru->foto_guru }}" @endif
+                                                            alt="" class="img-fluid"></td>
+                                                    <td class="text-center">{{ $itemGuru->email_guru }}</td>
+                                                    <td class="text-center">{{ $itemGuru->status_guru }}</td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group-vertical" role="group"
+                                                            aria-label="Basic example">
+                                                            <a href="{{ route('admin.edit.guru', $itemGuru->id) }}"
+                                                                type="button" class="btn btn-inverse-success">Edit</a>
+                                                            <a href="{{ route('admin.delete.guru', $itemGuru->id) }}"
+                                                                type="button" class="btn btn-inverse-danger">Delete</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <br>
+                                                @php
+                                                    $no++;
+                                                @endphp
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Guru;
 use Illuminate\Http\Request;
 
 class ManajemenGuru extends Controller
@@ -13,7 +14,10 @@ class ManajemenGuru extends Controller
      */
     public function index()
     {
-        return view('admin.pages.kelola-guru.index');
+        $data = [
+            'guru' => Guru::all()
+        ];
+        return view('admin.pages.kelola-guru.index', $data);
     }
 
     /**
@@ -23,7 +27,10 @@ class ManajemenGuru extends Controller
      */
     public function create()
     {
-        return view('admin.pages.kelola-guru.create');
+        $data = [
+            'action' => route('admin.store.guru')
+        ];
+        return view('admin.pages.kelola-guru.create', $data);
     }
 
     /**
@@ -56,7 +63,11 @@ class ManajemenGuru extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = [
+            'guru'  => Guru::find($id),
+            'action' => route('admin.update.guru', $id)
+        ];
+        return view('admin.pages.kelola-guru.form', $data);
     }
 
     /**
