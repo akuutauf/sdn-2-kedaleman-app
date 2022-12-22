@@ -88,9 +88,9 @@
                                                     <td class="text-center">{{ $itemGuru->nama_guru }}</td>
                                                     <td class="text-center">{{ $itemGuru->nip_guru }}</td>
                                                     <td class="text-center"><img
-                                                            @if ($itemGuru->foto_guru == '') src="{{ asset('img/ilustrator/avatar-logo.png') }}"
+                                                            @if ($itemGuru->foto_guru == '') src="{{ asset('images/guru/' . $itemGuru->foto_guru) }}"
                                                          @else
-                                                         src="{{ $itemGuru->foto_guru }}" @endif
+                                                         src="{{ asset('images/guru/' . $itemGuru->foto_guru) }}" @endif
                                                             alt="" class="img-fluid"></td>
                                                     <td class="text-center">{{ $itemGuru->email_guru }}</td>
                                                     <td class="text-center">{{ $itemGuru->status_guru }}</td>

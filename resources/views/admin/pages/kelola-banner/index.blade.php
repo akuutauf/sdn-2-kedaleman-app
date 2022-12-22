@@ -78,24 +78,32 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="shadow-sm">
-                                                <td class="text-center">1</td>
-                                                <td class="text-center">Portfolio Sekolah</td>
-                                                <td class="text-center"><img
-                                                        src="{{ asset('admin/images/img-data/example-profile.png') }}"
-                                                        alt="" class="img-fluid"></td>
-                                                <td class="text-center">Aktif</td>
-                                                <td class="text-center">
-                                                    <div class="btn-group-vertical" role="group"
-                                                        aria-label="Basic example">
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-success">Edit</a>
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-danger">Delete</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <br>
+                                            @php
+                                                $no = 1;
+                                            @endphp
+                                            @foreach ($banner as $itemBanner)
+                                                <tr class="shadow-sm">
+                                                    <td class="text-center">{{ $no }}</td>
+                                                    <td class="text-center">{{ $itemBanner->nama_banner }}</td>
+                                                    <td class="text-center"><img
+                                                            src="{{ asset('images/banner/' . $itemBanner->foto_banner) }}"
+                                                            alt="" class="img-fluid"></td>
+                                                    <td class="text-center">{{ $itemBanner->status_banner }}</td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group-vertical" role="group"
+                                                            aria-label="Basic example">
+                                                            <a href="{{ route('admin.edit.banner', $itemBanner->id) }}"
+                                                                type="button" class="btn btn-inverse-success">Edit</a>
+                                                            <a href="{{ route('admin.delete.banner', $itemBanner->id) }}"
+                                                                type="button" class="btn btn-inverse-danger">Delete</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <br>
+                                                @php
+                                                    $no++;
+                                                @endphp
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

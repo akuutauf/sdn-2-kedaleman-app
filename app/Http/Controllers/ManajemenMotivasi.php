@@ -1,84 +1,57 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\Controller;
+use App\Models\Motivasi;
+use App\Models\Guru;
 use Illuminate\Http\Request;
 
 class ManajemenMotivasi extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        return view('admin.pages.kelola-motivasi.index');
+        $data = [
+            'guru' => Guru::all(),
+            'motivasi' => Motivasi::all()
+        ];
+        return view('admin.pages.kelola-motivasi.index', $data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        return view('admin.pages.kelola-motivasi.create');
+        $data = [
+            'guru' => Guru::all(),
+            'action' => route('admin.store.motivasi')
+        ];
+        return view('admin.pages.kelola-motivasi.create', $data);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        Motivasi::create($request->all());
+        return redirect()->route('admin.motivasi')->with('success', 'Motivasi berhasil di tambahkan');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $data = [
+            'guru' => Guru::all(),
+            'motivasi'  => Motivasi::find($id),
+            'action' => route('admin.update.motivasi', $id)
+        ];
+        return view('admin.pages.kelola-motivasi.form', $data);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        Motivasi::where('id', $request->id)->update($request->only(['id_guru', 'pesan_motivasi', 'status_motivasi']));
+        return redirect()->route('admin.motivasi')->with('success', 'Motivasi berhasil di Update');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        Motivasi::where('id', $id)->delete();
+        return redirect()->route('admin.motivasi')->with('success', 'Motivasi berhasil di Hapus');
     }
+
 }

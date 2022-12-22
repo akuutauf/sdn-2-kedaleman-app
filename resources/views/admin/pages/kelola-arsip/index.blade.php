@@ -80,23 +80,31 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="shadow-sm">
-                                                <td class="text-center">1</td>
-                                                <td class="text-center">Jadwal Pelajaran Kelas 6</td>
-                                                <td class="text-center">Jadwal Mata Pelajaran</td>
-                                                <td class="text-center">Kepala Sekolah</td>
-                                                <td class="text-center">09/12/2022</td>
-                                                <td class="text-center">
-                                                    <div class="btn-group-vertical" role="group"
-                                                        aria-label="Basic example">
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-success">Edit</a>
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-danger">Delete</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <br>
+                                            @php
+                                                $no = 1;
+                                            @endphp
+                                            @foreach ($arsip as $itemArsip)
+                                                <tr class="shadow-sm">
+                                                    <td class="text-center">{{ $no }}</td>
+                                                    <td class="text-center">{{ $itemArsip->nama_file_arsip }}</td>
+                                                    <td class="text-center">{{ $itemArsip->jenis_file_arsip }}</td>
+                                                    <td class="text-center">{{ $itemArsip->tanggal_upload_arsip }}</td>
+                                                    <td class="text-center">{{ $itemArsip->desc_file_arsip }}</td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group-vertical" role="group"
+                                                            aria-label="Basic example">
+                                                            <a href="{{ route('admin.edit.arsip', $itemArsip->id) }}"
+                                                                type="button" class="btn btn-inverse-success">Edit</a>
+                                                            <a href="{{ route('admin.delete.arsip', $itemArsip->id) }}"
+                                                                type="button" class="btn btn-inverse-danger">Delete</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <br>
+                                                @php
+                                                    $no++;
+                                                @endphp
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

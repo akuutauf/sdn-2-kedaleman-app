@@ -12,6 +12,8 @@ class Guru extends Model
     protected $table = 'gurus';
     protected $primaryKey = 'id';
     protected $fillable = ['id', 'nama_guru', 'foto_guru', 'nik_guru', 'nuptk_guru', 'nip_guru', 'gender_guru', 'tempat_lahir_guru', 'tanggal_lahir_guru', 'jabatan_guru', 'email_guru', 'no_telp_guru', 'alamat_guru', 'status_guru'];
+    protected $guarded = [];
+    public $timestamps = false;
 
     // relasi one to one ke model motivasi (not fix)
     public function motivasi()

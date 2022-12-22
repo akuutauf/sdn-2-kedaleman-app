@@ -45,7 +45,8 @@
                             <div class="col-md-12 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
-                                        <form class="forms-sample">
+                                        <form action="{{ $action }}" class="forms-sample" method="POST"
+                                            enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -64,17 +65,11 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="foto_banner">Foto Banner</label>
-                                                        <input id="foto_banner" type="file" name="foto_banner"
-                                                            class="file-upload-default">
-                                                        <div class="input-group col-xs-12">
-                                                            <input type="text" class="form-control file-upload-info"
-                                                                disabled placeholder="Upload Gambar">
-                                                            <span class="input-group-append">
-                                                                <button class="file-upload-browse btn btn-primary"
-                                                                    type="button">Unggah</button>
-                                                            </span>
-                                                        </div>
+                                                        <label for="image" class="medium">Foto Banner <span
+                                                                class="fw-medium">(*max img
+                                                                2Mb)</span>:</label>
+                                                        <input type="file" class="form-control form-theme"
+                                                            id="foto_banner" name="file" placeholder="Foto Banner">
                                                     </div>
                                                 </div>
                                             </div>
@@ -85,8 +80,8 @@
                                                         <select class="form-control" id="status_banner"
                                                             name="status_banner">
                                                             <option>Pilih Status Banner</option>
-                                                            <option>Aktif</option>
-                                                            <option>Non-aktif</option>
+                                                            <option value="Aktif">Aktif</option>
+                                                            <option value="Non-Aktif">Non-aktif</option>
                                                         </select>
                                                     </div>
                                                 </div>

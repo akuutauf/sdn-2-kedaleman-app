@@ -12,4 +12,6 @@ class Pengumuman extends Model
     protected $table = 'pengumumans';
     protected $primaryKey = 'id';
     protected $fillable = ['id', 'judul_pengumuman', 'pembuat_pengumuman', 'penerima_pengumuman', 'perihal_pengumuman', 'tanggal_pengumuman', 'isi_pengumuman', 'lampiran_pengumuman'];
+    public $timestamps = false;
+    protected $guarded = [];
 }

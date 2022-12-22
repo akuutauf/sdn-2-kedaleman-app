@@ -78,26 +78,33 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="shadow-sm">
-                                                <td class="text-center">1</td>
-                                                <td class="text-center">Taufik Hidayat</td>
-                                                <td class="text-center"><img
-                                                        src="{{ asset('admin/images/img-data/example-profile.png') }}"
-                                                        alt="" class="img-fluid"></td>
-                                                <td class="text-center">Sukses terdiri dari 3 hal penting, yaitu kerja
-                                                    keras, berdoa dan selalu berbakti kepada orang tua.</td>
-                                                <td class="text-center">Aktif</td>
-                                                <td class="text-center">
-                                                    <div class="btn-group-vertical" role="group"
-                                                        aria-label="Basic example">
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-success">Edit</a>
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-danger">Delete</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <br>
+                                            @php
+                                                $no = 1;
+                                            @endphp
+                                            @foreach ($motivasi as $itemMotivasi)
+                                                <tr class="shadow-sm">
+                                                    <td class="text-center">{{ $no }}</td>
+                                                    <td class="text-center"></td>
+                                                    <td class="text-center"><img
+                                                            src="{{ asset('images/guru/' . $itemMotivasi->foto_guru) }}"
+                                                            alt="" class="img-fluid"></td>
+                                                    <td class="text-center">{{ $itemMotivasi->pesan_motivasi }}</td>
+                                                    <td class="text-center">{{ $itemMotivasi->status_motivasi }}</td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group-vertical" role="group"
+                                                            aria-label="Basic example">
+                                                            <a href="{{ route('admin.edit.motivasi', $itemMotivasi->id) }}"
+                                                                type="button" class="btn btn-inverse-success">Edit</a>
+                                                            <a href="{{ route('admin.delete.motivasi', $itemMotivasi->id) }}"
+                                                                type="button" class="btn btn-inverse-danger">Delete</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <br>
+                                                @php
+                                                    $no++;
+                                                @endphp
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

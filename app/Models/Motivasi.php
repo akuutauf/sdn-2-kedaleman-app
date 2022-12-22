@@ -12,6 +12,7 @@ class Motivasi extends Model
     protected $table = 'motivasis';
     protected $primaryKey = 'id';
     protected $fillable = ['id', 'id_guru', 'pesan_motivasi', 'status_motivasi'];
+    public $timestamps = false;
 
     // relasi one to one ke model guru (not fix)
     public function guru()

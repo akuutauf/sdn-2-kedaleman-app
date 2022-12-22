@@ -45,7 +45,8 @@
                             <div class="col-md-12 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
-                                        <form class="forms-sample">
+                                        <form action="{{ $action }}" class="forms-sample" method="POST"
+                                            enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -97,25 +98,20 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="lampiran_pengumuman">File Lampiran</label>
-                                                        <input id="lampiran_pengumuman" type="file"
-                                                            name="lampiran_pengumuman" class="file-upload-default">
-                                                        <div class="input-group col-xs-12">
-                                                            <input type="text" class="form-control file-upload-info"
-                                                                disabled placeholder="Upload File">
-                                                            <span class="input-group-append">
-                                                                <button class="file-upload-browse btn btn-primary"
-                                                                    type="button">Unggah</button>
-                                                            </span>
-                                                        </div>
+                                                        <label for="lampiran_pengumuman" class="medium">Lampiran File <span
+                                                                class="fw-medium">(*max file
+                                                                10Mb)</span>:</label>
+                                                        <input type="file" class="form-control form-theme"
+                                                            id="lampiran_pengumuman" name="file"
+                                                            placeholder="Lampiran File">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label for="pesan_motivasi">Isi Pesan Pengumuman</label>
-                                                        <textarea class="form-control" id="pesan_motivasi" rows="4" name="pesan_motivasi"></textarea>
+                                                        <label for="isi_pengumuman">Isi Pesan Pengumuman</label>
+                                                        <textarea class="form-control" id="isi_pengumuman" rows="4" name="isi_pengumuman"></textarea>
                                                     </div>
                                                 </div>
                                             </div>

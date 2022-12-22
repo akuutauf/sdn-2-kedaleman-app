@@ -45,7 +45,8 @@
                             <div class="col-md-12 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
-                                        <form class="forms-sample">
+                                        <form action="{{ $action }}" class="forms-sample" method="POST"
+                                            enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -60,9 +61,12 @@
                                                         <label for="id_guru">Guru</label>
                                                         <select class="form-control" id="id_guru" name="id_guru">
                                                             <option>Pilih Guru</option>
-                                                            <option>Guru 1</option>
-                                                            <option>Guru 2</option>
-                                                            <option>Guru 3</option>
+                                                            @foreach ($guru as $item)
+                                                                <option value="{{ $item->id }}"
+                                                                    {{ isset($motivasi) && $motivasi->id_guru == $item->id ? 'selected' : '' }}>
+                                                                    {{ $item->nama_guru }}
+                                                                </option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                 </div>

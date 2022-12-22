@@ -45,7 +45,8 @@
                             <div class="col-md-12 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
-                                        <form class="forms-sample">
+                                        <form action="{{ $action }}" class="forms-sample" method="POST"
+                                            enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -64,17 +65,11 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="kode_file_arsip">File Arsip</label>
-                                                        <input id="kode_file_arsip" type="file" name="kode_file_arsip"
-                                                            class="file-upload-default">
-                                                        <div class="input-group col-xs-12">
-                                                            <input type="text" class="form-control file-upload-info"
-                                                                disabled placeholder="Upload File Arsip">
-                                                            <span class="input-group-append">
-                                                                <button class="file-upload-browse btn btn-primary"
-                                                                    type="button">Unggah</button>
-                                                            </span>
-                                                        </div>
+                                                        <label for="kode_file_arsip" class="medium"> File Arsip <span
+                                                                class="fw-medium">(*max file
+                                                                10Mb)</span>:</label>
+                                                        <input type="file" class="form-control form-theme"
+                                                            id="kode_file_arsip" name="file" placeholder=" File Arsip">
                                                     </div>
                                                 </div>
                                             </div>
@@ -92,10 +87,10 @@
                                                         <select class="form-control" id="jenis_file_arsip"
                                                             name="jenis_file_arsip">
                                                             <option>Pilih Jenis Arsip</option>
-                                                            <option>Arsip Guru</option>
-                                                            <option>Arsip Nilai</option>
-                                                            <option>Arsip Siswa</option>
-                                                            <option>Arsip Prestasi</option>
+                                                            <option value="Arsip Guru">Arsip Guru</option>
+                                                            <option value="Arsip Nilai">Arsip Nilai</option>
+                                                            <option value="Arsip Siswa">Arsip Siswa</option>
+                                                            <option value="Arsip Prestasi">Arsip Prestasi</option>
                                                         </select>
                                                     </div>
                                                 </div>

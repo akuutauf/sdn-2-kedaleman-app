@@ -45,7 +45,8 @@
                             <div class="col-md-12 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
-                                        <form action="{{ $action }}" class="forms-sample">
+                                        <form action="{{ $action }}" class="forms-sample" method="POST"
+                                            enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -66,16 +67,11 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="foto_guru">Foto</label>
-                                                        <input id="foto_guru" type="file" name="foto_guru"
-                                                            class="file-upload-default" value="{{ $guru->foto_guru }}">
-                                                        <div class="input-group col-xs-12">
-                                                            <input type="text" class="form-control file-upload-info"
-                                                                disabled placeholder="Upload Gambar">
-                                                            <span class="input-group-append">
-                                                                <button class="file-upload-browse btn btn-primary"
-                                                                    type="button">Unggah</button>
-                                                            </span>
-                                                        </div>
+                                                        <label for="image" class="medium">Foto Guru <span
+                                                                class="fw-medium">(*max img
+                                                                2Mb)</span>:</label>
+                                                        <input type="file" class="form-control form-theme" id="foto_guru"
+                                                            name="file" placeholder="Foto Guru">
                                                     </div>
                                                 </div>
                                             </div>

@@ -81,27 +81,35 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="shadow-sm">
-                                                <td class="text-center">1</td>
-                                                <td class="text-center">Lomba 17 Agustus 2023</td>
-                                                <td class="text-center"><img
-                                                        src="{{ asset('admin/images/img-data/example-profile.png') }}"
-                                                        alt="" class="img-fluid"></td>
-                                                <td class="text-center">Kepala Sekolah</td>
-                                                <td class="text-center">17/08/2023</td>
-                                                <td class="text-center">Rogojampi</td>
-                                                <td class="text-center">Aktif</td>
-                                                <td class="text-center">
-                                                    <div class="btn-group-vertical" role="group"
-                                                        aria-label="Basic example">
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-success">Edit</a>
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-danger">Delete</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <br>
+                                            @php
+                                                $no = 1;
+                                            @endphp
+                                            @foreach ($event as $itemEvent)
+                                                <tr class="shadow-sm">
+                                                    <td class="text-center">{{ $no }}</td>
+                                                    <td class="text-center">{{ $itemEvent->judul_event }}</td>
+                                                    <td class="text-center"><img
+                                                            src="{{ asset('images/event/' . $itemEvent->foto_event) }}"
+                                                            alt="" class="img-fluid"></td>
+                                                    <td class="text-center">{{ $itemEvent->penyelenggara_event }}</td>
+                                                    <td class="text-center">{{ $itemEvent->tanggal_event }}</td>
+                                                    <td class="text-center">{{ $itemEvent->lokasi_event }}</td>
+                                                    <td class="text-center">{{ $itemEvent->status_event }}</td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group-vertical" role="group"
+                                                            aria-label="Basic example">
+                                                            <a href="{{ route('admin.edit.event', $itemEvent->id) }}"
+                                                                type="button" class="btn btn-inverse-success">Edit</a>
+                                                            <a href="{{ route('admin.delete.event', $itemEvent->id) }}"
+                                                                type="button" class="btn btn-inverse-danger">Delete</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <br>
+                                                @php
+                                                    $no++;
+                                                @endphp
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

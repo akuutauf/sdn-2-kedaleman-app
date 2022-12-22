@@ -74,29 +74,35 @@
                                                 <th class="text-center">Perihal</th>
                                                 <th class="text-center">Pembuat</th>
                                                 <th class="text-center">Tanggal</th>
-                                                <th width="15%" class="text-center">Status</th>
                                                 <th width="15%" class="text-center">Menu</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="shadow-sm">
-                                                <td class="text-center">1</td>
-                                                <td class="text-center">Pendaftaran Siswa Baru 2023</td>
-                                                <td class="text-center">Kegiatan Pendaftaran Siswa Baru</td>
-                                                <td class="text-center">Kepala Sekolah</td>
-                                                <td class="text-center">09/12/2022</td>
-                                                <td class="text-center">Aktif</td>
-                                                <td class="text-center">
-                                                    <div class="btn-group-vertical" role="group"
-                                                        aria-label="Basic example">
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-success">Edit</a>
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-danger">Delete</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <br>
+                                            @php
+                                                $no = 1;
+                                            @endphp
+                                            @foreach ($pengumuman as $itemPengumuman)
+                                                <tr class="shadow-sm">
+                                                    <td class="text-center">{{ $no }}</td>
+                                                    <td class="text-center">{{ $itemPengumuman->judul_pengumuman }}</td>
+                                                    <td class="text-center">{{ $itemPengumuman->perihal_pengumuman }}</td>
+                                                    <td class="text-center">{{ $itemPengumuman->pembuat_pengumuman }}</td>
+                                                    <td class="text-center">{{ $itemPengumuman->tanggal_pengumuman }}</td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group-vertical" role="group"
+                                                            aria-label="Basic example">
+                                                            <a href="{{ route('admin.edit.pengumuman', $itemPengumuman->id) }}"
+                                                                type="button" class="btn btn-inverse-success">Edit</a>
+                                                            <a href="{{ route('admin.delete.pengumuman', $itemPengumuman->id) }}"
+                                                                type="button" class="btn btn-inverse-danger">Delete</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <br>
+                                                @php
+                                                    $no++;
+                                                @endphp
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

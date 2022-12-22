@@ -72,35 +72,41 @@
                                                 <th width="5%" class="text-center">No</th>
                                                 <th class="text-center">Judul</th>
                                                 <th width="15%" class="text-center">Foto</th>
-                                                <th class="text-center">Penyelenggara</th>
+                                                <th class="text-center">Nama Perlombaan</th>
                                                 <th class="text-center">Tanggal</th>
-                                                <th class="text-center">Lokasi</th>
-                                                <th width="15%" class="text-center">Status</th>
+                                                <th class="text-center">Peraih Prestasi</th>
                                                 <th width="15%" class="text-center">Menu</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="shadow-sm">
-                                                <td class="text-center">1</td>
-                                                <td class="text-center">Lomba 17 Agustus 2023</td>
-                                                <td class="text-center"><img
-                                                        src="{{ asset('admin/images/img-data/example-profile.png') }}"
-                                                        alt="" class="img-fluid"></td>
-                                                <td class="text-center">Kepala Sekolah</td>
-                                                <td class="text-center">17/08/2023</td>
-                                                <td class="text-center">Rogojampi</td>
-                                                <td class="text-center">Aktif</td>
-                                                <td class="text-center">
-                                                    <div class="btn-group-vertical" role="group"
-                                                        aria-label="Basic example">
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-success">Edit</a>
-                                                        <a href="" type="button"
-                                                            class="btn btn-inverse-danger">Delete</a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <br>
+                                            @php
+                                                $no = 1;
+                                            @endphp
+                                            @foreach ($prestasi as $itemPrestasi)
+                                                <tr class="shadow-sm">
+                                                    <td class="text-center">{{ $no }}</td>
+                                                    <td class="text-center">{{ $itemPrestasi->judul_prestasi }}</td>
+                                                    <td class="text-center"><img
+                                                            src="{{ asset('images/prestasi/' . $itemPrestasi->foto_prestasi) }}"
+                                                            alt="" class="img-fluid"></td>
+                                                    <td class="text-center">{{ $itemPrestasi->nama_perlombaan }}</td>
+                                                    <td class="text-center">{{ $itemPrestasi->tanggal_prestasi }}</td>
+                                                    <td class="text-center">{{ $itemPrestasi->peraih_prestasi }}</td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group-vertical" role="group"
+                                                            aria-label="Basic example">
+                                                            <a href="{{ route('admin.edit.prestasi', $itemPrestasi->id) }}"
+                                                                type="button" class="btn btn-inverse-success">Edit</a>
+                                                            <a href="{{ route('admin.delete.prestasi', $itemPrestasi->id) }}"
+                                                                type="button" class="btn btn-inverse-danger">Delete</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <br>
+                                                @php
+                                                    $no++;
+                                                @endphp
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
