@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Waktu pembuatan: 07 Des 2022 pada 07.33
+-- Waktu pembuatan: 23 Des 2022 pada 02.25
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -108,6 +108,13 @@ CREATE TABLE `gurus` (
   `status_guru` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data untuk tabel `gurus`
+--
+
+INSERT INTO `gurus` (`id`, `nama_guru`, `foto_guru`, `nik_guru`, `nuptk_guru`, `nip_guru`, `gender_guru`, `tempat_lahir_guru`, `tanggal_lahir_guru`, `jabatan_guru`, `email_guru`, `no_telp_guru`, `alamat_guru`, `status_guru`) VALUES
+(1, 'Taufik Hidayat', 'image_473706986250_629260154579.jpg', '3510131209010003', '362055401019', '362055401019', 'Laki-laki', 'Banyuwangi', '2001-09-12', 'Guru Pengajar', 'taufikhidayat09121@gmail.com', '082332743884', 'Dusun Puspan Desa Kedaleman RT 01 Rw 01 Kecamatan Rogojampi', 'Aktif');
+
 -- --------------------------------------------------------
 
 --
@@ -149,6 +156,13 @@ CREATE TABLE `motivasis` (
   `pesan_motivasi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status_motivasi` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `motivasis`
+--
+
+INSERT INTO `motivasis` (`id`, `id_guru`, `pesan_motivasi`, `status_motivasi`) VALUES
+(2, 1, 'Belajar adalah sesuatu hal yang menyenangkan, jika kita menemukan satu tujuan yang sama.', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -236,7 +250,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin Sekolah', 'sdn2kedaleman@gmail.com', NULL, '$2y$10$i4y5eRTZzO5rTtQsNQyHYuGjhsFlGRlf36OzAk/HutYQr25Ed9/lO', NULL, '2022-12-06 23:28:20', '2022-12-06 23:28:20');
+(1, 'Admin Sekolah', 'sdn2kedaleman@gmail.com', NULL, '$2y$10$i4y5eRTZzO5rTtQsNQyHYuGjhsFlGRlf36OzAk/HutYQr25Ed9/lO', NULL, '2022-12-06 23:28:20', '2022-12-06 23:28:20'),
+(2, 'Admin Sekolah', 'adminsekolah@gmail.com', NULL, '$2y$10$3v11R56Qqj/OYCyInQ12leB5rDWRqoEdLyKVA7V.LSTepkV8j778G', NULL, '2022-12-13 19:39:01', '2022-12-13 19:39:01');
 
 --
 -- Indexes for dumped tables
@@ -351,7 +366,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT untuk tabel `gurus`
 --
 ALTER TABLE `gurus`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
@@ -363,7 +378,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `motivasis`
 --
 ALTER TABLE `motivasis`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengumumans`
@@ -387,7 +402,7 @@ ALTER TABLE `prestasis`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

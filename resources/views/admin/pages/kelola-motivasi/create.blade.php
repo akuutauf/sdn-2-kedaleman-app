@@ -76,8 +76,8 @@
                                                         <select class="form-control" id="status_motivasi"
                                                             name="status_motivasi">
                                                             <option>Pilih Status Motivasi</option>
-                                                            <option>Aktif</option>
-                                                            <option>Non-aktif</option>
+                                                            <option value="Aktif">Aktif</option>
+                                                            <option value="Non-aktif">Non-aktif</option>
                                                         </select>
                                                     </div>
                                                 </div>

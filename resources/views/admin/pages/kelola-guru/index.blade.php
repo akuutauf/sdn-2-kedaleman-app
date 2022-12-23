@@ -88,7 +88,7 @@
                                                     <td class="text-center">{{ $itemGuru->nama_guru }}</td>
                                                     <td class="text-center">{{ $itemGuru->nip_guru }}</td>
                                                     <td class="text-center"><img
-                                                            @if ($itemGuru->foto_guru == '') src="{{ asset('images/guru/' . $itemGuru->foto_guru) }}"
+                                                            @if ($itemGuru->foto_guru == '') src="{{ asset('img/logo/tut-wuri-handayani-logo.png') }}"
                                                          @else
                                                          src="{{ asset('images/guru/' . $itemGuru->foto_guru) }}" @endif
                                                             alt="" class="img-fluid"></td>

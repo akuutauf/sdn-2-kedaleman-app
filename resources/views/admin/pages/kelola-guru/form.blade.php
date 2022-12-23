@@ -66,12 +66,12 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="foto_guru">Foto</label>
-                                                        <label for="image" class="medium">Foto Guru <span
+                                                        <label for="image" class="medium" for="foto_guru">Foto Guru <span
                                                                 class="fw-medium">(*max img
                                                                 2Mb)</span>:</label>
                                                         <input type="file" class="form-control form-theme" id="foto_guru"
-                                                            name="file" placeholder="Foto Guru">
+                                                            name="file" placeholder="Foto Guru"
+                                                            value="{{ $guru->foto_guru }}">
                                                     </div>
                                                 </div>
                                             </div>

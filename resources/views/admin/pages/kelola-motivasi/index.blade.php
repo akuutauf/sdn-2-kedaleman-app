@@ -84,10 +84,18 @@
                                             @foreach ($motivasi as $itemMotivasi)
                                                 <tr class="shadow-sm">
                                                     <td class="text-center">{{ $no }}</td>
-                                                    <td class="text-center"></td>
-                                                    <td class="text-center"><img
-                                                            src="{{ asset('images/guru/' . $itemMotivasi->foto_guru) }}"
-                                                            alt="" class="img-fluid"></td>
+                                                    <td class="text-center">
+                                                        @foreach ($guru as $item)
+                                                            @if ($itemMotivasi != null && $itemMotivasi->id_guru)
+                                                                {{ $item->nama_guru }}
+                                                            @endif
+                                                        @endforeach
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <img @foreach ($guru as $item)
+                                                        src="{{ asset('images/guru/' . $item->foto_guru) }}" @endforeach
+                                                            alt="" class="img-fluid">
+                                                    </td>
                                                     <td class="text-center">{{ $itemMotivasi->pesan_motivasi }}</td>
                                                     <td class="text-center">{{ $itemMotivasi->status_motivasi }}</td>
                                                     <td class="text-center">

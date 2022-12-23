@@ -410,7 +410,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-md-12 grid-margin stretch-card">
                     <div class="card shadow-sm" data-aos="zoom-out-up" data-aos-duration="1500" data-aos-once='true'>
                         <div class="card-body">
@@ -440,7 +440,7 @@
 
 
                 </div>
-            </div>
+            </div> --}}
         </div>
         <!-- content-wrapper ends -->
     </div>
