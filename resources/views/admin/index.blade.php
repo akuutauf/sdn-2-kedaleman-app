@@ -20,8 +20,9 @@
                         <div class="col-12 col-xl-4">
                             <div class="justify-content-end d-flex">
                                 <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
-                                    <button class="btn btn-sm btn-light bg-white" type="button" id="dropdownMenuDate2"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <button class="btn btn-sm btn-light bg-white shadow-sm" type="button"
+                                        id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="true">
                                         Today:
                                         <script>
                                             var d = (new Date()).toString().split(' ').splice(1, 3).join(' ');

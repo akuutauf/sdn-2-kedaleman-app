@@ -40,7 +40,7 @@
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                <i class="fa-solid fa-power-off text-primary"></i></i>
+                                <i class="fa-solid fa-door-open text-primary"></i></i>
                                 <span class="ml-2">{{ __('Keluar') }}</span>
                             </a>
 
