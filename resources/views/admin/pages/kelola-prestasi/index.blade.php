@@ -73,7 +73,7 @@
                                                 <th class="text-center">Judul</th>
                                                 <th width="15%" class="text-center">Foto</th>
                                                 <th class="text-center">Nama Perlombaan</th>
-                                                <th class="text-center">Tanggal</th>
+                                                <th class="text-center" width="10%">Tanggal</th>
                                                 <th class="text-center">Peraih Prestasi</th>
                                                 <th width="15%" class="text-center">Menu</th>
                                             </tr>
@@ -88,7 +88,7 @@
                                                     <td class="text-center">{{ $itemPrestasi->judul_prestasi }}</td>
                                                     <td class="text-center"><img
                                                             src="{{ asset('images/prestasi/' . $itemPrestasi->foto_prestasi) }}"
-                                                            alt="" class="img-fluid"></td>
+                                                            alt="" class="img-fluid rounded"></td>
                                                     <td class="text-center">{{ $itemPrestasi->nama_perlombaan }}</td>
                                                     <td class="text-center">{{ $itemPrestasi->tanggal_prestasi }}</td>
                                                     <td class="text-center">{{ $itemPrestasi->peraih_prestasi }}</td>
