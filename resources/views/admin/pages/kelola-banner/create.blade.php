@@ -81,7 +81,7 @@
                                                             name="status_banner">
                                                             <option>Pilih Status Banner</option>
                                                             <option value="Aktif">Aktif</option>
-                                                            <option value="Non-Aktif">Non-aktif</option>
+                                                            <option value="Non-aktif">Non-aktif</option>
                                                         </select>
                                                     </div>
                                                 </div>

@@ -87,7 +87,7 @@
                                                     <td class="text-center">{{ $itemBanner->nama_banner }}</td>
                                                     <td class="text-center"><img
                                                             src="{{ asset('images/banner/' . $itemBanner->foto_banner) }}"
-                                                            alt="" class="img-fluid"></td>
+                                                            alt="" class="img-fluid rounded"></td>
                                                     <td class="text-center">{{ $itemBanner->status_banner }}</td>
                                                     <td class="text-center">
                                                         <div class="btn-group-vertical" role="group"
