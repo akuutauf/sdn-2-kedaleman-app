@@ -113,7 +113,7 @@
                                                         <select class="form-control" id="status_event" name="status_event">
                                                             <option>Pilih Status Event</option>
                                                             <option value="Aktif">Aktif</option>
-                                                            <option value="Non-Aktif">Non-aktif</option>
+                                                            <option value="Non-aktif">Non-aktif</option>
                                                         </select>
                                                     </div>
                                                 </div>

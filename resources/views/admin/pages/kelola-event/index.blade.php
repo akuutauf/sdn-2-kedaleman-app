@@ -90,7 +90,7 @@
                                                     <td class="text-center">{{ $itemEvent->judul_event }}</td>
                                                     <td class="text-center"><img
                                                             src="{{ asset('images/event/' . $itemEvent->foto_event) }}"
-                                                            alt="" class="img-fluid"></td>
+                                                            alt="" class="img-fluid rounded"></td>
                                                     <td class="text-center">{{ $itemEvent->penyelenggara_event }}</td>
                                                     <td class="text-center">{{ $itemEvent->tanggal_event }}</td>
                                                     <td class="text-center">{{ $itemEvent->lokasi_event }}</td>
