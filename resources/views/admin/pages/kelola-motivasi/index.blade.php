@@ -94,7 +94,7 @@
                                                     <td class="text-center">
                                                         <img @foreach ($guru as $item)
                                                         src="{{ asset('images/guru/' . $item->foto_guru) }}" @endforeach
-                                                            alt="" class="img-fluid">
+                                                            alt="" class="img-fluid rounded">
                                                     </td>
                                                     <td class="text-center">{{ $itemMotivasi->pesan_motivasi }}</td>
                                                     <td class="text-center">{{ $itemMotivasi->status_motivasi }}</td>

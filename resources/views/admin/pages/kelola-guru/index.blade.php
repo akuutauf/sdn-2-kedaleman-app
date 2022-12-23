@@ -91,7 +91,7 @@
                                                             @if ($itemGuru->foto_guru == '') src="{{ asset('img/logo/tut-wuri-handayani-logo.png') }}"
                                                          @else
                                                          src="{{ asset('images/guru/' . $itemGuru->foto_guru) }}" @endif
-                                                            alt="" class="img-fluid"></td>
+                                                            alt="" class="img-fluid rounded"></td>
                                                     <td class="text-center">{{ $itemGuru->email_guru }}</td>
                                                     <td class="text-center">{{ $itemGuru->status_guru }}</td>
                                                     <td class="text-center">
