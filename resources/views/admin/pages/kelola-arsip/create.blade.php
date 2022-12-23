@@ -28,7 +28,9 @@
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">Tambah Data Arsip Sekolah</strong>
-                                <p class="mt-2">Deskripsi tambah data arsip...</p>
+                                <p class="mt-2">Formulir tambah data file arsip sekolah, masukkan informasi yang sesuai
+                                    &
+                                    mohon isi untuk semua field yang tertera.</p>
                             </div>
                         </div>
                     </div>
@@ -103,9 +105,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                                            <button type="submit" class="btn btn-primary mr-2">Tambah</button>
                                             <a href="{{ route('admin.arsip') }}"
-                                                class="btn btn-outline-primary shadow-sm">Cancel</a>
+                                                class="btn btn-outline-primary shadow-sm">Batal</a>
                                         </form>
                                     </div>
                                 </div>

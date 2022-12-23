@@ -28,7 +28,10 @@
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">Tabel Data Arsip</strong>
-                                <p class="mt-2">Deskripsi manajemen data arsip...</p>
+                                <p class="mt-2">Halaman utama data arsip, search data arsip, serta menu panel
+                                    tambah, ubah
+                                    &
+                                    hapus data arsip sekolah.</p>
                             </div>
                             <div class="container-fluid">
                                 <div class="row justify-content-around">

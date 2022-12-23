@@ -28,7 +28,10 @@
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">Tabel Data Motivasi Guru</strong>
-                                <p class="mt-2">Deskripsi manajemen data motivasi guru...</p>
+                                <p class="mt-2">Halaman utama data motivasi, search data motivasi, serta menu panel
+                                    tambah, ubah
+                                    &
+                                    hapus data motivasi guru.</p>
                             </div>
                             <div class="container-fluid">
                                 <div class="row justify-content-around">

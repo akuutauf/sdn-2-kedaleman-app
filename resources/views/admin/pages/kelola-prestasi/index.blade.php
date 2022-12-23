@@ -28,7 +28,10 @@
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">Tabel Data Prestasi</strong>
-                                <p class="mt-2">Deskripsi manajemen data prestasi siswa...</p>
+                                <p class="mt-2">Halaman utama data prestasi, search data prestasi, serta menu panel
+                                    tambah, ubah
+                                    &
+                                    hapus data prestasi siswa.</p>
                             </div>
                             <div class="container-fluid">
                                 <div class="row justify-content-around">

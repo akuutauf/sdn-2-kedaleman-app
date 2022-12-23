@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use Fila;
+
+use File;
 use App\Models\Arsip;
 use Illuminate\Http\Request;
 
