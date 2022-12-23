@@ -50,10 +50,10 @@ class ManajemenEvent extends Controller
         return view('admin.pages.kelola-event.form', $data);
     }
 
-    public function update(Request $request)
+    public function update(Request $request, Event $event)
     {
         $request->validate([
-            'file' => 'required|mimes:jpg,jpeg,png,giff',
+            'file' => 'nullable|mimes:jpg,jpeg,png,giff',
         ]);
 
         $data = Event::find($request->id);
@@ -66,6 +66,9 @@ class ManajemenEvent extends Controller
             $file = $request->file('file');
             $filename = 'image_' . rand(0, 999999999999) . '_' . rand(0, 999999999999) . '.' . $file->getClientOriginalExtension();
             $file->move($path, $filename);
+        }
+        else{
+            $filename = $event->foto_event;
         }
 
         $request->merge(['foto_event' => $filename]);

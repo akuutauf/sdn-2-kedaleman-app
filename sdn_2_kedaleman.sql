@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3307
--- Waktu pembuatan: 23 Des 2022 pada 02.25
--- Versi server: 10.4.17-MariaDB
--- Versi PHP: 8.0.0
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 23 Des 2022 pada 10.25
+-- Versi server: 10.4.21-MariaDB
+-- Versi PHP: 7.3.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `arsips` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `nama_file_arsip` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `kode_file_arsip` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kode_file_arsip` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `jenis_file_arsip` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tanggal_upload_arsip` date NOT NULL,
   `desc_file_arsip` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
@@ -45,7 +45,7 @@ CREATE TABLE `arsips` (
 CREATE TABLE `banners` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `nama_banner` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `foto_banner` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `foto_banner` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status_banner` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -113,7 +113,7 @@ CREATE TABLE `gurus` (
 --
 
 INSERT INTO `gurus` (`id`, `nama_guru`, `foto_guru`, `nik_guru`, `nuptk_guru`, `nip_guru`, `gender_guru`, `tempat_lahir_guru`, `tanggal_lahir_guru`, `jabatan_guru`, `email_guru`, `no_telp_guru`, `alamat_guru`, `status_guru`) VALUES
-(1, 'Taufik Hidayat', 'image_473706986250_629260154579.jpg', '3510131209010003', '362055401019', '362055401019', 'Laki-laki', 'Banyuwangi', '2001-09-12', 'Guru Pengajar', 'taufikhidayat09121@gmail.com', '082332743884', 'Dusun Puspan Desa Kedaleman RT 01 Rw 01 Kecamatan Rogojampi', 'Aktif');
+(3, 'Nanda Awimbi Yahya Pratama', 'image_52036304843_507745157729.jpg', '45678648648', '465861354', '2313454', 'Laki-laki', 'Kediri', '2022-12-23', 'Guru Pengajar', 'nandaawimbi@gmail.com', '08547784512', 'nakjfjebfalk', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -156,13 +156,6 @@ CREATE TABLE `motivasis` (
   `pesan_motivasi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status_motivasi` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data untuk tabel `motivasis`
---
-
-INSERT INTO `motivasis` (`id`, `id_guru`, `pesan_motivasi`, `status_motivasi`) VALUES
-(2, 1, 'Belajar adalah sesuatu hal yang menyenangkan, jika kita menemukan satu tujuan yang sama.', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -250,8 +243,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin Sekolah', 'sdn2kedaleman@gmail.com', NULL, '$2y$10$i4y5eRTZzO5rTtQsNQyHYuGjhsFlGRlf36OzAk/HutYQr25Ed9/lO', NULL, '2022-12-06 23:28:20', '2022-12-06 23:28:20'),
-(2, 'Admin Sekolah', 'adminsekolah@gmail.com', NULL, '$2y$10$3v11R56Qqj/OYCyInQ12leB5rDWRqoEdLyKVA7V.LSTepkV8j778G', NULL, '2022-12-13 19:39:01', '2022-12-13 19:39:01');
+(1, 'Admin Sekolah', 'sdn2kedaleman@gmail.com', NULL, '$2y$10$i4y5eRTZzO5rTtQsNQyHYuGjhsFlGRlf36OzAk/HutYQr25Ed9/lO', NULL, '2022-12-06 23:28:20', '2022-12-06 23:28:20');
 
 --
 -- Indexes for dumped tables
@@ -342,19 +334,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `arsips`
 --
 ALTER TABLE `arsips`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
@@ -366,7 +358,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT untuk tabel `gurus`
 --
 ALTER TABLE `gurus`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
@@ -384,7 +376,7 @@ ALTER TABLE `motivasis`
 -- AUTO_INCREMENT untuk tabel `pengumumans`
 --
 ALTER TABLE `pengumumans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `personal_access_tokens`
@@ -396,13 +388,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT untuk tabel `prestasis`
 --
 ALTER TABLE `prestasis`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

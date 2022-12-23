@@ -50,10 +50,10 @@ class ManajemenPrestasi extends Controller
         return view('admin.pages.kelola-prestasi.form', $data);
     }
 
-    public function update(Request $request)
+    public function update(Request $request, Prestasi $prestasi)
     {
         $request->validate([
-            'file' => 'required|mimes:jpg,jpeg,png,giff',
+            'file' => 'nullable|mimes:jpg,jpeg,png,giff',
         ]);
 
         $data = Prestasi::find($request->id);
@@ -66,6 +66,9 @@ class ManajemenPrestasi extends Controller
             $file = $request->file('file');
             $filename = 'image_' . rand(0, 999999999999) . '_' . rand(0, 999999999999) . '.' . $file->getClientOriginalExtension();
             $file->move($path, $filename);
+        }
+        else{
+            $filename = $prestasi->foto_prestasi;
         }
 
         $request->merge(['foto_prestasi' => $filename]);

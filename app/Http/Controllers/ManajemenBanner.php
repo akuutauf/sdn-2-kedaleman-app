@@ -50,10 +50,10 @@ class ManajemenBanner extends Controller
         return view('admin.pages.kelola-banner.form', $data);
     }
 
-    public function update(Request $request)
+    public function update(Request $request, Banner $banner)
     {
         $request->validate([
-            'file' => 'required|mimes:jpg,jpeg,png,giff',
+            'file' => 'nullable|mimes:jpg,jpeg,png,giff',
         ]);
 
         $data = Banner::find($request->id);
@@ -66,6 +66,9 @@ class ManajemenBanner extends Controller
             $file = $request->file('file');
             $filename = 'image_' . rand(0, 999999999999) . '_' . rand(0, 999999999999) . '.' . $file->getClientOriginalExtension();
             $file->move($path, $filename);
+        }
+        else{
+            $filename = $banner->foto_banner;
         }
 
         $request->merge(['foto_banner' => $filename]);

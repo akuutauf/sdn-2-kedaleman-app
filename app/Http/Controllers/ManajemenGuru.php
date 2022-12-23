@@ -42,7 +42,7 @@ class ManajemenGuru extends Controller
         return redirect()->route('admin.guru')->with('success', 'Data Guru berhasil di tambahkan');
     }
 
-    public function edit($id)
+    public function edit($id, Guru $guru)
     {
         $data = [
             'guru'  => Guru::find($id),
@@ -51,22 +51,25 @@ class ManajemenGuru extends Controller
         return view('admin.pages.kelola-guru.form', $data);
     }
 
-    public function update(Request $request)
+    public function update(Request $request, Guru $guru)
     {
         $request->validate([
-            'file' => 'required|mimes:jpg,jpeg,png,giff',
+            'file' => 'nullable|mimes:jpg,jpeg,png,giff',
         ]);
 
         $data = Guru::find($request->id);
         if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $filename = 'image_' . rand(0, 999999999999) . '_' . rand(0, 999999999999) . '.' . $file->getClientOriginalExtension();
             $path = public_path('images/guru');
+            $file->move($path, $filename);
+
             if (file_exists($path . '/' . $data->foto_guru)) {
                 File::delete($path . '/' . $data->foto_guru);
             }
 
-            $file = $request->file('file');
-            $filename = 'image_' . rand(0, 999999999999) . '_' . rand(0, 999999999999) . '.' . $file->getClientOriginalExtension();
-            $file->move($path, $filename);
+        } else{
+            $filename = $guru->foto_guru;
         }
 
         $request->merge(['foto_guru' => $filename]);
