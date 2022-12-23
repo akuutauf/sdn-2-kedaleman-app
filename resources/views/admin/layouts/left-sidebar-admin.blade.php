@@ -5,7 +5,7 @@
         <li class="nav-item">
             <a class="nav-link" href="{{ route('dashboard') }}">
                 <i class="icon-grid menu-icon"></i>
-                <span class="menu-title">Dashboard</span>
+                <span class="menu-title"><i class="fa-solid fa-house"></i>&ensp;&ensp;Dashboard</span>
             </a>
         </li>
         <li class="nav-item">

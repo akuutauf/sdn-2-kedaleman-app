@@ -28,7 +28,10 @@
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">Tambah Data Pengumuman Sekolah</strong>
-                                <p class="mt-2">Deskripsi tambah data pengumuman...</p>
+                                <p class="mt-2">Formulir tambah data pengumuman sekolah, masukkan informasi yang sesuai
+                                    &
+                                    mohon isi untuk semua field yang tertera. Untuk field lampiran file boleh dikosongkan.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -115,9 +118,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                                            <button type="submit" class="btn btn-primary mr-2">Tambah</button>
                                             <a href="{{ route('admin.pengumuman') }}"
-                                                class="btn btn-outline-primary shadow-sm">Cancel</a>
+                                                class="btn btn-outline-primary shadow-sm">Batal</a>
                                         </form>
                                     </div>
                                 </div>

@@ -28,7 +28,10 @@
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">Tabel Data Event</strong>
-                                <p class="mt-2">Deskripsi manajemen data event sekolah...</p>
+                                <p class="mt-2">Halaman utama data event, search data event, serta menu panel
+                                    tambah, ubah
+                                    &
+                                    hapus data event sekolah.</p>
                             </div>
                             <div class="container-fluid">
                                 <div class="row justify-content-around">

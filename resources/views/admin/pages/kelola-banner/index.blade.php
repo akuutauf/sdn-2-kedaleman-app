@@ -28,7 +28,10 @@
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">Tabel Data Banner</strong>
-                                <p class="mt-2">Deskripsi manajemen data banner...</p>
+                                <p class="mt-2">Halaman utama data banner, search data banner, serta menu panel
+                                    tambah, ubah
+                                    &
+                                    hapus data banner beranda.</p>
                             </div>
                             <div class="container-fluid">
                                 <div class="row justify-content-around">
