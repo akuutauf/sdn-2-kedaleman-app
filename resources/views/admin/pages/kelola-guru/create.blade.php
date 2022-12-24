@@ -69,7 +69,7 @@
                                                         <label for="image" class="medium">Foto Guru <span
                                                                 class="fw-medium">(*max img
                                                                 2Mb)</span>:</label>
-                                                        <input type="file" class="form-control form-theme" id="foto_guru"
+                                                        <input type="file" class="form-control" id="foto_guru"
                                                             name="file" placeholder="Foto Guru">
                                                     </div>
                                                 </div>

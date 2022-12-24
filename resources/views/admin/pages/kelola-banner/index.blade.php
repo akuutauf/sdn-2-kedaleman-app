@@ -5,6 +5,13 @@
     <link rel="stylesheet" href="{{ asset('admin/vendors/css/vendor.bundle.base.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/css/vertical-layout-light/style.css') }}">
 
+    {{-- Css Bootstrap online --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    {{-- Datatable boostrap --}}
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.13.1/datatables.min.css" />
+
     <title>Manajemen Data Banner | Manajemen Website</title>
 @endsection
 
@@ -35,25 +42,11 @@
                             </div>
                             <div class="container-fluid">
                                 <div class="row justify-content-around">
-                                    <div class="col-md-3">
+                                    <div class="col-md-12">
                                         <a href="{{ route('admin.create.banner') }}"
                                             class="btn btn-outline-primary mt-4">Tambah
                                             Data
                                             Banner</a>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <form action="">
-                                            <div class="form-group">
-                                                <div class="input-group mt-4">
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Masukkan nama banner" aria-label="banner">
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-sm btn-primary" type="button">Cari Data
-                                                            Banner</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -62,10 +55,9 @@
                 </div>
             </div><!-- .animated -->
         </div><!-- .content -->
-
         <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
-                <div class="card shadow-sm">
+                <div class="card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12">
@@ -96,9 +88,11 @@
                                                         <div class="btn-group-vertical" role="group"
                                                             aria-label="Basic example">
                                                             <a href="{{ route('admin.edit.banner', $itemBanner->id) }}"
-                                                                type="button" class="btn btn-inverse-success">Edit</a>
+                                                                type="button"
+                                                                class="btn btn-inverse-success py-3 px-3">Edit</a>
                                                             <a href="{{ route('admin.delete.banner', $itemBanner->id) }}"
-                                                                type="button" class="btn btn-inverse-danger">Delete</a>
+                                                                type="button"
+                                                                class="btn btn-inverse-danger py-3 px-3">Delete</a>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -114,18 +108,20 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
     <!-- content-wrapper ends -->
-    </div>
-    <!-- main-panel ends -->
 @endsection
 
 @section('script')
     <script src="{{ asset('admin/js/off-canvas.js') }}"></script>
     <script src="{{ asset('admin/js/hoverable-collapse.js') }}"></script>
     <script src="{{ asset('admin/js/template.js') }}"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+    </script>
 @endsection

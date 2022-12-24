@@ -45,25 +45,11 @@
                             </div>
                             <div class="container-fluid">
                                 <div class="row justify-content-around">
-                                    <div class="col-md-3">
+                                    <div class="col-md-12">
                                         <a href="{{ route('admin.create.event') }}"
                                             class="btn btn-outline-primary mt-4">Tambah
                                             Data
                                             Event</a>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <form action="">
-                                            <div class="form-group">
-                                                <div class="input-group mt-4">
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Masukkan nama event" aria-label="event">
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-sm btn-primary" type="button">Cari Data
-                                                            Event</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +61,7 @@
 
         <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
-                <div class="card shadow-sm">
+                <div class="card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12">
@@ -113,9 +99,11 @@
                                                         <div class="btn-group-vertical" role="group"
                                                             aria-label="Basic example">
                                                             <a href="{{ route('admin.edit.event', $itemEvent->id) }}"
-                                                                type="button" class="btn btn-inverse-success">Edit</a>
+                                                                type="button"
+                                                                class="btn btn-inverse-success py-3 px-3">Edit</a>
                                                             <a href="{{ route('admin.delete.event', $itemEvent->id) }}"
-                                                                type="button" class="btn btn-inverse-danger">Delete</a>
+                                                                type="button"
+                                                                class="btn btn-inverse-danger py-3 px-3">Delete</a>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -131,8 +119,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -145,4 +131,10 @@
     <script src="{{ asset('admin/js/off-canvas.js') }}"></script>
     <script src="{{ asset('admin/js/hoverable-collapse.js') }}"></script>
     <script src="{{ asset('admin/js/template.js') }}"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+    </script>
 @endsection
