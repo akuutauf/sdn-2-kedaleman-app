@@ -28,7 +28,9 @@
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">Update Data Prestasi Siswa</strong>
-                                <p class="mt-2">Deskripsi update data prestasi...</p>
+                                <p class="mt-2">Formulir untuk mengubah data prestasi siswa, masukkan informasi yang ingin
+                                    diubah, dan
+                                    ketika ingin mengubah data maka mohon upload ulang foto prestasi.</p>
                             </div>
                         </div>
                     </div>
@@ -109,9 +111,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                                            <button type="submit" class="btn btn-primary mr-2">Simpan</button>
                                             <a href="{{ route('admin.prestasi') }}"
-                                                class="btn btn-outline-primary shadow-sm">Cancel</a>
+                                                class="btn btn-outline-primary shadow-sm">Batal</a>
                                         </form>
                                     </div>
                                 </div>

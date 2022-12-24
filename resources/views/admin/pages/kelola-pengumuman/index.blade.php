@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="{{ asset('admin/css/vertical-layout-light/style.css') }}">
 
     <title>Manajemen Data Pengumuman Sekolah | Manajemen Website</title>
+
+    @php
+        // fungsi konversi data tipe date ke tanggal
+        function dateConversion($date)
+        {
+            $month = [1 => 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+            $slug = explode('-', $date);
+            return $slug[2] . ' ' . $month[(int) $slug[1]] . ' ' . $slug[0];
+        }
+    @endphp
 @endsection
 
 @section('content')
@@ -90,7 +100,8 @@
                                                     <td class="text-center">{{ $itemPengumuman->judul_pengumuman }}</td>
                                                     <td class="text-center">{{ $itemPengumuman->perihal_pengumuman }}</td>
                                                     <td class="text-center">{{ $itemPengumuman->pembuat_pengumuman }}</td>
-                                                    <td class="text-center">{{ $itemPengumuman->tanggal_pengumuman }}</td>
+                                                    <td class="text-center">
+                                                        {{ dateConversion($itemPengumuman->tanggal_pengumuman) }}</td>
                                                     <td class="text-center">
                                                         <div class="btn-group-vertical" role="group"
                                                             aria-label="Basic example">

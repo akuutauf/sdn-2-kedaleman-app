@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="{{ asset('admin/css/vertical-layout-light/style.css') }}">
 
     <title>Manajemen Data Prestasi Siswa | Manajemen Website</title>
+
+    @php
+        // fungsi konversi data tipe date ke tanggal
+        function dateConversion($date)
+        {
+            $month = [1 => 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+            $slug = explode('-', $date);
+            return $slug[2] . ' ' . $month[(int) $slug[1]] . ' ' . $slug[0];
+        }
+    @endphp
 @endsection
 
 @section('content')
@@ -76,7 +86,7 @@
                                                 <th class="text-center">Judul</th>
                                                 <th width="15%" class="text-center">Foto</th>
                                                 <th class="text-center">Nama Perlombaan</th>
-                                                <th class="text-center" width="10%">Tanggal</th>
+                                                <th class="text-center" width="15%">Tanggal</th>
                                                 <th class="text-center">Peraih Prestasi</th>
                                                 <th width="15%" class="text-center">Menu</th>
                                             </tr>
@@ -93,7 +103,8 @@
                                                             src="{{ asset('images/prestasi/' . $itemPrestasi->foto_prestasi) }}"
                                                             alt="" class="img-fluid rounded"></td>
                                                     <td class="text-center">{{ $itemPrestasi->nama_perlombaan }}</td>
-                                                    <td class="text-center">{{ $itemPrestasi->tanggal_prestasi }}</td>
+                                                    <td class="text-center">
+                                                        {{ dateConversion($itemPrestasi->tanggal_prestasi) }}</td>
                                                     <td class="text-center">{{ $itemPrestasi->peraih_prestasi }}</td>
                                                     <td class="text-center">
                                                         <div class="btn-group-vertical" role="group"

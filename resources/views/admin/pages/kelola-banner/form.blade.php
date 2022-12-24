@@ -28,7 +28,10 @@
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">Update Data Banner Beranda</strong>
-                                <p class="mt-2">Deskripsi update data banner...</p>
+                                <p class="mt-2">Formulir untuk mengubah data foto banner beranda, masukkan informasi yang
+                                    ingin
+                                    diubah, dan
+                                    ketika ingin mengubah data maka mohon upload ulang foto banner.</p>
                             </div>
                         </div>
                     </div>
@@ -92,9 +95,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                                            <button type="submit" class="btn btn-primary mr-2">Simpan</button>
                                             <a href="{{ route('admin.banner') }}"
-                                                class="btn btn-outline-primary shadow-sm">Cancel</a>
+                                                class="btn btn-outline-primary shadow-sm">Batal</a>
                                         </form>
                                     </div>
                                 </div>

@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="{{ asset('admin/css/vertical-layout-light/style.css') }}">
 
     <title>Manajemen Data Event Sekolah | Manajemen Website</title>
+
+    @php
+        // fungsi konversi data tipe date ke tanggal
+        function dateConversion($date)
+        {
+            $month = [1 => 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+            $slug = explode('-', $date);
+            return $slug[2] . ' ' . $month[(int) $slug[1]] . ' ' . $slug[0];
+        }
+    @endphp
 @endsection
 
 @section('content')
@@ -95,7 +105,8 @@
                                                             src="{{ asset('images/event/' . $itemEvent->foto_event) }}"
                                                             alt="" class="img-fluid rounded"></td>
                                                     <td class="text-center">{{ $itemEvent->penyelenggara_event }}</td>
-                                                    <td class="text-center">{{ $itemEvent->tanggal_event }}</td>
+                                                    <td class="text-center">{{ dateConversion($itemEvent->tanggal_event) }}
+                                                    </td>
                                                     <td class="text-center">{{ $itemEvent->lokasi_event }}</td>
                                                     <td class="text-center">{{ $itemEvent->status_event }}</td>
                                                     <td class="text-center">

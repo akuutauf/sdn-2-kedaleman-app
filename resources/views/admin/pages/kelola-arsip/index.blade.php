@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="{{ asset('admin/css/vertical-layout-light/style.css') }}">
 
     <title>Manajemen Data Arsip | Manajemen Website</title>
+
+    @php
+        // fungsi konversi data tipe date ke tanggal
+        function dateConversion($date)
+        {
+            $month = [1 => 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+            $slug = explode('-', $date);
+            return $slug[2] . ' ' . $month[(int) $slug[1]] . ' ' . $slug[0];
+        }
+    @endphp
 @endsection
 
 @section('content')
@@ -76,6 +86,7 @@
                                                 <th width="5%" class="text-center">No</th>
                                                 <th class="text-center">Nama Arsip</th>
                                                 <th class="text-center">Jenis Arsip</th>
+                                                <th class="text-center">File Arsip</th>
                                                 <th class="text-center">Tanggal</th>
                                                 <th class="text-center">Deskripsi</th>
                                                 {{-- <th width="15%" class="text-center">Status</th> --}}
@@ -91,7 +102,12 @@
                                                     <td class="text-center">{{ $no }}</td>
                                                     <td class="text-center">{{ $itemArsip->nama_file_arsip }}</td>
                                                     <td class="text-center">{{ $itemArsip->jenis_file_arsip }}</td>
-                                                    <td class="text-center">{{ $itemArsip->tanggal_upload_arsip }}</td>
+                                                    <td class="text-center"><a
+                                                            href="{{ asset('dokumen/arsip/' . $itemArsip->kode_file_arsip) }}"
+                                                            target="_blank">[ Lihat ]</a>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        {{ dateConversion($itemArsip->tanggal_upload_arsip) }}</td>
                                                     <td class="text-center">{{ $itemArsip->desc_file_arsip }}</td>
                                                     <td class="text-center">
                                                         <div class="btn-group-vertical" role="group"
