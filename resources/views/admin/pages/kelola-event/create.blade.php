@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="{{ asset('admin/vendors/css/vendor.bundle.base.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/css/vertical-layout-light/style.css') }}">
 
+    {{-- datedroppper js --}}
+    <script src="{{ asset('admin/js-datedropper/datedropper-javascript.js') }}"></script>
+
     <title>Tambah Data Event | Manajemen Website</title>
 @endsection
 
@@ -78,8 +81,9 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="tanggal_event">Tanggal Event</label>
-                                                        <input type="date" class="form-control" id="tanggal_event"
-                                                            name="tanggal_event" placeholder="tanggal/bulan/tahun" />
+                                                        <input type="date" class="form-control date-input"
+                                                            data-dd-opt-custom-class="dd-theme-bootstrap" id="tanggal_event"
+                                                            name="tanggal_event" placeholder="tahun-bulan-tanggal" />
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
@@ -111,7 +115,8 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="status_event">Status</label>
-                                                        <select class="form-control" id="status_event" name="status_event">
+                                                        <select class="form-control" id="status_event"
+                                                            name="status_event">
                                                             <option>Pilih Status Event</option>
                                                             <option value="Aktif">Aktif</option>
                                                             <option value="Non-aktif">Non-aktif</option>
@@ -149,4 +154,16 @@
     <script src="{{ asset('admin/js/template.js') }}"></script>
 
     <script src="{{ asset('admin/js/file-upload.js') }}"></script>
+
+    {{-- Inisiasi datedroppper --}}
+    <script>
+        dateDropper({
+            selector: '.date-input',
+            expandedDefault: true,
+            expandable: true,
+            overlay: true,
+            showArrowsOnHover: true,
+            autoFill: false
+        });
+    </script>
 @endsection
