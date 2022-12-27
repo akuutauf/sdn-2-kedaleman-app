@@ -10,3 +10,33 @@
 .date-input {
     background-color: white !important;
 }
+
+.paragrhap-justify {
+    text-align: justify !important;
+}
+
+.card-border-none {
+    border: 0px solid transparent !important;
+}
+
+.limit-text-title {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.limit-text {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4 !important;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.bg-button-theme {
+    background-color: #2980b9 !important;
+}
+
+.alert-theme {
+    background-color: #abedd8 !important;
+}

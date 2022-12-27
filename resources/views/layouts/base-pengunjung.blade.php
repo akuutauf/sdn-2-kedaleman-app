@@ -28,6 +28,7 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('pengunjung/assets/css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('admin/css/main.css') }}">
 
     <!-- Vendor CSS Files -->
     <link href="{{ asset('pengunjung/assets/vendor/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">

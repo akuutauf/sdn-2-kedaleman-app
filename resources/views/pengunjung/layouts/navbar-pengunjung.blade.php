@@ -28,9 +28,8 @@
                         <li class="dropdown"><a class="nav-link scrollto"><span>Info Sekolah</span> <i
                                     class="bi bi-chevron-right"></i></a>
                             <ul>
-                                <li><a class="nav-link scrollto" href="{{ route('pengumuman') }}">Pengumuman
-                                        Sekolah</a></li>
-                                <li><a class="nav-link scrollto" href="{{ route('event') }}">Event Sekolah</a></li>
+                                <li><a class="nav-link scrollto" href="{{ route('event') }}">Event</a></li>
+                                <li><a class="nav-link scrollto" href="{{ route('pengumuman') }}">Pengumuman</a></li>
                             </ul>
                         </li>
                         <li><a class="nav-link scrollto" href="{{ route('arsip') }}">Data Arsip Sekolah</a></li>
