@@ -887,6 +887,7 @@
             </div>
         </section><!-- End Contact Section -->
 
+        <hr>
     </main><!-- End #main -->
 @endsection
 

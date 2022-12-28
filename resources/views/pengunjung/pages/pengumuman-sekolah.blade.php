@@ -76,7 +76,7 @@
                                 {{-- card pengumuman --}}
                                 <div class="card card-border-none shadow-sm bg-white">
                                     <div class="card-body">
-                                        <div class="alert alert-success card-border-none text-center" role="alert">
+                                        <div class="alert bg-card card-border-none text-center text-white" role="alert">
                                             <b class="limit-text-title"><i class="fa-solid fa-newspaper"></i>&ensp;Judul
                                                 Pengumuman</b>
                                         </div>
@@ -102,7 +102,7 @@
                                 {{-- card pengumuman --}}
                                 <div class="card card-border-none shadow-sm bg-white">
                                     <div class="card-body">
-                                        <div class="alert alert-success card-border-none text-center" role="alert">
+                                        <div class="alert bg-card card-border-none text-center text-white" role="alert">
                                             <b class="limit-text-title"><i class="fa-solid fa-newspaper"></i>&ensp;Judul
                                                 Pengumuman 2</b>
                                         </div>

@@ -15,6 +15,14 @@
     text-align: justify !important;
 }
 
+.bg-card {
+    background-color: #5777ba !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
 .card-border-none {
     border: 0px solid transparent !important;
 }
@@ -39,4 +47,95 @@
 
 .alert-theme {
     background-color: #abedd8 !important;
+}
+
+/* card style */
+.team {
+    width: 100%;
+    padding-bottom: 60px;
+}
+.team_background {
+    padding-top: 53px;
+}
+
+.section_title_container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.section_title {
+    line-height: 1.2;
+    font-weight: 600;
+    color: #495c83 !important;
+}
+.section_subtitle {
+    line-height: 1.85;
+    margin-top: 14px;
+}
+
+.team_row {
+    margin-top: 43px;
+}
+.team_col {
+    margin-bottom: 40px;
+}
+
+.team_item {
+    width: 100%;
+}
+.team_image {
+    width: 180px;
+    height: 220px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -86px;
+    z-index: 5;
+}
+.team_image img {
+    max-width: 100%;
+}
+
+.team_body {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 1px 10px rgba(29, 34, 47, 0.1);
+    text-align: center;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.team_item:hover .team_body {
+    box-shadow: 0px 5px 40px rgba(29, 34, 47, 0.15);
+}
+.team_title a {
+    font-family: "Roboto Slab", serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #384158;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.team_title a:hover {
+    color: #14bdee;
+}
+.team_subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: #76777a;
+    margin-top: 6px;
+}
+
+.hr-theme {
+    color: #646fd4;
+    height: 1.8px !important;
+    width: 83% !important;
+    align-items: center;
+    border-radius: 30px;
 }

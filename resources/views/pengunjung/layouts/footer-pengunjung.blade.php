@@ -1,6 +1,6 @@
 <!-- ======= Footer ======= -->
 <footer id="footer">
-    <hr>
+    {{-- <hr> --}}
     <div class="footer-top">
         <div class="container">
             <div class="row">

@@ -20,7 +20,6 @@
                 <li><a class="nav-link scrollto" href="{{ route('beranda') }}#layanan">Layanan</a></li>
                 <li><a class="nav-link scrollto" href="{{ route('beranda') }}#guru">Guru</a></li>
                 <li><a class="nav-link scrollto" href="{{ route('beranda') }}#kegiatan">Kegiatan</a></li>
-                <li><a class="nav-link scrollto" href="{{ route('beranda') }}#pertanyaan">Pertanyaan</a></li>
                 <li class="dropdown"><a class="nav-link scrollto"><span>Link</span> <i
                             class="bi bi-chevron-down"></i></a>
                     <ul>
@@ -36,6 +35,7 @@
                         <li><a class="nav-link scrollto" href="{{ route('prestasi') }}">Data Prestasi Siswa</a></li>
                     </ul>
                 </li>
+                <li><a class="nav-link scrollto" href="{{ route('beranda') }}#pertanyaan">Pertanyaan</a></li>
                 <li><a class="nav-link scrollto" href="{{ route('beranda') }}#kontak">Kontak</a></li>
                 @if (auth()->user() != null)
                     <li><a class="getstarted scrollto" href="{{ route('login') }}">{{ Auth::user()->name }}</a>
