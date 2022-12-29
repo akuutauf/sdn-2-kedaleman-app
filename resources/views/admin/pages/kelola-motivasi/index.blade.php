@@ -75,7 +75,7 @@
                                                     <td class="text-center">{{ $no }}</td>
                                                     <td class="text-center">
                                                         @foreach ($guru as $item)
-                                                            @if ($itemMotivasi != null && $itemMotivasi->id_guru)
+                                                            @if ($itemMotivasi != null && $itemMotivasi->id)
                                                                 {{ $item->nama_guru }}
                                                             @endif
                                                         @endforeach

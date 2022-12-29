@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Guru;
+use App\Models\Motivasi;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pengunjung.index');
+        $data = [
+            'guru'=>Guru::all(),
+            'motivasi' =>Motivasi::all(),
+        ];
+        return view('pengunjung.index', $data);
     }
 
     /**

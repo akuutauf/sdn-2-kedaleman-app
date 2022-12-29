@@ -68,139 +68,27 @@
                     </div>
                 </div>
                 <div class="row mb-2 justify-content-center">
-                    <div class="col-lg-3 col-md-6 team_col" data-aos="fade-up">
-                        <div class="team_item">
-                            <div class="team_body">
-                                <img src="{{ asset('images/guru/image_210566796461_420903797995.jpg') }}"
-                                    alt="Foto Kepala Sekolah" class="p-3 img-fluid rounded" title="Kepala Sekolah">
-                                <center>
-                                    <hr class="hr-theme mx-auto">
-                                </center>
-                                <div class="pb-4">
-                                    <a class=""><b>Nama Guru S.Pd</b></a>
-                                    <div class="mt-3">NIP :
-                                        12345678
+                    @foreach ($gurupage as $item)
+                        <div class="col-lg-3 col-md-6 team_col" data-aos="fade-up">
+                            <div class="team_item">
+                                <div class="team_body">
+                                    <img src="{{ asset('images/guru/' . $item->foto_guru) }}" alt="Foto Kepala Sekolah"
+                                        class="p-3 img-fluid rounded" title="Kepala Sekolah">
+                                    <center>
+                                        <hr class="hr-theme mx-auto">
+                                    </center>
+                                    <div class="pb-4">
+                                        <a class=""><b>{{ $item->nama_guru }}</b></a>
+                                        <div class="mt-3">NIP : {{ $item->nip_guru }}
+                                        </div>
+                                        <div>Email : {{ $item->email_guru }}</div>
+                                        <div>Jabatan : {{ $item->jabatan_guru }}</div>
                                     </div>
-                                    <div>Email : email@gmail.com</div>
-                                    <div>Jabatan : Pegawai Negeri</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 team_col" data-aos="fade-up">
-                        <div class="team_item">
-                            <div class="team_body">
-                                <img src="{{ asset('images/guru/image_210566796461_420903797995.jpg') }}"
-                                    alt="Foto Kepala Sekolah" class="p-3 img-fluid rounded" title="Kepala Sekolah">
-                                <center>
-                                    <hr class="hr-theme mx-auto">
-                                </center>
-                                <div class="pb-4">
-                                    <a class=""><b>Nama Guru S.Pd</b></a>
-                                    <div class="mt-3">NIP :
-                                        12345678
-                                    </div>
-                                    <div>Email : email@gmail.com</div>
-                                    <div>Jabatan : Pegawai Negeri</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 team_col" data-aos="fade-up">
-                        <div class="team_item">
-                            <div class="team_body">
-                                <img src="{{ asset('images/guru/image_210566796461_420903797995.jpg') }}"
-                                    alt="Foto Kepala Sekolah" class="p-3 img-fluid rounded" title="Kepala Sekolah">
-                                <center>
-                                    <hr class="hr-theme mx-auto">
-                                </center>
-                                <div class="pb-4">
-                                    <a class=""><b>Nama Guru S.Pd</b></a>
-                                    <div class="mt-3">NIP :
-                                        12345678
-                                    </div>
-                                    <div>Email : email@gmail.com</div>
-                                    <div>Jabatan : Pegawai Negeri</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 team_col" data-aos="fade-up">
-                        <div class="team_item">
-                            <div class="team_body">
-                                <img src="{{ asset('images/guru/image_210566796461_420903797995.jpg') }}"
-                                    alt="Foto Kepala Sekolah" class="p-3 img-fluid rounded" title="Kepala Sekolah">
-                                <center>
-                                    <hr class="hr-theme mx-auto">
-                                </center>
-                                <div class="pb-4">
-                                    <a class=""><b>Nama Guru S.Pd</b></a>
-                                    <div class="mt-3">NIP :
-                                        12345678
-                                    </div>
-                                    <div>Email : email@gmail.com</div>
-                                    <div>Jabatan : Pegawai Negeri</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 team_col" data-aos="fade-up">
-                        <div class="team_item">
-                            <div class="team_body">
-                                <img src="{{ asset('images/guru/image_210566796461_420903797995.jpg') }}"
-                                    alt="Foto Kepala Sekolah" class="p-3 img-fluid rounded" title="Kepala Sekolah">
-                                <center>
-                                    <hr class="hr-theme mx-auto">
-                                </center>
-                                <div class="pb-4">
-                                    <a class=""><b>Nama Guru S.Pd</b></a>
-                                    <div class="mt-3">NIP :
-                                        12345678
-                                    </div>
-                                    <div>Email : email@gmail.com</div>
-                                    <div>Jabatan : Pegawai Negeri</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 team_col" data-aos="fade-up">
-                        <div class="team_item">
-                            <div class="team_body">
-                                <img src="{{ asset('images/guru/image_210566796461_420903797995.jpg') }}"
-                                    alt="Foto Kepala Sekolah" class="p-3 img-fluid rounded" title="Kepala Sekolah">
-                                <center>
-                                    <hr class="hr-theme mx-auto">
-                                </center>
-                                <div class="pb-4">
-                                    <a class=""><b>Nama Guru S.Pd</b></a>
-                                    <div class="mt-3">NIP :
-                                        12345678
-                                    </div>
-                                    <div>Email : email@gmail.com</div>
-                                    <div>Jabatan : Pegawai Negeri</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 team_col" data-aos="fade-up">
-                        <div class="team_item">
-                            <div class="team_body">
-                                <img src="{{ asset('images/guru/image_210566796461_420903797995.jpg') }}"
-                                    alt="Foto Kepala Sekolah" class="p-3 img-fluid rounded" title="Kepala Sekolah">
-                                <center>
-                                    <hr class="hr-theme mx-auto">
-                                </center>
-                                <div class="pb-4">
-                                    <a class=""><b>Nama Guru S.Pd</b></a>
-                                    <div class="mt-3">NIP :
-                                        12345678
-                                    </div>
-                                    <div>Email : email@gmail.com</div>
-                                    <div>Jabatan : Pegawai Negeri</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
+                    @endforeach
+
                 </div>
             </div>
         </section>

@@ -408,83 +408,26 @@
                     <p>Informasi guru dan pengurus SDN 2 Kedaleman.</p>
                 </div>
 
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member shadow-sm">
-                            <div class="member-img">
-                                <img src="{{ asset('pengunjung/assets/img/team/team-1.jpg') }}" class="img-fluid"
-                                    alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                <div class="row mb-2 justify-content-center">
+                    @foreach ($guru as $item)
+                        <div class="col-lg-3 col-md-6 team_col" data-aos="fade-up">
+                            <div class="team_item">
+                                <div class="team_body">
+                                    <img src="{{ asset('images/guru/' . $item->foto_guru) }}" alt="Foto Kepala Sekolah"
+                                        class="p-3 img-fluid rounded" title="Kepala Sekolah">
+                                    <center>
+                                        <hr class="hr-theme mx-auto">
+                                    </center>
+                                    <div class="pb-4">
+                                        <a class=""><b>{{ $item->nama_guru }}</b></a>
+                                        <div class="mt-3">NIP : {{ $item->nip_guru }}
+                                        </div>
+                                        <div>Jabatan : {{ $item->jabatan_guru }}</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
-                            </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member shadow-sm">
-                            <div class="member-img">
-                                <img src="{{ asset('pengunjung/assets/img/team/team-2.jpg') }}" class="img-fluid"
-                                    alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                        <div class="member shadow-sm">
-                            <div class="member-img">
-                                <img src="{{ asset('pengunjung/assets/img/team/team-3.jpg') }}" class="img-fluid"
-                                    alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-                        <div class="member shadow-sm">
-                            <div class="member-img">
-                                <img src="{{ asset('pengunjung/assets/img/team/team-4.jpg') }}" class="img-fluid"
-                                    alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
 
@@ -517,78 +460,9 @@
                                 <h3>Saul Goodman</h3>
                                 <h4>Ceo &amp; Founder</h4>
                             </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    <span class="">
-                                        Export tempor illum tamen malis malis eram quae irure esse labore quem cillum
-                                        quid
-                                        cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure
-                                        amet
-                                        legam anim culpa.
-                                    </span>
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="{{ asset('pengunjung/assets/img/testimonials/testimonials-2.jpg') }}"
-                                    class="testimonial-img" alt="">
-                                <h3>Sara Wilsson</h3>
-                                <h4>Designer</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                    veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
-                                    minim.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="{{ asset('pengunjung/assets/img/testimonials/testimonials-3.jpg') }}"
-                                    class="testimonial-img" alt="">
-                                <h3>Jena Karlis</h3>
-                                <h4>Store Owner</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                    fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-                                    dolore labore illum veniam.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="{{ asset('pengunjung/assets/img/testimonials/testimonials-4.jpg') }}"
-                                    class="testimonial-img" alt="">
-                                <h3>Matt Brandon</h3>
-                                <h4>Freelancer</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                    veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                    culpa fore nisi cillum quid.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="{{ asset('pengunjung/assets/img/testimonials/testimonials-5.jpg') }}"
-                                    class="testimonial-img" alt="">
-                                <h3>John Larson</h3>
-                                <h4>Entrepreneur</h4>
-                            </div>
-                        </div><!-- End testimonial item -->
-
+                        </div>
+                        <! <div class="swiper-pagination">
                     </div>
-                    <div class="swiper-pagination"></div>
                 </div>
 
             </div>

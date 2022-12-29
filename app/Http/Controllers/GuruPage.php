@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Guru;
 use Illuminate\Http\Request;
 
 class GuruPage extends Controller
@@ -13,7 +13,10 @@ class GuruPage extends Controller
      */
     public function index()
     {
-        return view('pengunjung.pages.guru-staf');
+        $data =[
+            'gurupage'=> Guru::all()
+        ];
+        return view('pengunjung.pages.guru-staf', $data);
     }
 
     /**

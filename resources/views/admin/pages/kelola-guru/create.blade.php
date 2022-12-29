@@ -144,6 +144,7 @@
                                                         <select class="form-control" id="jabatan_guru"
                                                             name="jabatan_guru">
                                                             <option>Pilih Jabatan Guru</option>
+                                                            <option value="Kepala Sekolah">Kepala Sekolah</option>
                                                             <option value="Guru Pengajar">Guru Pengajar</option>
                                                             <option value="Guru PNS">Guru PNS</option>
                                                             <option value="Guru Honorer">Guru Honorer</option>
