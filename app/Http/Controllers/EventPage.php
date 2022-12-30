@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class EventPage extends Controller
@@ -13,7 +14,11 @@ class EventPage extends Controller
      */
     public function index()
     {
-        return view('pengunjung.pages.event-sekolah');
+        $data = [
+            'latest' => Event::where('status_event', "Aktif")->latest()->first()->get(),
+            'event' => Event::where('status_event', "Aktif")->get()
+        ];
+        return view('pengunjung.pages.event-sekolah', $data);
     }
 
     /**

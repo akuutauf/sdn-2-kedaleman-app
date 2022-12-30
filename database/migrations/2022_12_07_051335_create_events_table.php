@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('lokasi_event', 100)->nullable();
             $table->string('desc_event', 255)->nullable();
             $table->string('status_event', 15);
+            $table->timestamps();
         });
     }
 

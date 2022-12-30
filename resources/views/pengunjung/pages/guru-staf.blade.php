@@ -15,6 +15,7 @@
                         <ol>
                             <li><a href="{{ route('beranda') }}">Beranda</a></li>
                             <li>Link</li>
+                            <li>Info Sekolah</li>
                             <li>Guru dan Staf</li>
                         </ol>
                     </div>

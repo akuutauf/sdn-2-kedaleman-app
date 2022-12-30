@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Waktu pembuatan: 30 Des 2022 pada 12.32
+-- Waktu pembuatan: 30 Des 2022 pada 13.34
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -80,15 +80,17 @@ CREATE TABLE `events` (
   `penanggung_jawab_event` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `lokasi_event` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `desc_event` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status_event` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL
+  `status_event` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data untuk tabel `events`
 --
 
-INSERT INTO `events` (`id`, `judul_event`, `foto_event`, `tanggal_event`, `penyelenggara_event`, `penanggung_jawab_event`, `lokasi_event`, `desc_event`, `status_event`) VALUES
-(3, 'Selamat Tahun Baru 2023', 'image_740110200573_848783997164.jpg', '2022-12-30', 'SDN 2 Kedaleman', 'Koordinator', 'Sekolah', 'Berita Acara Selamat Tahun Baru', 'Aktif');
+INSERT INTO `events` (`id`, `judul_event`, `foto_event`, `tanggal_event`, `penyelenggara_event`, `penanggung_jawab_event`, `lokasi_event`, `desc_event`, `status_event`, `created_at`, `updated_at`) VALUES
+(1, 'Selamat Tahun Baru 2023', 'image_673243625583_98039765034.jpg', '2022-12-30', 'SDN 2 Kedaleman', 'Koordinator', 'Sekolah', 'Deskripsi event dengan rinci', 'Aktif', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -134,7 +136,7 @@ CREATE TABLE `gurus` (
 --
 
 INSERT INTO `gurus` (`id`, `nama_guru`, `foto_guru`, `nik_guru`, `nuptk_guru`, `nip_guru`, `gender_guru`, `tempat_lahir_guru`, `tanggal_lahir_guru`, `jabatan_guru`, `email_guru`, `no_telp_guru`, `alamat_guru`, `status_guru`) VALUES
-(5, 'Taufik Hidayat', 'image_686010846294_565600642253.jpg', '351811458771010', '123456', '32159753214715', 'Laki-laki', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'akutauf@gmail.com', '085265241598', 'Songgon, Banyuwangi', 'Aktif'),
+(5, 'Taufik Hidayat', 'image_187235257659_887891295180.jpg', '351811458771010', '123456', '32159753214715', 'Laki-laki', 'Banyuwangi', '2022-12-28', 'Kepala Sekolah', 'akutauf@gmail.com', '085265241598', 'Songgon, Banyuwangi', 'Aktif'),
 (6, 'Nanda Awimbi Yahya Pratama', 'image_456595844171_425915399997.jpg', '3518117401071010', '123456789987', '987951753654', 'Laki-laki', 'Kediri', '2022-12-28', 'Guru Pengajar', 'nandaawimbi@gmail.com', '089676298218', 'Kebalenan, Banyuwangi', 'Aktif'),
 (7, 'Rikiansyah Aris', 'image_622501338083_636470198133.jpg', '123456897987', '32165498779', '159987654321195', 'Laki-laki', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'rikiansyah@gmail.com', '085221598741', 'Genteng, Banyuwangi', 'Aktif'),
 (8, 'Aida Andinar', 'image_184262225485_775016217021.jpg', '123456789987654', '12345987897', '3216548744587', 'Perempuan', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'aidaandinar@gmail.com', '085478954458', 'Srono, Banyuwangi', 'Aktif'),
@@ -165,9 +167,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2022_12_07_051244_create_motivasis_table', 1),
 (7, '2022_12_07_051255_create_banners_table', 1),
 (9, '2022_12_07_051326_create_arsips_table', 1),
-(10, '2022_12_07_051335_create_events_table', 1),
 (11, '2022_12_07_051346_create_prestasis_table', 1),
-(12, '2022_12_07_051306_create_pengumumans_table', 2);
+(12, '2022_12_07_051306_create_pengumumans_table', 2),
+(13, '2022_12_07_051335_create_events_table', 3);
 
 -- --------------------------------------------------------
 
@@ -396,7 +398,7 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT untuk tabel `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
@@ -414,7 +416,7 @@ ALTER TABLE `gurus`
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT untuk tabel `motivasis`
