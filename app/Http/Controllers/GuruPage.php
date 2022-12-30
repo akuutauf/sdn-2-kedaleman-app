@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Guru;
 use Illuminate\Http\Request;
 
@@ -13,8 +14,9 @@ class GuruPage extends Controller
      */
     public function index()
     {
-        $data =[
-            'gurupage'=> Guru::all()
+        $data = [
+            'kepsek' => Guru::where('jabatan_guru', "Kepala Sekolah")->get(),
+            'gurupage' => Guru::where('jabatan_guru', "!=", "Kepala Sekolah")->orderBy('nama_guru', 'ASC')->get(),
         ];
         return view('pengunjung.pages.guru-staf', $data);
     }

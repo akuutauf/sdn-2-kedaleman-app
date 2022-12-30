@@ -39,25 +39,26 @@
                     </div>
                 </div>
                 <div class="row mb-2 justify-content-center">
-                    <div class="col-lg-3 col-md-6 team_col" data-aos="fade-up">
-                        <div class="team_item">
-                            <div class="team_body">
-                                <img src="{{ asset('images/guru/image_210566796461_420903797995.jpg') }}"
-                                    alt="Foto Kepala Sekolah" class="p-3 img-fluid rounded" title="Kepala Sekolah">
-                                <center>
-                                    <hr class="hr-theme mx-auto">
-                                </center>
-                                <div class="pb-4">
-                                    <a class=""><b>Nama Guru S.Pd</b></a>
-                                    <div class="mt-3">NIP :
-                                        12345678
+                    @foreach ($kepsek as $itemGuru)
+                        <div class="col-lg-3 col-md-6 team_col" data-aos="fade-up">
+                            <div class="team_item">
+                                <div class="team_body">
+                                    <img src="{{ asset('images/guru/' . $itemGuru->foto_guru) }}" alt="Foto Kepala Sekolah"
+                                        class="p-3 img-fluid rounded" title="Kepala Sekolah">
+                                    <center>
+                                        <hr class="hr-theme mx-auto">
+                                    </center>
+                                    <div class="pb-4">
+                                        <a class=""><b>{{ $itemGuru->nama_guru }}</b></a>
+                                        <div class="mt-3">NIP : {{ $itemGuru->nip_guru }}
+                                        </div>
+                                        <div>Email : {{ $itemGuru->email_guru }}</div>
+                                        <div>Jabatan : {{ $itemGuru->jabatan_guru }}</div>
                                     </div>
-                                    <div>Email : email@gmail.com</div>
-                                    <div>Jabatan : Pegawai Negeri</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
                 {{-- Dosen dan Staf --}}
                 <div class="row mb-4 justify-content-center mt-3">

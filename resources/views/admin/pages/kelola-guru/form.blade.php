@@ -156,6 +156,9 @@
                                                         <select class="form-control" id="jabatan_guru"
                                                             name="jabatan_guru">
                                                             <option>Pilih Jabatan Guru</option>
+                                                            <option value="Kepala Sekolah"
+                                                                {{ $guru->jabatan_guru == 'Kepala Sekolah' ? 'selected' : '' }}>
+                                                                Kepala Sekolah</option>
                                                             <option value="Guru Pengajar"
                                                                 {{ $guru->jabatan_guru == 'Guru Pengajar' ? 'selected' : '' }}>
                                                                 Guru Pengajar</option>
