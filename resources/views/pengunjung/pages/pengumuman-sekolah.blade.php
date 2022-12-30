@@ -1,7 +1,19 @@
 @extends('layouts.base-pengunjung')
 
 @section('title')
-    <title>Pengumuman Sekolah | SDN 2 Kedaleman</title>
+    @foreach ($latest as $title)
+        <title>{{ $title->judul_pengumuman }} | SDN 2 Kedaleman</title>
+    @endforeach
+
+    @php
+        // fungsi konversi data tipe date ke tanggal
+        function dateConversion($date)
+        {
+            $month = [1 => 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+            $slug = explode('-', $date);
+            return $slug[2] . ' ' . $month[(int) $slug[1]] . ' ' . $slug[0];
+        }
+    @endphp
 @endsection
 
 @section('content-one')
@@ -26,7 +38,7 @@
             <div class="container">
                 <div class="row gy-4">
                     {{-- isi pengumuman --}}
-                    @foreach ($pengumuman as $item)
+                    @foreach ($latest as $item)
                         <div class="col-lg-8">
                             <div class="portfolio-description">
                                 <div class="container">
@@ -45,7 +57,8 @@
                                     <li><strong>Perihal</strong>: <i>{{ $item->perihal_pengumuman }}</i></li>
                                     <li><strong>Pembuat</strong>: <i>{{ $item->pembuat_pengumuman }}</i></li>
                                     <li><strong>Penerima</strong>: <i>{{ $item->penerima_pengumuman }}</i></li>
-                                    <li><strong>Tanggal</strong>: <i>{{ $item->tanggal_pengumuman }}</i></li>
+                                    <li><strong>Tanggal</strong>: <i>{{ dateConversion($item->tanggal_pengumuman) }}</i>
+                                    </li>
                                     <li><strong>Lampiran</strong>: <a
                                             href=" {{ asset('dokumen/pengumuman/' . $item->lampiran_pengumuman) }}"
                                             target="_blank">Lihat Lampiran File</a>
@@ -60,58 +73,34 @@
                 <div class="row section-bg py-4 mt-4 rounded shadow-sm">
                     <div class="col-lg-12">
                         <div class="owl-carousel owl-theme">
-                            <div class="item">
-                                {{-- card pengumuman --}}
-                                <div class="card card-border-none shadow-sm bg-white">
-                                    <div class="card-body">
-                                        <div class="alert bg-card card-border-none text-center text-white" role="alert">
-                                            <b class="limit-text-title"><i class="fa-solid fa-newspaper"></i>&ensp;Judul
-                                                Pengumuman</b>
+
+                            @foreach ($pengumuman as $itemPengumuman)
+                                <div class="item">
+                                    {{-- card pengumuman --}}
+                                    <div class="card card-border-none shadow-sm bg-white">
+                                        <div class="card-body">
+                                            <div class="alert bg-card card-border-none text-center text-white"
+                                                role="alert">
+                                                <b class="limit-text-title"><i
+                                                        class="fa-solid fa-newspaper"></i>&ensp;{{ $itemPengumuman->judul_pengumuman }}</b>
+                                            </div>
+                                            <span class="card-title text-secondary limit-text-title">
+                                                {{ $itemPengumuman->perihal_pengumuman }}
+                                            </span>
+                                            <p class="card-title text-secondary">
+                                                {{ dateConversion($itemPengumuman->tanggal_pengumuman) }}
+                                            </p>
+
+                                            <p class="card-text mt-3 text-secondary limit-text">
+                                                {{ $itemPengumuman->isi_pengumuman }}</p>
+
+                                            <a href="" class="btn bg-button-theme text-white mt-3">Lihat
+                                                Pengumuman&ensp;<i class="fa-solid fa-circle-arrow-right"></i></a>
                                         </div>
-                                        <span class="card-title text-secondary limit-text-title">
-                                            Perihal Pengumuman
-                                        </span>
-                                        <p class="card-title text-secondary">
-                                            27 Desember 2022
-                                        </p>
-
-                                        <p class="card-text mt-3 text-secondary limit-text">Lorem ipsum dolor sit amet,
-                                            consectetur
-                                            adipisicing elit.
-                                            Cumque vel saepe voluptatem deleniti amet, architecto culpa nihil velit quaerat
-                                            consequatur.(Isi Pengumuman)</p>
-
-                                        <a href="" class="btn bg-button-theme text-white mt-3">Lihat
-                                            Pengumuman&ensp;<i class="fa-solid fa-circle-arrow-right"></i></a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item">
-                                {{-- card pengumuman --}}
-                                <div class="card card-border-none shadow-sm bg-white">
-                                    <div class="card-body">
-                                        <div class="alert bg-card card-border-none text-center text-white" role="alert">
-                                            <b class="limit-text-title"><i class="fa-solid fa-newspaper"></i>&ensp;Judul
-                                                Pengumuman 2</b>
-                                        </div>
-                                        <span class="card-title text-secondary limit-text-title">
-                                            Perihal Pengumuman
-                                        </span>
-                                        <p class="card-title text-secondary">
-                                            27 Desember 2022
-                                        </p>
+                            @endforeach
 
-                                        <p class="card-text mt-3 text-secondary limit-text">Lorem ipsum dolor sit amet,
-                                            consectetur
-                                            adipisicing elit.
-                                            Cumque vel saepe voluptatem deleniti amet, architecto culpa nihil velit quaerat
-                                            consequatur.(Isi Pengumuman)</p>
-
-                                        <a href="" class="btn bg-button-theme text-white mt-3">Lihat
-                                            Pengumuman&ensp;<i class="fa-solid fa-circle-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

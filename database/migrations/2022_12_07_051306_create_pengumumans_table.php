@@ -22,6 +22,7 @@ return new class extends Migration
             $table->date('tanggal_pengumuman');
             $table->string('isi_pengumuman', 5000);
             $table->string('lampiran_pengumuman')->nullable();
+            $table->timestamps();
         });
     }
 

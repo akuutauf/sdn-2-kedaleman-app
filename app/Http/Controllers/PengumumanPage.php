@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Pengumuman;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,10 @@ class PengumumanPage extends Controller
     public function index()
     {
         $data = [
+            'latest' => Pengumuman::latest()->first()->get(),
             'pengumuman' => Pengumuman::all()
         ];
+        // return dd($data['latest']);
         return view('pengunjung.pages.pengumuman-sekolah', $data);
     }
 

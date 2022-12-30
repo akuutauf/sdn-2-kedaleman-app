@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 30 Des 2022 pada 11.12
--- Versi server: 10.4.21-MariaDB
--- Versi PHP: 7.3.30
+-- Host: 127.0.0.1:3307
+-- Waktu pembuatan: 30 Des 2022 pada 12.32
+-- Versi server: 10.4.17-MariaDB
+-- Versi PHP: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,6 +36,13 @@ CREATE TABLE `arsips` (
   `desc_file_arsip` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data untuk tabel `arsips`
+--
+
+INSERT INTO `arsips` (`id`, `nama_file_arsip`, `kode_file_arsip`, `jenis_file_arsip`, `tanggal_upload_arsip`, `desc_file_arsip`) VALUES
+(2, 'File Testing', 'doc_231564587738_114833089483.pdf', 'Arsip Siswa', '2022-12-30', 'Ebook Panduan Lengkap');
+
 -- --------------------------------------------------------
 
 --
@@ -50,6 +57,13 @@ CREATE TABLE `banners` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `banners`
+--
+
+INSERT INTO `banners` (`id`, `nama_banner`, `foto_banner`, `status_banner`, `created_at`, `updated_at`) VALUES
+(3, 'Prestasi Siswa Teladan', 'image_28656857305_778288815600.jpg', 'Aktif', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -68,6 +82,13 @@ CREATE TABLE `events` (
   `desc_event` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status_event` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `events`
+--
+
+INSERT INTO `events` (`id`, `judul_event`, `foto_event`, `tanggal_event`, `penyelenggara_event`, `penanggung_jawab_event`, `lokasi_event`, `desc_event`, `status_event`) VALUES
+(3, 'Selamat Tahun Baru 2023', 'image_740110200573_848783997164.jpg', '2022-12-30', 'SDN 2 Kedaleman', 'Koordinator', 'Sekolah', 'Berita Acara Selamat Tahun Baru', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -143,10 +164,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (5, '2022_12_07_051226_create_gurus_table', 1),
 (6, '2022_12_07_051244_create_motivasis_table', 1),
 (7, '2022_12_07_051255_create_banners_table', 1),
-(8, '2022_12_07_051306_create_pengumumans_table', 1),
 (9, '2022_12_07_051326_create_arsips_table', 1),
 (10, '2022_12_07_051335_create_events_table', 1),
-(11, '2022_12_07_051346_create_prestasis_table', 1);
+(11, '2022_12_07_051346_create_prestasis_table', 1),
+(12, '2022_12_07_051306_create_pengumumans_table', 2);
 
 -- --------------------------------------------------------
 
@@ -196,15 +217,17 @@ CREATE TABLE `pengumumans` (
   `perihal_pengumuman` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tanggal_pengumuman` date NOT NULL,
   `isi_pengumuman` varchar(5000) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lampiran_pengumuman` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `lampiran_pengumuman` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data untuk tabel `pengumumans`
 --
 
-INSERT INTO `pengumumans` (`id`, `judul_pengumuman`, `pembuat_pengumuman`, `penerima_pengumuman`, `perihal_pengumuman`, `tanggal_pengumuman`, `isi_pengumuman`, `lampiran_pengumuman`) VALUES
-(3, 'Jadwal Pelajaran kelas 1 - 6', 'Kepala Sekolah', 'Seluruh Siswa SD', 'Jadwal Pelajaran', '2022-12-30', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat pretium ipsum ut suscipit. Sed eu tempor dolor. Nulla finibus lectus accumsan lorem vestibulum auctor. Maecenas eu lectus quis ipsum tincidunt ullamcorper. Curabitur convallis fermentum ultrices. Nunc egestas odio sit amet efficitur finibus. Nulla molestie purus velit, eget rutrum risus aliquam nec.', 'doc_892037004507_26431571342.xlsx');
+INSERT INTO `pengumumans` (`id`, `judul_pengumuman`, `pembuat_pengumuman`, `penerima_pengumuman`, `perihal_pengumuman`, `tanggal_pengumuman`, `isi_pengumuman`, `lampiran_pengumuman`, `created_at`, `updated_at`) VALUES
+(1, 'PPDB Tahun Ajaran 2023', 'Koordinator', 'Khalayak Umum dan Masyarakat Sekitar', 'Pembukaan Pendaftaran Siswa Baru Tahun 2023', '2022-12-30', 'Deskripsi pengumuman berkaitan dengan penjelasan pengumuman secara detail', 'doc_1261582339_929449834667.pdf', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -238,7 +261,7 @@ CREATE TABLE `prestasis` (
   `nama_perlombaan` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tanggal_prestasi` date NOT NULL,
   `peraih_prestasi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `desc_prestasi` varchar(2024) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `desc_prestasi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -246,8 +269,7 @@ CREATE TABLE `prestasis` (
 --
 
 INSERT INTO `prestasis` (`id`, `judul_prestasi`, `foto_prestasi`, `nama_perlombaan`, `tanggal_prestasi`, `peraih_prestasi`, `desc_prestasi`) VALUES
-(3, 'E-SPORT', 'image_947892192840_288580846355.jpg', 'Tournament MLBB', '2022-12-30', 'Siswa Kelas 6', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat pretium ipsum ut suscipit. Sed eu tempor dolor'),
-(4, 'Kesenian', 'image_993952860013_616212124279.jpg', 'Lomba Tari Tingkat Kabupaten', '2022-12-30', 'Mahasiswa', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat pretium ipsum ut suscipit. Sed eu tempor dolor. Nulla finibus lectus accumsan lorem vestibulum auctor. Maecenas eu lectus quis ipsum tincidunt ullamcorper. Curabitur convallis fermentum ultrices. Nunc egestas odio sit amet efficitur finibus. Nulla molestie purus velit, eget rutrum risus aliquam nec.');
+(3, 'Siswa SD Kelas 6 Memperoleh Prestasi Di tingkat Nasional', 'image_243095513967_95077060966.jpg', 'Lomba Menulis Puisi dan Pidato Tingkat Nasional', '2022-12-30', 'Ilham Nurisky dan Nanda Awimbi', 'Mendapatkan juara 1 dan 2 tingkat nasional');
 
 -- --------------------------------------------------------
 
@@ -362,19 +384,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `arsips`
 --
 ALTER TABLE `arsips`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
@@ -392,7 +414,7 @@ ALTER TABLE `gurus`
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `motivasis`
@@ -404,7 +426,7 @@ ALTER TABLE `motivasis`
 -- AUTO_INCREMENT untuk tabel `pengumumans`
 --
 ALTER TABLE `pengumumans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `personal_access_tokens`
@@ -416,7 +438,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT untuk tabel `prestasis`
 --
 ALTER TABLE `prestasis`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
