@@ -27,52 +27,38 @@
             <div class="container">
 
                 <div class="row gy-4">
+                    @foreach ($prestasi as $item)
+                        <h2>{{ $item->judul_prestasi }}</h2>
+                        <div class="col-lg-8">
+                            <div class="portfolio-details-slider swiper">
+                                <div class="swiper-wrapper align-items-center">
+                                    <div class="swiper-slide">
+                                        <img src="{{ asset('images/prestasi/' . $item->foto_prestasi) }}" alt="">
+                                    </div>
 
-                    <div class="col-lg-8">
-                        <div class="portfolio-details-slider swiper">
-                            <div class="swiper-wrapper align-items-center">
-
-                                <div class="swiper-slide">
-                                    <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-1.jpg') }}"
-                                        alt="">
                                 </div>
-
-                                <div class="swiper-slide">
-                                    <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-2.jpg') }}"
-                                        alt="">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-3.jpg') }}"
-                                        alt="">
-                                </div>
-
+                                <div class="swiper-pagination"></div>
                             </div>
-                            <div class="swiper-pagination"></div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-4">
-                        <div class="portfolio-info">
-                            <h3>Halaman Prestasi Siswa</h3>
-                            <ul>
-                                <li><strong>Category</strong>: Web design</li>
-                                <li><strong>Client</strong>: Poliwangi Company</li>
-                                <li><strong>Project date</strong>: 01 March, 2020</li>
-                                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-                            </ul>
-                        </div>
-                        <div class="portfolio-description">
-                            <h2>This is an example of portfolio detail</h2>
-                            <p>
-                                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi
-                                labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque
-                                itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur
-                                dignissimos. Sequi nulla at esse enim cum deserunt eius.
-                            </p>
-                        </div>
-                    </div>
+                        <div class="col-lg-4">
+                            <div class="portfolio-info">
+                                <h2> Prestasi Siswa</h2>
+                                <ul>
+                                    <li><strong>Nama Perlombaan </strong>: {{ $item->nama_perlombaan }}</li>
+                                    <li><strong>Nama Siswa</strong>: {{ $item->peraih_prestasi }}</li>
+                                    <li><strong>Tanggal Perlombaan</strong>: {{ $item->tanggal_prestasi }}</li>
 
+                                </ul>
+                            </div>
+                            <div class="portfolio-description">
+                                <h2>Deskirpsi Perlombaan</h2>
+                                <p>
+                                    {{ $item->desc_prestasi }}
+                                </p>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
 
             </div>

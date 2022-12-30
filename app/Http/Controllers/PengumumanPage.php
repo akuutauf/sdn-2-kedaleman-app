@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Pengumuman;
 use Illuminate\Http\Request;
 
 class PengumumanPage extends Controller
@@ -13,7 +13,10 @@ class PengumumanPage extends Controller
      */
     public function index()
     {
-        return view('pengunjung.pages.pengumuman-sekolah');
+        $data = [
+            'pengumuman' => Pengumuman::all()
+        ];
+        return view('pengunjung.pages.pengumuman-sekolah', $data);
     }
 
     /**

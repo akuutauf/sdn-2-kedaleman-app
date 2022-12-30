@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('nama_perlombaan', 100)->nullable();
             $table->date('tanggal_prestasi');
             $table->string('peraih_prestasi', 255)->nullable();
-            $table->string('desc_prestasi', 255)->nullable();
+            $table->string('desc_prestasi', 2024)->nullable();
         });
     }
 
