@@ -6,29 +6,22 @@
 
 @section('content-one')
     <main id="main">
-
-        <!-- ======= Breadcrumbs ======= -->
-        <section class="breadcrumbs">
-            <div class="container">
-
-                <div class="d-flex justify-content-between align-items-center">
-                    <h2>Inner Page</h2>
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li>Inner Page</li>
-                    </ol>
+        <!-- ======= Portfolio Details Section ======= -->
+        <section id="portfolio-details" class="portfolio-details">
+            <!-- ======= Breadcrumbs ======= -->
+            <section id="breadcrumbs" class="breadcrumbs bg-theme mt-5 pt-5">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2><b>Arsip Sekolah</b></h2>
+                        <ol>
+                            <li><a href="{{ route('beranda') }}">Beranda</a></li>
+                            <li>Link</li>
+                            <li>Data Arsip Sekolah</li>
+                        </ol>
+                    </div>
                 </div>
-
-            </div>
-        </section><!-- End Breadcrumbs -->
-
-        <section class="inner-page">
-            <div class="container">
-                <p>
-                    Halaman Arsip Sekolah
-                </p>
-            </div>
-        </section>
+            </section><!-- End Breadcrumbs -->
+        </section><!-- End Portfolio Details Section -->
 
     </main><!-- End #main -->
 @endsection

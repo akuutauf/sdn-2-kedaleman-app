@@ -26,46 +26,34 @@
             <div class="container">
                 <div class="row gy-4">
                     {{-- isi pengumuman --}}
-                    <div class="col-lg-8">
-                        <div class="portfolio-description">
-                            <div class="container">
-                                <h2>Judul Pengumuman</h2>
-                                <p class="paragrhap-justify">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eaque magnam id, officia
-                                    doloremque numquam recusandae tenetur impedit. Eaque ipsa tenetur amet nostrum nemo
-                                    possimus
-                                    accusamus ipsum corporis harum quaerat non, eligendi similique hic expedita repudiandae
-                                    atque necessitatibus voluptatibus! Totam quam voluptatem et, sapiente molestiae nostrum
-                                    vel
-                                    neque itaque rerum.
-                                </p>
-                                <p class="paragrhap-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi
-                                    repudiandae dolorem deleniti
-                                    optio fugit nulla iste numquam eum neque temporibus praesentium soluta quas doloribus
-                                    qui
-                                    officia, rem quae blanditiis. Atque, amet quaerat incidunt, quae, earum beatae aliquam
-                                    autem
-                                    fugiat voluptate ea consequatur repudiandae nulla aspernatur quisquam reiciendis
-                                    impedit.
-                                    Reiciendis accusantium earum distinctio fugit asperiores quas, omnis libero possimus.
-                                    Repellendus pariatur officia id quibusdam, maiores doloremque.</p>
+                    @foreach ($pengumuman as $item)
+                        <div class="col-lg-8">
+                            <div class="portfolio-description">
+                                <div class="container">
+                                    <h2>{{ $item->judul_pengumuman }}</h2>
+                                    <p class="paragrhap-justify">
+                                        {{ $item->isi_pengumuman }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-4">
-                        <div class="portfolio-info">
-                            <h3>Detail Pengumuman</h3>
-                            <ul>
-                                <li><strong>Perihal</strong>: <i>Perihal Pengumuman</i></li>
-                                <li><strong>Pembuat</strong>: <i>Si Fulan</i></li>
-                                <li><strong>Penerima</strong>: <i>Siswa Kelas 1 SD</i></li>
-                                <li><strong>Tanggal</strong>: 27 Desember 2022</li>
-                                <li><strong>Lampiran</strong>: <a href="#" target="_blank">Lihat Lampiran File</a>
-                                </li>
-                            </ul>
+                        <div class="col-lg-4">
+                            <div class="portfolio-info">
+                                <h3>Detail Pengumuman</h3>
+                                <ul>
+                                    <li><strong>Perihal</strong>: <i>{{ $item->perihal_pengumuman }}</i></li>
+                                    <li><strong>Pembuat</strong>: <i>{{ $item->pembuat_pengumuman }}</i></li>
+                                    <li><strong>Penerima</strong>: <i>{{ $item->penerima_pengumuman }}</i></li>
+                                    <li><strong>Tanggal</strong>: <i>{{ $item->tanggal_pengumuman }}</i></li>
+                                    <li><strong>Lampiran</strong>: <a
+                                            href=" {{ asset('dokumen/pengumuman/' . $item->lampiran_pengumuman) }}"
+                                            target="_blank">Lihat Lampiran File</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
 
                 {{-- konten pengumuman yang lain --}}

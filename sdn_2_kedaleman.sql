@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 30 Des 2022 pada 08.46
+-- Waktu pembuatan: 30 Des 2022 pada 11.12
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 7.3.30
 
@@ -195,9 +195,16 @@ CREATE TABLE `pengumumans` (
   `penerima_pengumuman` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `perihal_pengumuman` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tanggal_pengumuman` date NOT NULL,
-  `isi_pengumuman` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `isi_pengumuman` varchar(5000) COLLATE utf8mb4_unicode_ci NOT NULL,
   `lampiran_pengumuman` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `pengumumans`
+--
+
+INSERT INTO `pengumumans` (`id`, `judul_pengumuman`, `pembuat_pengumuman`, `penerima_pengumuman`, `perihal_pengumuman`, `tanggal_pengumuman`, `isi_pengumuman`, `lampiran_pengumuman`) VALUES
+(3, 'Jadwal Pelajaran kelas 1 - 6', 'Kepala Sekolah', 'Seluruh Siswa SD', 'Jadwal Pelajaran', '2022-12-30', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat pretium ipsum ut suscipit. Sed eu tempor dolor. Nulla finibus lectus accumsan lorem vestibulum auctor. Maecenas eu lectus quis ipsum tincidunt ullamcorper. Curabitur convallis fermentum ultrices. Nunc egestas odio sit amet efficitur finibus. Nulla molestie purus velit, eget rutrum risus aliquam nec.', 'doc_892037004507_26431571342.xlsx');
 
 -- --------------------------------------------------------
 
@@ -231,8 +238,16 @@ CREATE TABLE `prestasis` (
   `nama_perlombaan` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tanggal_prestasi` date NOT NULL,
   `peraih_prestasi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `desc_prestasi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `desc_prestasi` varchar(2024) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `prestasis`
+--
+
+INSERT INTO `prestasis` (`id`, `judul_prestasi`, `foto_prestasi`, `nama_perlombaan`, `tanggal_prestasi`, `peraih_prestasi`, `desc_prestasi`) VALUES
+(3, 'E-SPORT', 'image_947892192840_288580846355.jpg', 'Tournament MLBB', '2022-12-30', 'Siswa Kelas 6', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat pretium ipsum ut suscipit. Sed eu tempor dolor'),
+(4, 'Kesenian', 'image_993952860013_616212124279.jpg', 'Lomba Tari Tingkat Kabupaten', '2022-12-30', 'Mahasiswa', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat pretium ipsum ut suscipit. Sed eu tempor dolor. Nulla finibus lectus accumsan lorem vestibulum auctor. Maecenas eu lectus quis ipsum tincidunt ullamcorper. Curabitur convallis fermentum ultrices. Nunc egestas odio sit amet efficitur finibus. Nulla molestie purus velit, eget rutrum risus aliquam nec.');
 
 -- --------------------------------------------------------
 
@@ -389,7 +404,7 @@ ALTER TABLE `motivasis`
 -- AUTO_INCREMENT untuk tabel `pengumumans`
 --
 ALTER TABLE `pengumumans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `personal_access_tokens`
@@ -401,7 +416,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT untuk tabel `prestasis`
 --
 ALTER TABLE `prestasis`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`

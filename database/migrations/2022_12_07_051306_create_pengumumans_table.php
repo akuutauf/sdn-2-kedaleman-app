@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('penerima_pengumuman', 50);
             $table->string('perihal_pengumuman', 100)->nullable();
             $table->date('tanggal_pengumuman');
-            $table->string('isi_pengumuman', 255);
+            $table->string('isi_pengumuman', 5000);
             $table->string('lampiran_pengumuman')->nullable();
         });
     }

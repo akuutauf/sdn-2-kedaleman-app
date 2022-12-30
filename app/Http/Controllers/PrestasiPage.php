@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Prestasi;
 use Illuminate\Http\Request;
 
 class PrestasiPage extends Controller
@@ -13,7 +13,10 @@ class PrestasiPage extends Controller
      */
     public function index()
     {
-        return view('pengunjung.pages.prestasi-siswa');
+        $data =[
+            'prestasi' => Prestasi::all()
+        ];
+        return view('pengunjung.pages.prestasi-siswa', $data);
     }
 
     /**
