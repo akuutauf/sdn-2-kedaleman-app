@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Arsip;
 use Illuminate\Http\Request;
 
 class ArsipPage extends Controller
@@ -13,7 +14,10 @@ class ArsipPage extends Controller
      */
     public function index()
     {
-        return view('pengunjung.pages.arsip-sekolah');
+        $data = [
+            'arsip' => Arsip::all(),
+        ];
+        return view('pengunjung.pages.arsip-sekolah', $data);
     }
 
     /**

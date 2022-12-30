@@ -19,6 +19,11 @@
     background-color: #5777ba !important;
 }
 
+.thead-theme {
+    background-color: #5777ba !important;
+    color: white !important;
+}
+
 .text-white {
     color: white !important;
 }
