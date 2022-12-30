@@ -87,8 +87,8 @@
                                     {{-- card event --}}
                                     <div class="card card-border-none shadow-sm bg-white">
                                         <div class="card-body">
-                                            <div class="alert bg-card card-border-none text-center text-white"
-                                                role="alert">
+                                            <div class="alert bg-card card-border-none text-white" role="alert"
+                                                title="{{ $itemEvent->judul_event }}">
                                                 <b class="limit-text-title"><i
                                                         class="fa-solid fa-newspaper"></i>&ensp;{{ $itemEvent->judul_event }}</b>
                                             </div>

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->date('tanggal_prestasi');
             $table->string('peraih_prestasi', 255)->nullable();
             $table->string('desc_prestasi', 2024)->nullable();
+            $table->timestamps();
         });
     }
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Waktu pembuatan: 30 Des 2022 pada 13.34
+-- Waktu pembuatan: 30 Des 2022 pada 13.58
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -167,9 +167,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2022_12_07_051244_create_motivasis_table', 1),
 (7, '2022_12_07_051255_create_banners_table', 1),
 (9, '2022_12_07_051326_create_arsips_table', 1),
-(11, '2022_12_07_051346_create_prestasis_table', 1),
 (12, '2022_12_07_051306_create_pengumumans_table', 2),
-(13, '2022_12_07_051335_create_events_table', 3);
+(13, '2022_12_07_051335_create_events_table', 3),
+(14, '2022_12_07_051346_create_prestasis_table', 4);
 
 -- --------------------------------------------------------
 
@@ -263,15 +263,17 @@ CREATE TABLE `prestasis` (
   `nama_perlombaan` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tanggal_prestasi` date NOT NULL,
   `peraih_prestasi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `desc_prestasi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `desc_prestasi` varchar(2024) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data untuk tabel `prestasis`
 --
 
-INSERT INTO `prestasis` (`id`, `judul_prestasi`, `foto_prestasi`, `nama_perlombaan`, `tanggal_prestasi`, `peraih_prestasi`, `desc_prestasi`) VALUES
-(3, 'Siswa SD Kelas 6 Memperoleh Prestasi Di tingkat Nasional', 'image_243095513967_95077060966.jpg', 'Lomba Menulis Puisi dan Pidato Tingkat Nasional', '2022-12-30', 'Ilham Nurisky dan Nanda Awimbi', 'Mendapatkan juara 1 dan 2 tingkat nasional');
+INSERT INTO `prestasis` (`id`, `judul_prestasi`, `foto_prestasi`, `nama_perlombaan`, `tanggal_prestasi`, `peraih_prestasi`, `desc_prestasi`, `created_at`, `updated_at`) VALUES
+(1, 'Siswa SD Kelas 6 Memperoleh Prestasi Di tingkat Nasional', 'image_614062873285_89279677315.jpg', 'Lomba Menulis Puisi dan Pidato Tingkat Nasional', '2022-12-30', 'Ilham Nurisky dan Nanda Awimbi', 'Deskripsi prestasi lebih jelas', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -416,7 +418,7 @@ ALTER TABLE `gurus`
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `motivasis`
@@ -440,7 +442,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT untuk tabel `prestasis`
 --
 ALTER TABLE `prestasis`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`

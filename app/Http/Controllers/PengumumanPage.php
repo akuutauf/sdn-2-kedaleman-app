@@ -16,7 +16,7 @@ class PengumumanPage extends Controller
     {
         $data = [
             'latest' => Pengumuman::latest()->first()->get(),
-            'pengumuman' => Pengumuman::all()
+            'pengumuman' => Pengumuman::orderBy('tanggal_pengumuman', 'ASC')->get()
         ];
         // return dd($data['latest']);
         return view('pengunjung.pages.pengumuman-sekolah', $data);

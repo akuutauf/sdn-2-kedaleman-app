@@ -45,7 +45,7 @@
                             <div class="team_item">
                                 <div class="team_body">
                                     <img src="{{ asset('images/guru/' . $itemGuru->foto_guru) }}" alt="Foto Kepala Sekolah"
-                                        class="p-3 img-fluid rounded" title="Kepala Sekolah">
+                                        class="p-3 img-fluid rounded" title="{{ $itemGuru->nama_guru }}">
                                     <center>
                                         <hr class="hr-theme mx-auto">
                                     </center>
@@ -75,7 +75,7 @@
                             <div class="team_item">
                                 <div class="team_body">
                                     <img src="{{ asset('images/guru/' . $item->foto_guru) }}" alt="Foto Kepala Sekolah"
-                                        class="p-3 img-fluid rounded" title="Kepala Sekolah">
+                                        class="p-3 img-fluid rounded" title="{{ $item->nama_guru }}">
                                     <center>
                                         <hr class="hr-theme mx-auto">
                                     </center>

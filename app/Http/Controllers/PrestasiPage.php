@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Prestasi;
 use Illuminate\Http\Request;
 
@@ -13,8 +14,9 @@ class PrestasiPage extends Controller
      */
     public function index()
     {
-        $data =[
-            'prestasi' => Prestasi::all()
+        $data = [
+            'latest' => Prestasi::latest()->first()->get(),
+            'prestasi' => Prestasi::orderBy('tanggal_prestasi', 'ASC')->get()
         ];
         return view('pengunjung.pages.prestasi-siswa', $data);
     }

@@ -16,7 +16,7 @@ class EventPage extends Controller
     {
         $data = [
             'latest' => Event::where('status_event', "Aktif")->latest()->first()->get(),
-            'event' => Event::where('status_event', "Aktif")->get()
+            'event' => Event::where('status_event', "Aktif")->orderBy('tanggal_event', 'ASC')->get()
         ];
         return view('pengunjung.pages.event-sekolah', $data);
     }

@@ -79,12 +79,13 @@
                                     {{-- card pengumuman --}}
                                     <div class="card card-border-none shadow-sm bg-white">
                                         <div class="card-body">
-                                            <div class="alert bg-card card-border-none text-center text-white"
-                                                role="alert">
+                                            <div class="alert bg-card card-border-none text-white" role="alert"
+                                                title="{{ $itemPengumuman->judul_pengumuman }}">
                                                 <b class="limit-text-title"><i
                                                         class="fa-solid fa-newspaper"></i>&ensp;{{ $itemPengumuman->judul_pengumuman }}</b>
                                             </div>
-                                            <span class="card-title text-secondary limit-text-title">
+                                            <span class="card-title text-secondary limit-text-title"
+                                                title="{{ $itemPengumuman->perihal_pengumuman }}">
                                                 {{ $itemPengumuman->perihal_pengumuman }}
                                             </span>
                                             <p class="card-title text-secondary">
