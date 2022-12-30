@@ -40,6 +40,10 @@
                                     class="img-fluid shadow-sm rounded"></div>
                             <div><img src="{{ asset('pengunjung/assets/img/school-ilustration-3.jpg') }}" alt="Image"
                                     class="img-fluid shadow-sm rounded"></div>
+                            @foreach ($banner as $itemBanner)
+                                <div><img src="{{ asset('images/banner/' . $itemBanner->foto_banner) }}" alt="Image"
+                                        class="img-fluid shadow-sm rounded"></div>
+                            @endforeach
                         </div>
                     </center>
                 </div>

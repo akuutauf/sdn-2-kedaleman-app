@@ -38,18 +38,18 @@ Route::get('/arsip-sekolah', [ArsipPage::class, 'index'])->name('arsip');
 Route::get('/prestasi-siswa', [PrestasiPage::class, 'index'])->name('prestasi');
 
 // view component pages (admin)
-Route::get('/buttons', [ComponentPages::class, 'buttons'])->name('buttons');
-Route::get('/dropdowns', [ComponentPages::class, 'dropdowns'])->name('dropdowns');
-Route::get('/typography', [ComponentPages::class, 'typography'])->name('typography');
-Route::get('/basic_elements', [ComponentPages::class, 'basic_elements'])->name('basic_elements');
-Route::get('/chart_js', [ComponentPages::class, 'chart_js'])->name('chart_js');
-Route::get('/basic_table', [ComponentPages::class, 'basic_table'])->name('basic_table');
-Route::get('/mdi_icons', [ComponentPages::class, 'mdi_icons'])->name('mdi_icons');
-Route::get('/sample_login', [ComponentPages::class, 'sample_login'])->name('sample_login');
-Route::get('/sample_register', [ComponentPages::class, 'sample_register'])->name('sample_register');
-Route::get('/error_404', [ComponentPages::class, 'error_404'])->name('error_404');
-Route::get('/error_500', [ComponentPages::class, 'error_500'])->name('error_500');
-Route::get('/documentation', [ComponentPages::class, 'documentation'])->name('documentation');
+// Route::get('/buttons', [ComponentPages::class, 'buttons'])->name('buttons');
+// Route::get('/dropdowns', [ComponentPages::class, 'dropdowns'])->name('dropdowns');
+// Route::get('/typography', [ComponentPages::class, 'typography'])->name('typography');
+// Route::get('/basic_elements', [ComponentPages::class, 'basic_elements'])->name('basic_elements');
+// Route::get('/chart_js', [ComponentPages::class, 'chart_js'])->name('chart_js');
+// Route::get('/basic_table', [ComponentPages::class, 'basic_table'])->name('basic_table');
+// Route::get('/mdi_icons', [ComponentPages::class, 'mdi_icons'])->name('mdi_icons');
+// Route::get('/sample_login', [ComponentPages::class, 'sample_login'])->name('sample_login');
+// Route::get('/sample_register', [ComponentPages::class, 'sample_register'])->name('sample_register');
+// Route::get('/error_404', [ComponentPages::class, 'error_404'])->name('error_404');
+// Route::get('/error_500', [ComponentPages::class, 'error_500'])->name('error_500');
+// Route::get('/documentation', [ComponentPages::class, 'documentation'])->name('documentation');
 
 // view admin
 Route::middleware(['auth'])->group(function () {

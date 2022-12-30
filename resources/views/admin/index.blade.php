@@ -134,7 +134,7 @@
                                     <div class="card-body">
                                         <p class="mb-4">Manajemen Banner</p>
                                         <p class="fs-30 mb-2">{{ $banner }}</p>
-                                        <p>Kelola data gambar banner beranda</p>
+                                        <p>Kelola data banner beranda</p>
                                     </div>
                                 </a>
                             </div>

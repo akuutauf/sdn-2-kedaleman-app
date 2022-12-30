@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Banner;
 use App\Models\Guru;
 use App\Models\Motivasi;
 use Illuminate\Http\Request;
@@ -16,8 +18,9 @@ class HomeController extends Controller
     {
         $data = [
             Guru::all(),
-            'guru'=>Guru::all(),
-            'motivasi' =>Motivasi::all(),
+            'guru' => Guru::all(),
+            'motivasi' => Motivasi::all(),
+            'banner' => Banner::where('status_banner', "Aktif")->get(),
         ];
         return view('pengunjung.index', $data);
     }
