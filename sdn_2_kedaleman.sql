@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Des 2022 pada 10.25
+-- Waktu pembuatan: 30 Des 2022 pada 08.46
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 7.3.30
 
@@ -113,7 +113,11 @@ CREATE TABLE `gurus` (
 --
 
 INSERT INTO `gurus` (`id`, `nama_guru`, `foto_guru`, `nik_guru`, `nuptk_guru`, `nip_guru`, `gender_guru`, `tempat_lahir_guru`, `tanggal_lahir_guru`, `jabatan_guru`, `email_guru`, `no_telp_guru`, `alamat_guru`, `status_guru`) VALUES
-(3, 'Nanda Awimbi Yahya Pratama', 'image_52036304843_507745157729.jpg', '45678648648', '465861354', '2313454', 'Laki-laki', 'Kediri', '2022-12-23', 'Guru Pengajar', 'nandaawimbi@gmail.com', '08547784512', 'nakjfjebfalk', 'Aktif');
+(5, 'Taufik Hidayat', 'image_686010846294_565600642253.jpg', '351811458771010', '123456', '32159753214715', 'Laki-laki', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'akutauf@gmail.com', '085265241598', 'Songgon, Banyuwangi', 'Aktif'),
+(6, 'Nanda Awimbi Yahya Pratama', 'image_456595844171_425915399997.jpg', '3518117401071010', '123456789987', '987951753654', 'Laki-laki', 'Kediri', '2022-12-28', 'Guru Pengajar', 'nandaawimbi@gmail.com', '089676298218', 'Kebalenan, Banyuwangi', 'Aktif'),
+(7, 'Rikiansyah Aris', 'image_622501338083_636470198133.jpg', '123456897987', '32165498779', '159987654321195', 'Laki-laki', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'rikiansyah@gmail.com', '085221598741', 'Genteng, Banyuwangi', 'Aktif'),
+(8, 'Aida Andinar', 'image_184262225485_775016217021.jpg', '123456789987654', '12345987897', '3216548744587', 'Perempuan', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'aidaandinar@gmail.com', '085478954458', 'Srono, Banyuwangi', 'Aktif'),
+(9, 'Sekar Ananta', 'image_409883130186_19138002394.jpg', '1235487965478', '123458974568', '32165498712', 'Perempuan', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'sekarananta@gmail.com', '085478951235', 'Banyuwangi', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -156,6 +160,15 @@ CREATE TABLE `motivasis` (
   `pesan_motivasi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status_motivasi` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `motivasis`
+--
+
+INSERT INTO `motivasis` (`id`, `id_guru`, `pesan_motivasi`, `status_motivasi`) VALUES
+(3, 7, 'Jika Anda berpikir pendidikan itu mahal, coba perkirakan biaya ketidaktahuan', 'Aktif'),
+(4, 6, 'Semakin banyak Anda membaca, semakin banyak hal yang akan Anda ketahui. Semakin banyak yang Anda pelajari, semakin banyak tempat yang akan Anda kunjungi.', 'Aktif'),
+(5, 8, 'kalau bisa dilakukan besok kenapa harus sekarang', 'Non-aktif');
 
 -- --------------------------------------------------------
 
@@ -358,7 +371,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT untuk tabel `gurus`
 --
 ALTER TABLE `gurus`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
@@ -370,7 +383,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `motivasis`
 --
 ALTER TABLE `motivasis`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengumumans`

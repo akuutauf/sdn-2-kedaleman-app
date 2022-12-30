@@ -17,6 +17,6 @@ class Motivasi extends Model
     // relasi one to one ke model guru (not fix)
     public function guru()
     {
-        return $this->belongsTo(Guru::class);
+        return $this->belongsTo(Guru::class, 'id_guru','id');
     }
 }

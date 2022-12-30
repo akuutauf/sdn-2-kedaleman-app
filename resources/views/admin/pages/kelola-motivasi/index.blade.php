@@ -73,16 +73,15 @@
                                             @foreach ($motivasi as $itemMotivasi)
                                                 <tr class="shadow-sm">
                                                     <td class="text-center">{{ $no }}</td>
-                                                    <td class="text-center">
-                                                        @foreach ($guru as $item)
+                                                    <td class="text-center"> {{ $itemMotivasi->guru->nama_guru }} </td>
+                                                    {{-- @foreach ($guru as $item)
                                                             @if ($itemMotivasi != null && $itemMotivasi->id)
                                                                 {{ $item->nama_guru }}
                                                             @endif
-                                                        @endforeach
-                                                    </td>
+                                                        @endforeach --}}
+                                                    {{-- </td> --}}
                                                     <td class="text-center">
-                                                        <img @foreach ($guru as $item)
-                                                        src="{{ asset('images/guru/' . $item->foto_guru) }}" @endforeach
+                                                        <img src="{{ asset('images/guru/' . $itemMotivasi->guru->foto_guru) }}"
                                                             alt="" class="img-fluid rounded">
                                                     </td>
                                                     <td class="text-center">{{ $itemMotivasi->pesan_motivasi }}</td>

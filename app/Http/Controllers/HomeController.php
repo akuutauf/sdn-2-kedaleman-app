@@ -15,6 +15,7 @@ class HomeController extends Controller
     public function index()
     {
         $data = [
+            Guru::all(),
             'guru'=>Guru::all(),
             'motivasi' =>Motivasi::all(),
         ];

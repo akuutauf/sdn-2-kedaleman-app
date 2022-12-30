@@ -445,26 +445,25 @@
 
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                     <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                    rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                    risus at semper.
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src="{{ asset('pengunjung/assets/img/testimonials/testimonials-1.jpg') }}"
-                                    class="testimonial-img" alt="">
-                                <h3>Saul Goodman</h3>
-                                <h4>Ceo &amp; Founder</h4>
+                        @foreach ($motivasi as $item)
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                        {{ $item->pesan_motivasi }}
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                    <img src="{{ asset('images/guru/' . $item->guru->foto_guru) }}"
+                                        class="testimonial-img" alt="">
+                                    <h3>{{ $item->guru->nama_guru }}</h3>
+                                    {{-- <h4>Ceo &amp; Founder</h4> --}}
+                                </div>
                             </div>
-                        </div>
-                        <! <div class="swiper-pagination">
+                        @endforeach
                     </div>
-                </div>
 
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </section><!-- End Testimonials Section -->
 
