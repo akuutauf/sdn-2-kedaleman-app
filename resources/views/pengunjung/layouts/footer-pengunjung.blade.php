@@ -51,15 +51,20 @@
                 <div class="col-lg-2 col-md-6 footer-links">
                     <h4>Link Website</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#">Guru dan Staf
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="{{ route('guru') }}">Guru dan
+                                Staf
                                 Sekolah</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#">Info Pengumuman</a>
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto"
+                                href="{{ route('pengumuman') }}">Info Pengumuman</a>
                         </li>
-                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#">Data Arsip
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="{{ route('arsip') }}">Data
+                                Arsip
                                 Sekolah</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#">Info Event
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="{{ route('event') }}">Info
+                                Event
                                 Sekolah</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="#">Data Prestasi
+                        <li><i class="bx bx-chevron-right"></i> <a class="scrollto" href="{{ route('prestasi') }}">Data
+                                Prestasi
                                 Siswa</a></li>
                     </ul>
                 </div>
@@ -76,12 +81,13 @@
                 Rights Reserved
             </div>
         </div>
-        <div class="social-links text-center text-md-right pt-2">
+        {{-- link social media sekolah --}}
+        {{-- <div class="social-links text-center text-md-right pt-2">
             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
             <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
             <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
             <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
+        </div> --}}
     </div>
 </footer><!-- End Footer -->

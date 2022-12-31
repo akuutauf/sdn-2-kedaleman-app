@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Arsip;
 use App\Models\Banner;
+use App\Models\Event;
 use App\Models\Guru;
 use App\Models\Motivasi;
+use App\Models\Pengumuman;
+use App\Models\Prestasi;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -18,9 +22,17 @@ class HomeController extends Controller
     {
         $data = [
             Guru::all(),
-            'guru' => Guru::all(),
+            'guru' => Guru::where('jabatan_guru', "!=", "Kepala Sekolah")->orderBy('nama_guru', 'ASC')->get(),
+            'kepsek' => Guru::where('jabatan_guru', "Kepala Sekolah")->get(),
             'motivasi' => Motivasi::all(),
             'banner' => Banner::where('status_banner', "Aktif")->get(),
+            'count_guru' => Guru::count(),
+            'count_event' => Event::count(),
+            'count_arsip' => Arsip::count(),
+            'count_prestasi' => Prestasi::count(),
+            'latest_event' => Event::latest()->take(3)->get(),
+            'latest_pengumuman' => Pengumuman::latest()->take(3)->get(),
+            'latest_prestasi' => Prestasi::latest()->take(3)->get(),
         ];
         return view('pengunjung.index', $data);
     }

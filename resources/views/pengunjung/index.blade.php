@@ -2,6 +2,16 @@
 
 @section('title')
     <title>Beranda | SDN 2 Kedaleman</title>
+
+    @php
+        // fungsi konversi data tipe date ke tanggal
+        function dateConversion($date)
+        {
+            $month = [1 => 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+            $slug = explode('-', $date);
+            return $slug[2] . ' ' . $month[(int) $slug[1]] . ' ' . $slug[0];
+        }
+    @endphp
 @endsection
 
 @section('content-one')
@@ -70,8 +80,9 @@
                     <div class="icon-box">
                         <div class="icon"><i class="ri-stack-line"></i></div>
                         <h4 class="title"><a href="{{ route('pengumuman') }}">Pengumuman Sekolah</a></h4>
-                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                            excepturi</p>
+                        <p class="description text-justify">Pengumuman berisikan informasi penting terkait dengan hal hal
+                            yang perlu di
+                            sampaikan oleh sekolah kepada siswa.</p>
                     </div>
                 </div>
 
@@ -80,8 +91,9 @@
                     <div class="icon-box">
                         <div class="icon"><i class="ri-palette-line"></i></div>
                         <h4 class="title"><a href="">Agenda Sekolah</a></h4>
-                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                            dolore</p>
+                        <p class="description text-justify">Berbagai jenis kegiatan atau event yang pernah atau akan
+                            dilaksanakan
+                            sekolah, akan di sampaikan di website sekolah SDN 2 Kedaleman.</p>
                     </div>
                 </div>
 
@@ -90,8 +102,10 @@
                     <div class="icon-box">
                         <div class="icon"><i class="ri-command-line"></i></div>
                         <h4 class="title"><a href="">Layanan Sekolah</a></h4>
-                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                            officia</p>
+                        <p class="description text-justify">Berbagai jenis pelayanan atau fasilitas sekolah yang dapat
+                            digunakan oleh
+                            guru maupun siswa untuk kegiatan pembelajaran.
+                        </p>
                     </div>
                 </div>
 
@@ -100,8 +114,9 @@
                     <div class="icon-box">
                         <div class="icon"><i class="ri-fingerprint-line"></i></div>
                         <h4 class="title"><a href="">Kehidupan Siswa</a></h4>
-                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                            blanditiis</p>
+                        <p class="description text-justify">Segala aktifitas yang dilakukan oleh siswa sebagai bentuk
+                            kegiatan
+                            pembelajaran dan berkreasi yang siswa lakukan semasa di sekolah.</p>
                     </div>
                 </div>
 
@@ -162,32 +177,32 @@
 
                     <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                         <div class="count-box">
-                            <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="2"
-                                class="purecounter"></span>
+                            <span data-purecounter-start="0" data-purecounter-end="{{ $count_guru }}"
+                                data-purecounter-duration="2" class="purecounter"></span>
                             <p>Guru dan Staf</p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                         <div class="count-box">
-                            <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="2"
-                                class="purecounter"></span>
+                            <span data-purecounter-start="0" data-purecounter-end="{{ $count_event }}"
+                                data-purecounter-duration="2" class="purecounter"></span>
                             <p>Event Sekolah</p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                         <div class="count-box">
-                            <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="2"
-                                class="purecounter"></span>
+                            <span data-purecounter-start="0" data-purecounter-end="{{ $count_arsip }}"
+                                data-purecounter-duration="2" class="purecounter"></span>
                             <p>Arsip Sekolah</p>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
                         <div class="count-box">
-                            <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="2"
-                                class="purecounter"></span>
+                            <span data-purecounter-start="0" data-purecounter-end="{{ $count_prestasi }}"
+                                data-purecounter-duration="2" class="purecounter"></span>
                             <p>Prestasi Siswa</p>
                         </div>
                     </div>
@@ -245,40 +260,11 @@
         <section id="clients" class="clients bg-secondary">
             <div class="container">
 
-                <div class="row">
+                <div class="row justify-content-center">
 
                     <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
                         data-aos="zoom-in">
-                        <img src="{{ asset('img/logo/poliwangi-logo-text-only.svg') }}" class="img-fluid" alt="">
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-                        data-aos="zoom-in">
-                        <img src="{{ asset('pengunjung/assets/img/clients/client-2.png') }}" class="img-fluid"
-                            alt="">
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-                        data-aos="zoom-in">
-                        <img src="{{ asset('pengunjung/assets/img/clients/client-3.png') }}" class="img-fluid"
-                            alt="">
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-                        data-aos="zoom-in">
-                        <img src="{{ asset('pengunjung/assets/img/clients/client-4.png') }}" class="img-fluid"
-                            alt="">
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-                        data-aos="zoom-in">
-                        <img src="{{ asset('pengunjung/assets/img/clients/client-5.png') }}" class="img-fluid"
-                            alt="">
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-                        data-aos="zoom-in">
-                        <img src="{{ asset('pengunjung/assets/img/clients/client-6.png') }}" class="img-fluid"
+                        <img src="{{ asset('img/logo/poliwangi-logo-text-only.svg') }}" class="img-fluid"
                             alt="">
                     </div>
 
@@ -309,7 +295,9 @@
                                 <i class="bx bxl-dribbble"></i>
                             </div>
                             <h4><a href="">Kantor Guru</a></h4>
-                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                            <p class="text-center">Mengakomodasi segala bentuk tempat untuk aktifitas guru, untuk menerima
+                                pengajuan dari siswa
+                                maupun wali murid, dan mengakomodasi tempat penerimaan tamu.</p>
                         </div>
                     </div>
 
@@ -326,7 +314,9 @@
                                 <i class="bx bx-file"></i>
                             </div>
                             <h4><a href="">Lapangan Sekolah</a></h4>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                            <p class="text-center">Sebagai tempat untuk sarana berkumpul dalam melakukan semua kegiatan
+                                baik upacara, olahraga,
+                                maupun kegiatan-kegiatan sekolah yang lain</p>
                         </div>
                     </div>
 
@@ -343,7 +333,9 @@
                                 <i class="bx bx-tachometer"></i>
                             </div>
                             <h4><a href="">UKS Sekolah</a></h4>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                            <p class="text-center">Sebagai tempat untuk meningkatkan mutu pendidikan dan prestasi belajar
+                                peserta didik yang
+                                tercermin dalam kehidupan prilaku hidup bersih dan sehat.</p>
                         </div>
                     </div>
 
@@ -360,7 +352,9 @@
                                 <i class="bx bx-layer"></i>
                             </div>
                             <h4><a href="">Kantin Sekolah</a></h4>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                            <p class="text-center">Membantu pertumbuhan dan kesehatan siswa dengan jalan menyediakan
+                                makanan yang sehat, bergizi
+                                dan praktis. Mendorong siswa untuk memilih makanan yang cukup dan seimbang</p>
                         </div>
                     </div>
 
@@ -377,7 +371,9 @@
                                 <i class="bx bx-slideshow"></i>
                             </div>
                             <h4><a href="">Mushola Sekolah</a></h4>
-                            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+                            <p class="text-center">Sebagai tempat untuk membina generasi yang madani, sarana ukhuwah
+                                islamiyah, sebagai sarana membantu pendidikan non formal
+                                yang memberi dampak positif kepada warga Sekolah dan masyarakat di lingkungan sekolah.</p>
                         </div>
                     </div>
 
@@ -394,7 +390,8 @@
                                 <i class="bx bx-arch"></i>
                             </div>
                             <h4><a href="">Area Parkir Sekolah</a></h4>
-                            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+                            <p class="text-center">Mengakomodasi untuk meletakkan kendaraan baik mobil, motor, maupun
+                                sepeda milik siswa, guru, karyawan, tamu dan semua warga sekolah.</p>
                         </div>
                     </div>
 
@@ -413,7 +410,7 @@
                 </div>
 
                 <div class="row mb-2 justify-content-center">
-                    @foreach ($guru as $item)
+                    @foreach ($kepsek as $item)
                         <div class="col-lg-3 col-md-6 team_col" data-aos="fade-up">
                             <div class="team_item">
                                 <div class="team_body">
@@ -427,6 +424,25 @@
                                         <div class="mt-3">NIP : {{ $item->nip_guru }}
                                         </div>
                                         <div>Jabatan : {{ $item->jabatan_guru }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    @foreach ($guru as $itemGuru)
+                        <div class="col-lg-3 col-md-6 team_col" data-aos="fade-up">
+                            <div class="team_item">
+                                <div class="team_body">
+                                    <img src="{{ asset('images/guru/' . $itemGuru->foto_guru) }}"
+                                        alt="Foto Kepala Sekolah" class="p-3 img-fluid rounded" title="Kepala Sekolah">
+                                    <center>
+                                        <hr class="hr-theme mx-auto">
+                                    </center>
+                                    <div class="pb-4">
+                                        <a class=""><b>{{ $itemGuru->nama_guru }}</b></a>
+                                        <div class="mt-3">NIP : {{ $itemGuru->nip_guru }}
+                                        </div>
+                                        <div>Jabatan : {{ $itemGuru->jabatan_guru }}</div>
                                     </div>
                                 </div>
                             </div>
@@ -493,161 +509,66 @@
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="300">
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-1.jpg') }}"
-                                class="img-fluid shadow-sm rounded" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('pengunjung/assets/img/portfolio/portfolio-1.jpg') }}"
-                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                    {{-- data katalog event --}}
+                    @foreach ($latest_event as $itemEvent)
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                            <div class="portfolio-wrap">
+                                <img src="{{ asset('images/event/' . $itemEvent->foto_event) }}"
+                                    class="img-fluid shadow-sm rounded" alt="">
+                                <div class="portfolio-info" title="{{ $itemEvent->judul_event }}">
+                                    <h4 class="limit-text-title">{{ $itemEvent->judul_event }}</h4>
+                                    <p>{{ dateConversion($itemEvent->tanggal_event) }}</p>
+                                    <div class="portfolio-links">
+                                        <a href="{{ asset('images/event/' . $itemEvent->foto_event) }}"
+                                            data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                            title="{{ $itemEvent->judul_event }}"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-2.jpg') }}"
-                                class="img-fluid shadow-sm rounded" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('pengunjung/assets/img/portfolio/portfolio-2.jpg') }}"
-                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                    {{-- data katalog pengumuman --}}
+                    @foreach ($latest_pengumuman as $itemPengumuman)
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                            <div class="portfolio-wrap">
+                                <img src="{{ asset('pengunjung/assets/img/pengumuman-image.jpg') }}"
+                                    class="img-fluid shadow-sm rounded" alt="">
+                                <div class="portfolio-info" title="{{ $itemPengumuman->judul_pengumuman }}">
+                                    <h4 class="limit-text-title">{{ $itemPengumuman->judul_pengumuman }}</h4>
+                                    <p>{{ dateConversion($itemPengumuman->tanggal_pengumuman) }}</p>
+                                    <div class="portfolio-links">
+                                        <a href="{{ asset('pengunjung/assets/img/pengumuman-image.jpg') }}"
+                                            data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                            title="{{ $itemPengumuman->judul_pengumuman }}"><i
+                                                class="fa-solid fa-eye"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-3.jpg') }}"
-                                class="img-fluid shadow-sm rounded" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 2</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('pengunjung/assets/img/portfolio/portfolio-3.jpg') }}"
-                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                    {{-- data katalog prestasi --}}
+                    @foreach ($latest_prestasi as $itemPrestasi)
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                            <div class="portfolio-wrap">
+                                <img src="{{ asset('images/prestasi/' . $itemPrestasi->foto_prestasi) }}"
+                                    class="img-fluid shadow-sm rounded" alt="">
+                                <div class="portfolio-info" title="{{ $itemPrestasi->judul_prestasi }}">
+                                    <h4 class="limit-text-title">{{ $itemPrestasi->judul_prestasi }}</h4>
+                                    <p>{{ dateConversion($itemPrestasi->tanggal_prestasi) }}</p>
+                                    <div class="portfolio-links">
+                                        <a href="{{ asset('images/prestasi/' . $itemPrestasi->foto_prestasi) }}"
+                                            data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                            title="{{ $itemPrestasi->judul_prestasi }}"><i
+                                                class="fa-solid fa-eye"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-4.jpg') }}"
-                                class="img-fluid shadow-sm rounded" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 2</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('pengunjung/assets/img/portfolio/portfolio-4.jpg') }}"
-                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-5.jpg') }}"
-                                class="img-fluid shadow-sm rounded" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 2</h4>
-                                <p>Web</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('pengunjung/assets/img/portfolio/portfolio-5.jpg') }}"
-                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-6.jpg') }}"
-                                class="img-fluid shadow-sm rounded" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 3</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('pengunjung/assets/img/portfolio/portfolio-6.jpg') }}"
-                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-7.jpg') }}"
-                                class="img-fluid shadow-sm rounded" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 1</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('pengunjung/assets/img/portfolio/portfolio-7.jpg') }}"
-                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-8.jpg') }}"
-                                class="img-fluid shadow-sm rounded" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 3</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('pengunjung/assets/img/portfolio/portfolio-8.jpg') }}"
-                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('pengunjung/assets/img/portfolio/portfolio-9.jpg') }}"
-                                class="img-fluid shadow-sm rounded" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('pengunjung/assets/img/portfolio/portfolio-9.jpg') }}"
-                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
-
             </div>
         </section><!-- End Portfolio Section -->
 

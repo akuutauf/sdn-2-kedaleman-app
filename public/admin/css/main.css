@@ -24,6 +24,10 @@
     color: white !important;
 }
 
+.text-justify {
+    text-align: justify !important;
+}
+
 .text-white {
     color: white !important;
 }
