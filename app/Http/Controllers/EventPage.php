@@ -50,7 +50,11 @@ class EventPage extends Controller
      */
     public function show($id)
     {
-        //
+        $data = [
+            'this_event' => Event::find($id),
+            'event' => Event::where('status_event', "Aktif")->orderBy('tanggal_event', 'ASC')->get()
+        ];
+        return view('pengunjung.pages.event-sekolah-show', $data);
     }
 
     /**
