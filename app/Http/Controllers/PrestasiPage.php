@@ -50,7 +50,11 @@ class PrestasiPage extends Controller
      */
     public function show($id)
     {
-        //
+        $data = [
+            'this_prestasi' => Prestasi::find($id),
+            'prestasi' => Prestasi::orderBy('tanggal_prestasi', 'ASC')->get()
+        ];
+        return view('pengunjung.pages.prestasi-siswa-show', $data);
     }
 
     /**
