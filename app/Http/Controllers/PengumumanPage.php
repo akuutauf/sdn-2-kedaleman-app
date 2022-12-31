@@ -18,7 +18,6 @@ class PengumumanPage extends Controller
             'latest' => Pengumuman::latest()->orderBy('id', 'DESC')->take(1)->get(),
             'pengumuman' => Pengumuman::orderBy('tanggal_pengumuman', 'ASC')->get()
         ];
-        // return dd($data['latest']);
         return view('pengunjung.pages.pengumuman-sekolah', $data);
     }
 
@@ -51,7 +50,11 @@ class PengumumanPage extends Controller
      */
     public function show($id)
     {
-        //
+        $data = [
+            'this_pengumuman' => Pengumuman::find($id),
+            'pengumuman' => Pengumuman::orderBy('tanggal_pengumuman', 'ASC')->get()
+        ];
+        return view('pengunjung.pages.pengumuman-sekolah-show', $data);
     }
 
     /**
