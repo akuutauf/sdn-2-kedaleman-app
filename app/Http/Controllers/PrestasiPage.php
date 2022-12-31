@@ -15,7 +15,7 @@ class PrestasiPage extends Controller
     public function index()
     {
         $data = [
-            'latest' => Prestasi::latest()->first()->get(),
+            'latest' => Prestasi::latest()->orderBy('id', 'DESC')->take(1)->get(),
             'prestasi' => Prestasi::orderBy('tanggal_prestasi', 'ASC')->get()
         ];
         return view('pengunjung.pages.prestasi-siswa', $data);

@@ -92,7 +92,7 @@
                                                 <b class="limit-text-title"><i
                                                         class="fa-solid fa-newspaper"></i>&ensp;{{ $itemEvent->judul_event }}</b>
                                             </div>
-                                            <img src="{{ asset('images/event/' . $item->foto_event) }}"
+                                            <img src="{{ asset('images/event/' . $itemEvent->foto_event) }}"
                                                 class="img-fluid rounded" alt="">
                                             <span class="card-title text-secondary limit-text-title mt-3">
                                                 <b>Lokasi :</b> {{ $itemEvent->lokasi_event }}
@@ -104,7 +104,8 @@
                                             <p class="card-text mt-3 text-secondary limit-text">
                                                 {{ $itemEvent->desc_event }}</p>
 
-                                            <a href="" class="btn bg-button-theme text-white mt-3">Lihat
+                                            <a href="{{ route('event.show', $itemEvent->id) }}"
+                                                class="btn bg-button-theme text-white mt-3">Lihat
                                                 Event&ensp;<i class="fa-solid fa-circle-arrow-right"></i></a>
                                         </div>
                                     </div>

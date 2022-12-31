@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Waktu pembuatan: 30 Des 2022 pada 13.58
+-- Waktu pembuatan: 31 Des 2022 pada 08.51
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -41,7 +41,8 @@ CREATE TABLE `arsips` (
 --
 
 INSERT INTO `arsips` (`id`, `nama_file_arsip`, `kode_file_arsip`, `jenis_file_arsip`, `tanggal_upload_arsip`, `desc_file_arsip`) VALUES
-(2, 'File Testing', 'doc_231564587738_114833089483.pdf', 'Arsip Siswa', '2022-12-30', 'Ebook Panduan Lengkap');
+(2, 'File Testing', 'doc_231564587738_114833089483.pdf', 'Arsip Siswa', '2022-12-30', 'Ebook Panduan Lengkap'),
+(3, 'E-book Panduan Lengkap Kelola Website Wordpress', 'doc_420793063620_25717551708.pdf', 'Arsip Guru', '2022-12-31', 'File untuk belajar pengelolaan website sederhana dengan wordpress');
 
 -- --------------------------------------------------------
 
@@ -63,7 +64,8 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`id`, `nama_banner`, `foto_banner`, `status_banner`, `created_at`, `updated_at`) VALUES
-(3, 'Prestasi Siswa Teladan', 'image_28656857305_778288815600.jpg', 'Aktif', NULL, NULL);
+(3, 'Prestasi Siswa Teladan', 'image_28656857305_778288815600.jpg', 'Aktif', NULL, NULL),
+(4, 'Contoh Banner Masjid', 'image_549578215371_512371329152.jpg', 'Non-aktif', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -90,7 +92,8 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `judul_event`, `foto_event`, `tanggal_event`, `penyelenggara_event`, `penanggung_jawab_event`, `lokasi_event`, `desc_event`, `status_event`, `created_at`, `updated_at`) VALUES
-(1, 'Selamat Tahun Baru 2023', 'image_673243625583_98039765034.jpg', '2022-12-30', 'SDN 2 Kedaleman', 'Koordinator', 'Sekolah', 'Deskripsi event dengan rinci', 'Aktif', NULL, NULL);
+(1, 'Selamat Tahun Baru 2023', 'image_673243625583_98039765034.jpg', '2022-12-30', 'SDN 2 Kedaleman', 'Koordinator', 'Sekolah', 'Deskripsi event dengan rinci', 'Aktif', NULL, NULL),
+(2, 'PPDB 2023 Siswa Baru Dibuka', 'image_9367249306_534122600645.jpg', '2022-12-31', 'SDN 2 Kedaleman', 'Koordinator', 'Sekolah', 'Pendaftaran siswa baru sekolah dasar 2023', 'Aktif', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -229,7 +232,8 @@ CREATE TABLE `pengumumans` (
 --
 
 INSERT INTO `pengumumans` (`id`, `judul_pengumuman`, `pembuat_pengumuman`, `penerima_pengumuman`, `perihal_pengumuman`, `tanggal_pengumuman`, `isi_pengumuman`, `lampiran_pengumuman`, `created_at`, `updated_at`) VALUES
-(1, 'PPDB Tahun Ajaran 2023', 'Koordinator', 'Khalayak Umum dan Masyarakat Sekitar', 'Pembukaan Pendaftaran Siswa Baru Tahun 2023', '2022-12-30', 'Deskripsi pengumuman berkaitan dengan penjelasan pengumuman secara detail', 'doc_1261582339_929449834667.pdf', NULL, NULL);
+(1, 'PPDB Tahun Ajaran 2023', 'Koordinator', 'Khalayak Umum dan Masyarakat Sekitar', 'Pembukaan Pendaftaran Siswa Baru Tahun 2023', '2022-12-30', 'Deskripsi pengumuman berkaitan dengan penjelasan pengumuman secara detail', 'doc_1261582339_929449834667.pdf', NULL, NULL),
+(2, 'Libur Akhir Tahun 2023', 'Koordinator', 'Siswa', 'Liburan Semester Ganjil', '2022-12-31', 'Jangan lupa belajar mandiri', 'doc_623508964566_66445725002.docx', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -273,7 +277,8 @@ CREATE TABLE `prestasis` (
 --
 
 INSERT INTO `prestasis` (`id`, `judul_prestasi`, `foto_prestasi`, `nama_perlombaan`, `tanggal_prestasi`, `peraih_prestasi`, `desc_prestasi`, `created_at`, `updated_at`) VALUES
-(1, 'Siswa SD Kelas 6 Memperoleh Prestasi Di tingkat Nasional', 'image_614062873285_89279677315.jpg', 'Lomba Menulis Puisi dan Pidato Tingkat Nasional', '2022-12-30', 'Ilham Nurisky dan Nanda Awimbi', 'Deskripsi prestasi lebih jelas', NULL, NULL);
+(1, 'Siswa SD Kelas 6 Memperoleh Prestasi Di tingkat Nasional', 'image_614062873285_89279677315.jpg', 'Lomba Menulis Puisi dan Pidato Tingkat Nasional', '2022-12-30', 'Ilham Nurisky dan Nanda Awimbi', 'Deskripsi prestasi lebih jelas', NULL, NULL),
+(2, 'Perlombaan Hafidz dan Adzan, dalam Rangka Festival Santri Banyuwangi', 'image_294550909529_686354585823.jpg', 'Lomba Hafidz dan Adzan', '2022-12-31', 'Miftahul Indry dan Farel Prayoga', 'Alhamdulillah siswa kelas 5 SD ini memperoleh juara 2 dan 4, membanggakan sekolah untuk bersaing di kancah daerah dalam hal Agama.', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -388,19 +393,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `arsips`
 --
 ALTER TABLE `arsips`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
@@ -430,7 +435,7 @@ ALTER TABLE `motivasis`
 -- AUTO_INCREMENT untuk tabel `pengumumans`
 --
 ALTER TABLE `pengumumans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `personal_access_tokens`
@@ -442,7 +447,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT untuk tabel `prestasis`
 --
 ALTER TABLE `prestasis`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`

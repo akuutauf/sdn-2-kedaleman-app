@@ -95,7 +95,7 @@
                                             <p class="card-text mt-3 text-secondary limit-text">
                                                 {{ $itemPengumuman->isi_pengumuman }}</p>
 
-                                            <a href="" class="btn bg-button-theme text-white mt-3">Lihat
+                                            <a href="{{ route('pengumuman.show', $itemPengumuman->id) }}" class="btn bg-button-theme text-white mt-3">Lihat
                                                 Pengumuman&ensp;<i class="fa-solid fa-circle-arrow-right"></i></a>
                                         </div>
                                     </div>

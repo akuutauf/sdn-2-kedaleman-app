@@ -91,7 +91,7 @@
                                                 <b class="limit-text-title"><i
                                                         class="fa-solid fa-newspaper"></i>&ensp;{{ $itemPrestasi->judul_prestasi }}</b>
                                             </div>
-                                            <img src="{{ asset('images/prestasi/' . $item->foto_prestasi) }}"
+                                            <img src="{{ asset('images/prestasi/' . $itemPrestasi->foto_prestasi) }}"
                                                 class="img-fluid rounded" alt="">
                                             <span class="card-title text-secondary limit-text-title mt-3"
                                                 title="{{ $itemPrestasi->nama_perlombaan }}">
@@ -104,7 +104,8 @@
                                             <p class="card-text mt-3 text-secondary limit-text">
                                                 {{ $itemPrestasi->desc_prestasi }}</p>
 
-                                            <a href="" class="btn bg-button-theme text-white mt-3">Lihat
+                                            <a href="{{ route('prestasi.show', $itemPrestasi->id) }}"
+                                                class="btn bg-button-theme text-white mt-3">Lihat
                                                 Prestasi&ensp;<i class="fa-solid fa-circle-arrow-right"></i></a>
                                         </div>
                                     </div>

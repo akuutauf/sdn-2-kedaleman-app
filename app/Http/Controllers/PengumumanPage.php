@@ -15,7 +15,7 @@ class PengumumanPage extends Controller
     public function index()
     {
         $data = [
-            'latest' => Pengumuman::latest()->first()->get(),
+            'latest' => Pengumuman::latest()->orderBy('id', 'DESC')->take(1)->get(),
             'pengumuman' => Pengumuman::orderBy('tanggal_pengumuman', 'ASC')->get()
         ];
         // return dd($data['latest']);
