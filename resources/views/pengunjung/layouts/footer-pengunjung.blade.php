@@ -11,7 +11,7 @@
                         Jl. Cawang Dusun Puspan, Kedaleman, <br>
                         Kec. Rogojampi, Kab. Banyuwangi <br>
                         Prov. Jawa Timur <br><br>
-                        <strong>Telp:</strong> 08x-xxx-xxx-xxx<br>
+                        <strong>Telp:</strong> 085204890211 <br>
                         <strong>Email:</strong> <a class="text-decoration-none text-secondary"
                             href="mailto: sdn2kedaleman@gmail.com" target="_blank">sdn2kedaleman@gmail.com</a><br>
                     </p>

@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\ArsipPage;
-use App\Http\Controllers\ComponentPages;
 use App\Http\Controllers\DashboardAdmin;
 use App\Http\Controllers\EventPage;
 use App\Http\Controllers\GuruPage;
@@ -17,6 +16,7 @@ use App\Http\Controllers\PengumumanPage;
 use App\Http\Controllers\PrestasiPage;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\ComponentPages;
 
 /*
 |--------------------------------------------------------------------------

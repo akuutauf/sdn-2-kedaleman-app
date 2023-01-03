@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Waktu pembuatan: 31 Des 2022 pada 08.51
+-- Waktu pembuatan: 03 Jan 2023 pada 03.45
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -64,8 +64,8 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`id`, `nama_banner`, `foto_banner`, `status_banner`, `created_at`, `updated_at`) VALUES
-(3, 'Prestasi Siswa Teladan', 'image_28656857305_778288815600.jpg', 'Aktif', NULL, NULL),
-(4, 'Contoh Banner Masjid', 'image_549578215371_512371329152.jpg', 'Non-aktif', NULL, NULL);
+(3, 'Banner Tahun Baru 2023', 'image_994900771085_326600744435.jpg', 'Aktif', NULL, NULL),
+(4, 'Lomba 17 Agustus 2023', 'image_428810817200_895250936302.jpg', 'Aktif', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -92,8 +92,8 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `judul_event`, `foto_event`, `tanggal_event`, `penyelenggara_event`, `penanggung_jawab_event`, `lokasi_event`, `desc_event`, `status_event`, `created_at`, `updated_at`) VALUES
-(1, 'Selamat Tahun Baru 2023', 'image_673243625583_98039765034.jpg', '2022-12-30', 'SDN 2 Kedaleman', 'Koordinator', 'Sekolah', 'Deskripsi event dengan rinci', 'Aktif', NULL, NULL),
-(2, 'PPDB 2023 Siswa Baru Dibuka', 'image_9367249306_534122600645.jpg', '2022-12-31', 'SDN 2 Kedaleman', 'Koordinator', 'Sekolah', 'Pendaftaran siswa baru sekolah dasar 2023', 'Aktif', NULL, NULL);
+(1, 'Selamat Tahun Baru 2023', 'image_354508401836_922086522545.jpg', '2022-12-30', 'SDN 2 Kedaleman', 'Koordinator', 'Sekolah', 'Deskripsi event dengan rinci', 'Aktif', NULL, NULL),
+(2, 'PPDB 2023 Siswa Baru Dibuka', 'image_399944008984_1273162587.jpg', '2022-12-31', 'SDN 2 Kedaleman', 'Koordinator', 'Sekolah', 'Pendaftaran siswa baru sekolah dasar 2023', 'Aktif', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -139,11 +139,11 @@ CREATE TABLE `gurus` (
 --
 
 INSERT INTO `gurus` (`id`, `nama_guru`, `foto_guru`, `nik_guru`, `nuptk_guru`, `nip_guru`, `gender_guru`, `tempat_lahir_guru`, `tanggal_lahir_guru`, `jabatan_guru`, `email_guru`, `no_telp_guru`, `alamat_guru`, `status_guru`) VALUES
-(5, 'Taufik Hidayat', 'image_187235257659_887891295180.jpg', '351811458771010', '123456', '32159753214715', 'Laki-laki', 'Banyuwangi', '2022-12-28', 'Kepala Sekolah', 'akutauf@gmail.com', '085265241598', 'Songgon, Banyuwangi', 'Aktif'),
-(6, 'Nanda Awimbi Yahya Pratama', 'image_456595844171_425915399997.jpg', '3518117401071010', '123456789987', '987951753654', 'Laki-laki', 'Kediri', '2022-12-28', 'Guru Pengajar', 'nandaawimbi@gmail.com', '089676298218', 'Kebalenan, Banyuwangi', 'Aktif'),
-(7, 'Rikiansyah Aris', 'image_622501338083_636470198133.jpg', '123456897987', '32165498779', '159987654321195', 'Laki-laki', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'rikiansyah@gmail.com', '085221598741', 'Genteng, Banyuwangi', 'Aktif'),
-(8, 'Aida Andinar', 'image_184262225485_775016217021.jpg', '123456789987654', '12345987897', '3216548744587', 'Perempuan', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'aidaandinar@gmail.com', '085478954458', 'Srono, Banyuwangi', 'Aktif'),
-(9, 'Sekar Ananta', 'image_409883130186_19138002394.jpg', '1235487965478', '123458974568', '32165498712', 'Perempuan', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'sekarananta@gmail.com', '085478951235', 'Banyuwangi', 'Aktif');
+(5, 'Taufik Hidayat', 'image_117142483832_371992722830.jpg', '351811458771010', '123456', '32159753214715', 'Laki-laki', 'Banyuwangi', '2022-12-28', 'Kepala Sekolah', 'akutauf@gmail.com', '085265241598', 'Songgon, Banyuwangi', 'Aktif'),
+(6, 'Nanda Awimbi Yahya Pratama', 'image_841292149722_164152473137.jpg', '3518117401071010', '123456789987', '987951753654', 'Laki-laki', 'Kediri', '2022-12-28', 'Guru Pengajar', 'nandaawimbi@gmail.com', '089676298218', 'Kebalenan, Banyuwangi', 'Aktif'),
+(7, 'Rikiansyah Aris', 'image_275287368617_101796381482.jpg', '123456897987', '32165498779', '159987654321195', 'Laki-laki', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'rikiansyah@gmail.com', '085221598741', 'Genteng, Banyuwangi', 'Aktif'),
+(8, 'Aida Andinar', 'image_463868772010_251442113091.jpg', '123456789987654', '12345987897', '3216548744587', 'Perempuan', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'aidaandinar@gmail.com', '085478954458', 'Srono, Banyuwangi', 'Aktif'),
+(9, 'Sekar Ananta', 'image_397696428710_21863835975.jpg', '1235487965478', '123458974568', '32165498712', 'Perempuan', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'sekarananta@gmail.com', '085478951235', 'Banyuwangi', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -277,8 +277,8 @@ CREATE TABLE `prestasis` (
 --
 
 INSERT INTO `prestasis` (`id`, `judul_prestasi`, `foto_prestasi`, `nama_perlombaan`, `tanggal_prestasi`, `peraih_prestasi`, `desc_prestasi`, `created_at`, `updated_at`) VALUES
-(1, 'Siswa SD Kelas 6 Memperoleh Prestasi Di tingkat Nasional', 'image_614062873285_89279677315.jpg', 'Lomba Menulis Puisi dan Pidato Tingkat Nasional', '2022-12-30', 'Ilham Nurisky dan Nanda Awimbi', 'Deskripsi prestasi lebih jelas', NULL, NULL),
-(2, 'Perlombaan Hafidz dan Adzan, dalam Rangka Festival Santri Banyuwangi', 'image_294550909529_686354585823.jpg', 'Lomba Hafidz dan Adzan', '2022-12-31', 'Miftahul Indry dan Farel Prayoga', 'Alhamdulillah siswa kelas 5 SD ini memperoleh juara 2 dan 4, membanggakan sekolah untuk bersaing di kancah daerah dalam hal Agama.', NULL, NULL);
+(1, 'Siswa SD Kelas 6 Memperoleh Prestasi Di tingkat Nasional', 'image_380497848281_839950028253.jpg', 'Lomba Menulis Puisi dan Pidato Tingkat Nasional', '2022-12-30', 'Ilham Nurisky dan Nanda Awimbi', 'Deskripsi prestasi lebih jelas', NULL, NULL),
+(2, 'Perlombaan Hafidz dan Adzan, dalam Rangka Festival Santri Banyuwangi', 'image_598690541880_832451492325.jpg', 'Lomba Hafidz dan Adzan', '2022-12-31', 'Miftahul Indry dan Farel Prayoga', 'Alhamdulillah siswa kelas 5 SD ini memperoleh juara 2 dan 4, membanggakan sekolah untuk bersaing di kancah daerah dalam hal Agama.', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -399,7 +399,7 @@ ALTER TABLE `arsips`
 -- AUTO_INCREMENT untuk tabel `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `events`

@@ -30,29 +30,33 @@
                             informasi sekolah yang lainnya.<br><br>
                             Yuk cek sekarang.
                         </h2>
-                        <a href="#tentang" class="download-btn nav-link scrollto"><i class="fa-solid fa-school"></i>&ensp;
-                            Profil Sekolah</a>
-                        <a href="#kegiatan" class="download-btn nav-link scrollto"><i
-                                class="fa-regular fa-calendar-minus"></i>&ensp; Event
-                            Sekolah</a>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <a href="#tentang" class="btn-theme nav-link scrollto py-2 px-1 text-center mt-3"><i
+                                        class="fa-solid fa-school"></i>&ensp;
+                                    Profil Sekolah</a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="#kegiatan" class="btn-theme-two nav-link scrollto py-2 px-1 text-center mt-3"><i
+                                        class="fa-regular fa-calendar-minus"></i>&ensp; Event
+                                    Sekolah</a>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
                 <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img"
                     data-aos="fade-up">
-                    {{-- <img src="{{ asset('pengunjung/assets/img/school-ilustration-1.png') }}"
-                        class="img-fluid rounded shadow-sm" alt=""> --}}
-
-                    <center>
+                    <center class="">
                         <div class="owl-carousel owl-1">
-                            <div><img src="{{ asset('pengunjung/assets/img/school-ilustration-1.png') }}" alt="Image"
-                                    class="img-fluid shadow-sm rounded"></div>
-                            <div><img src="{{ asset('pengunjung/assets/img/school-ilustration-2.jpg') }}" alt="Image"
-                                    class="img-fluid shadow-sm rounded"></div>
-                            <div><img src="{{ asset('pengunjung/assets/img/school-ilustration-3.jpg') }}" alt="Image"
-                                    class="img-fluid shadow-sm rounded"></div>
+                            <div>
+                                <img src="{{ asset('pengunjung/assets/img/school-ilustration-1.png') }}" alt="Image"
+                                    class="img-fluid shadow-sm rounded">
+                            </div>
                             @foreach ($banner as $itemBanner)
                                 <div><img src="{{ asset('images/banner/' . $itemBanner->foto_banner) }}" alt="Image"
-                                        class="img-fluid shadow-sm rounded"></div>
+                                        class="img-fluid shadow-sm rounded" title="{{ $itemBanner->nama_banner }}"></div>
                             @endforeach
                         </div>
                     </center>
@@ -65,9 +69,10 @@
     <section id="hero" class="d-flex align-items-center">
         <div class="container position-relative section-bg shadow-sm rounded p-5" data-aos="fade-up" data-aos-delay="100">
             <div class="row justify-content-center mt-3">
-                <div class="col-xl-10 col-lg-9 text-center">
+                <div class="col-xl-8 col-lg-9 text-center">
                     <h1>Sejarah Sekolah <br>SDN 2 Kedaleman - Rogojampi</h1>
-                    <h2 class="mt-4">Informasi sejarah singkat SDN 2 Kedaleman.</h2>
+                    <h2 class="mt-4">Berdirinya sekolah SDN 2 Kedaleman berdasarkan instruksi Presiden atau Impress tahun
+                        1975 dan digunakan mulai Tahun Ajaran 1976/1977.</h2>
                 </div>
             </div>
             <div class="text-center">
@@ -138,31 +143,12 @@
                     <p>Informasi profil singkat SDN 2 Kedaleman.</p>
                 </div>
 
-                <div class="row content">
-                    <div class="col-lg-6">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua.
-                        </p>
-                        <ul>
-                            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat</li>
-                            <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in
-                                voluptate velit</li>
-                            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat</li>
-                        </ul>
-                    </div>
+                <div class="row content justify-content-center">
                     <div class="col-lg-6 pt-4 pt-lg-0">
                         <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.
+                            SDN 2 Kedaleman bertempat di RT.01 RW 0.2 Dusun Puspan Desa Kedaleman, Kecamatan Rogojampi dan
+                            Kabupaten Banyuwangi.
                         </p>
-                        <a href="#" class="btn-learn-more">Learn More</a>
                     </div>
                 </div>
 
@@ -218,37 +204,29 @@
 
                 <div class="row">
 
+                    {{-- video profile sekolah --}}
                     <div class="col-lg-6 video-box align-self-baseline" data-aos="fade-right" data-aos-delay="100">
-                        <img src="{{ asset('img/video/example-video-thumbnail.png') }}" class="img-fluid" alt="">
-                        <a href="https://youtu.be/Y6ARXupY_IU" class="glightbox play-btn mb-4" data-vbtype="video"
+                        <img src="{{ asset('pengunjung/assets/img/video-profil-sekolah.jpg') }}"
+                            class="img-fluid rounded border shadow-sm" alt="">
+                        <a href="https://youtu.be/vRLa2jUOBnI" class="glightbox play-btn mb-4" data-vbtype="video"
                             data-autoplay="true"></a>
                     </div>
 
                     <div class="col-lg-6 pt-3 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
                         <h3>Video Profil SDN 2 Kedaleman.</h3>
-                        <p class="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua.
+                        <p class="text-justify mb-4">
+                            Yuk lebih dekat dengan SDN 2 Kedaleman, berikut adalah video mengenai profil singkat, atau video
+                            kegiatan yang pernah dilaksanakan guru dan siswa semasa di sekolah loh. Pokoknya bakal seru dan
+                            menarik, yuk lihat video nya bersama.
                         </p>
-                        <ul>
-                            <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.</li>
-                            <li><i class="bx bx-check-double"></i> Duis aute irure dolor in reprehenderit in voluptate
-                                velit.</li>
-                            <li><i class="bx bx-check-double"></i> Voluptate repellendus pariatur reprehenderit
-                                corporis sint.</li>
-                            <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda
-                                mastiro dolore eu fugiat nulla pariatur.</li>
-                        </ul>
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum
-                        </p>
+
+                        {{-- video kegiatan siswa sekolah --}}
+                        <div class="col-lg-12 video-box align-self-baseline" data-aos="fade-left" data-aos-delay="100">
+                            <img src="{{ asset('pengunjung/assets/img/contoh-profile-sekolah.jpg') }}"
+                                class="img-fluid rounded border" alt="">
+                            <a href="https://youtu.be/vRLa2jUOBnI" class="glightbox play-btn mb-4" data-vbtype="video"
+                                data-autoplay="true"></a>
+                        </div>
                     </div>
 
                 </div>
@@ -395,6 +373,12 @@
                             alt="">
                     </div>
 
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
+                        data-aos="zoom-in">
+                        <img src="{{ asset('pengunjung/assets/img/clients/logo-ti-poliwangi.png') }}" class="img-fluid"
+                            alt="">
+                    </div>
+
                 </div>
 
             </div>
@@ -521,7 +505,7 @@
                                     <div class="portfolio-links">
                                         <a href="{{ asset('images/event/' . $itemEvent->foto_event) }}"
                                             data-gallery="portfolioGallery" class="portfolio-lightbox"
-                                            title="{{ $itemEvent->judul_event }}"><i class="fa-solid fa-eye"></i></a>
+                                            title="{{ $itemEvent->desc_event }}"><i class="fa-solid fa-eye"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -540,7 +524,7 @@
                                     <div class="portfolio-links">
                                         <a href="{{ asset('pengunjung/assets/img/pengumuman-image.jpg') }}"
                                             data-gallery="portfolioGallery" class="portfolio-lightbox"
-                                            title="{{ $itemPengumuman->judul_pengumuman }}"><i
+                                            title="{{ $itemPengumuman->isi_pengumuman }}"><i
                                                 class="fa-solid fa-eye"></i></a>
                                     </div>
                                 </div>
@@ -560,7 +544,7 @@
                                     <div class="portfolio-links">
                                         <a href="{{ asset('images/prestasi/' . $itemPrestasi->foto_prestasi) }}"
                                             data-gallery="portfolioGallery" class="portfolio-lightbox"
-                                            title="{{ $itemPrestasi->judul_prestasi }}"><i
+                                            title="{{ $itemPrestasi->desc_prestasi }}"><i
                                                 class="fa-solid fa-eye"></i></a>
                                     </div>
                                 </div>
@@ -578,7 +562,7 @@
 
                 <div class="section-title">
                     <h2>Pertanyaan Tentang Sekolah</h2>
-                    <p>Informasi penting dan pertanyaan tentang SDN 2 Kedaleman.</p>
+                    <p>Beberapa pertanyaan seputar SDN 2 Kedaleman.</p>
                 </div>
 
                 <div class="faq-list">

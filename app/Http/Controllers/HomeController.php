@@ -25,7 +25,7 @@ class HomeController extends Controller
             'guru' => Guru::where('jabatan_guru', "!=", "Kepala Sekolah")->orderBy('nama_guru', 'ASC')->get(),
             'kepsek' => Guru::where('jabatan_guru', "Kepala Sekolah")->get(),
             'motivasi' => Motivasi::all(),
-            'banner' => Banner::where('status_banner', "Aktif")->get(),
+            'banner' => Banner::where('status_banner', "Aktif")->latest()->take(5)->get(),
             'count_guru' => Guru::count(),
             'count_event' => Event::count(),
             'count_arsip' => Arsip::count(),
