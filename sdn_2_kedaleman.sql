@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Waktu pembuatan: 03 Jan 2023 pada 03.45
+-- Waktu pembuatan: 06 Jan 2023 pada 12.25
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -140,7 +140,7 @@ CREATE TABLE `gurus` (
 
 INSERT INTO `gurus` (`id`, `nama_guru`, `foto_guru`, `nik_guru`, `nuptk_guru`, `nip_guru`, `gender_guru`, `tempat_lahir_guru`, `tanggal_lahir_guru`, `jabatan_guru`, `email_guru`, `no_telp_guru`, `alamat_guru`, `status_guru`) VALUES
 (5, 'Taufik Hidayat', 'image_117142483832_371992722830.jpg', '351811458771010', '123456', '32159753214715', 'Laki-laki', 'Banyuwangi', '2022-12-28', 'Kepala Sekolah', 'akutauf@gmail.com', '085265241598', 'Songgon, Banyuwangi', 'Aktif'),
-(6, 'Nanda Awimbi Yahya Pratama', 'image_841292149722_164152473137.jpg', '3518117401071010', '123456789987', '987951753654', 'Laki-laki', 'Kediri', '2022-12-28', 'Guru Pengajar', 'nandaawimbi@gmail.com', '089676298218', 'Kebalenan, Banyuwangi', 'Aktif'),
+(6, 'Nanda Awimbi Yahya Pratama', 'image_282655153205_288240725921.jpg', '3518117401071010', '123456789987', '987951753654', 'Laki-laki', 'Kediri', '2022-12-28', 'Guru Pengajar', 'nandaawimbi@gmail.com', '089676298218', 'Kebalenan, Banyuwangi', 'Aktif'),
 (7, 'Rikiansyah Aris', 'image_275287368617_101796381482.jpg', '123456897987', '32165498779', '159987654321195', 'Laki-laki', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'rikiansyah@gmail.com', '085221598741', 'Genteng, Banyuwangi', 'Aktif'),
 (8, 'Aida Andinar', 'image_463868772010_251442113091.jpg', '123456789987654', '12345987897', '3216548744587', 'Perempuan', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'aidaandinar@gmail.com', '085478954458', 'Srono, Banyuwangi', 'Aktif'),
 (9, 'Sekar Ananta', 'image_397696428710_21863835975.jpg', '1235487965478', '123458974568', '32165498712', 'Perempuan', 'Banyuwangi', '2022-12-28', 'Guru Pengajar', 'sekarananta@gmail.com', '085478951235', 'Banyuwangi', 'Aktif');
@@ -194,7 +194,8 @@ CREATE TABLE `motivasis` (
 INSERT INTO `motivasis` (`id`, `id_guru`, `pesan_motivasi`, `status_motivasi`) VALUES
 (3, 7, 'Jika Anda berpikir pendidikan itu mahal, coba perkirakan biaya ketidaktahuan', 'Aktif'),
 (4, 6, 'Semakin banyak Anda membaca, semakin banyak hal yang akan Anda ketahui. Semakin banyak yang Anda pelajari, semakin banyak tempat yang akan Anda kunjungi.', 'Aktif'),
-(5, 8, 'kalau bisa dilakukan besok kenapa harus sekarang', 'Non-aktif');
+(5, 8, 'kalau bisa dilakukan besok kenapa harus sekarang', 'Non-aktif'),
+(6, 9, 'Ini pesan motivasi dari guru sekolah', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -233,7 +234,8 @@ CREATE TABLE `pengumumans` (
 
 INSERT INTO `pengumumans` (`id`, `judul_pengumuman`, `pembuat_pengumuman`, `penerima_pengumuman`, `perihal_pengumuman`, `tanggal_pengumuman`, `isi_pengumuman`, `lampiran_pengumuman`, `created_at`, `updated_at`) VALUES
 (1, 'PPDB Tahun Ajaran 2023', 'Koordinator', 'Khalayak Umum dan Masyarakat Sekitar', 'Pembukaan Pendaftaran Siswa Baru Tahun 2023', '2022-12-30', 'Deskripsi pengumuman berkaitan dengan penjelasan pengumuman secara detail', 'doc_1261582339_929449834667.pdf', NULL, NULL),
-(2, 'Libur Akhir Tahun 2023', 'Koordinator', 'Siswa', 'Liburan Semester Ganjil', '2022-12-31', 'Jangan lupa belajar mandiri', 'doc_623508964566_66445725002.docx', NULL, NULL);
+(2, 'Libur Akhir Tahun 2023', 'Koordinator', 'Siswa', 'Liburan Semester Ganjil', '2022-12-31', 'Jangan lupa belajar mandiri', 'doc_623508964566_66445725002.docx', NULL, NULL),
+(3, 'Masuk Sekolah Semester 2', 'Obing', 'Siswa', 'Pengumuman Masuk Sekolah Semester 2', '2023-01-01', 'Masuk sekolah dilaksanakan pada tanggal 02 Januari 2023', 'doc_72995621146_356678865230.pdf', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -399,7 +401,7 @@ ALTER TABLE `arsips`
 -- AUTO_INCREMENT untuk tabel `banners`
 --
 ALTER TABLE `banners`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `events`
@@ -429,13 +431,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT untuk tabel `motivasis`
 --
 ALTER TABLE `motivasis`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengumumans`
 --
 ALTER TABLE `pengumumans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `personal_access_tokens`
